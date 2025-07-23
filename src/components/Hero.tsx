@@ -1,7 +1,36 @@
 import { Button } from "@/components/ui/button";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import heroImage from "@/assets/hero-medical.jpg";
+import prostheticHand from "/lovable-uploads/86c9166c-7952-42e8-a5b5-8afa61b68b5b.png";
+import prostheticLeg from "@/assets/prosthetic-leg.jpg";
+import prostheticArm from "@/assets/prosthetic-arm.jpg";
+import orthoticBrace from "@/assets/orthotic-brace.jpg";
 
 const Hero = () => {
+  const prostheticImages = [
+    {
+      src: prostheticHand,
+      alt: "Advanced prosthetic hand demonstrating precision grip",
+      badge: "Precision Technology",
+    },
+    {
+      src: prostheticLeg,
+      alt: "Advanced prosthetic leg with carbon fiber components",
+      badge: "Mobility Solutions",
+    },
+    {
+      src: prostheticArm,
+      alt: "Sophisticated prosthetic arm with robotic hand",
+      badge: "Advanced Robotics",
+    },
+    {
+      src: orthoticBrace,
+      alt: "Modern orthotic foot brace with advanced materials",
+      badge: "Comfort & Support",
+    },
+  ];
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -26,18 +55,41 @@ const Hero = () => {
             Experience the future of mobility and independence.
           </p>
           
-          {/* Featured Prosthetic Image */}
+          {/* Featured Prosthetic Carousel */}
           <div className="mb-8">
-            <div className="relative inline-block">
-              <img 
-                src="/lovable-uploads/86c9166c-7952-42e8-a5b5-8afa61b68b5b.png" 
-                alt="Advanced prosthetic hand demonstrating precision grip" 
-                className="w-64 h-48 md:w-80 md:h-60 object-cover rounded-lg shadow-lg border-4 border-white/20"
-              />
-              <div className="absolute -bottom-2 -right-2 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
-                Precision Technology
-              </div>
-            </div>
+            <Carousel 
+              className="w-full max-w-xs md:max-w-md mx-auto"
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 3000,
+                  stopOnInteraction: false,
+                  stopOnMouseEnter: true,
+                })
+              ]}
+            >
+              <CarouselContent>
+                {prostheticImages.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <div className="relative">
+                      <img 
+                        src={image.src} 
+                        alt={image.alt} 
+                        className="w-full h-48 md:h-60 object-cover rounded-lg shadow-lg border-4 border-white/20"
+                      />
+                      <div className="absolute -bottom-2 -right-2 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        {image.badge}
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="bg-white/10 border-white/30 text-white hover:bg-white/20" />
+              <CarouselNext className="bg-white/10 border-white/30 text-white hover:bg-white/20" />
+            </Carousel>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
