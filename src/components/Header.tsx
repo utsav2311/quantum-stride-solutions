@@ -6,9 +6,11 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">Q</span>
-            </div>
+            <img 
+              src="/lovable-uploads/e5a83eab-625b-4d9c-803e-cd8d42658144.png" 
+              alt="Quantum Medical Logo" 
+              className="w-10 h-10"
+            />
             <div>
               <h1 className="text-2xl font-bold text-primary">Quantum Medical</h1>
               <p className="text-xs text-muted-foreground">Prosthetics & Orthotics</p>
