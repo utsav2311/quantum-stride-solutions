@@ -22,7 +22,16 @@ const Header = () => {
             <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
           </nav>
           
-          <Button variant="medical" size="sm">
+          <Button 
+            variant="medical" 
+            size="sm"
+            onClick={() => {
+              const appointmentSection = document.getElementById('appointment');
+              if (appointmentSection) {
+                appointmentSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
             Book Appointment
           </Button>
         </div>
