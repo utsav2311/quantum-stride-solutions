@@ -26,6 +26,20 @@ const Hero = () => {
             Experience the future of mobility and independence.
           </p>
           
+          {/* Featured Prosthetic Image */}
+          <div className="mb-8">
+            <div className="relative inline-block">
+              <img 
+                src="/lovable-uploads/86c9166c-7952-42e8-a5b5-8afa61b68b5b.png" 
+                alt="Advanced prosthetic hand demonstrating precision grip" 
+                className="w-64 h-48 md:w-80 md:h-60 object-cover rounded-lg shadow-lg border-4 border-white/20"
+              />
+              <div className="absolute -bottom-2 -right-2 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
+                Precision Technology
+              </div>
+            </div>
+          </div>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button variant="appointment" size="lg">
               Schedule Consultation
