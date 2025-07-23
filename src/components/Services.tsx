@@ -1,0 +1,80 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import prosthetics from "@/assets/prosthetics-service.jpg";
+import orthotics from "@/assets/orthotics-service.jpg";
+import consultation from "@/assets/consultation-service.jpg";
+
+const Services = () => {
+  const services = [
+    {
+      title: "Custom Prosthetics",
+      description: "State-of-the-art prosthetic limbs designed for optimal function and comfort. Using advanced materials and precision engineering.",
+      image: prosthetics,
+      features: ["3D Printing Technology", "Lightweight Materials", "Custom Fitting", "Ongoing Support"]
+    },
+    {
+      title: "Orthotic Solutions",
+      description: "Comprehensive orthotic devices to support, align, and improve the function of movable parts of the body.",
+      image: orthotics,
+      features: ["Custom Braces", "Foot Orthotics", "Spinal Support", "Sports Orthotics"]
+    },
+    {
+      title: "Expert Consultation",
+      description: "Professional assessment and personalized treatment planning with our certified prosthetists and orthotists.",
+      image: consultation,
+      features: ["Initial Assessment", "Treatment Planning", "Progress Monitoring", "Adjustments & Repairs"]
+    }
+  ];
+
+  return (
+    <section id="services" className="py-20 bg-medical-light/30">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Our Services</h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Comprehensive prosthetic and orthotic care tailored to your unique needs
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <Card key={index} className="group hover:shadow-card transition-all duration-300 hover:-translate-y-2 border-border/50">
+              <div className="relative overflow-hidden rounded-t-lg">
+                <img 
+                  src={service.image} 
+                  alt={service.title}
+                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+              </div>
+              
+              <CardHeader>
+                <CardTitle className="text-2xl text-primary">{service.title}</CardTitle>
+                <CardDescription className="text-base leading-relaxed">
+                  {service.description}
+                </CardDescription>
+              </CardHeader>
+              
+              <CardContent>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
+                      <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                
+                <Button variant="outline" className="w-full">
+                  Learn More
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Services;
