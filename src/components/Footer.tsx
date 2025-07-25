@@ -44,7 +44,7 @@ const Footer = () => {
               <p>Al Danah</p>
               <p>Abu Dhabi</p>
               <p>United Arab Emirates</p>
-              <p className="mt-3">📞 (555) 123-4567</p>
+              <p className="mt-3">📞 +971 558488759</p>
               <p>✉️ info@quantumuae.ae</p>
             </div>
           </div>
