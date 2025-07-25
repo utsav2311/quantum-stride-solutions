@@ -41,9 +41,9 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Contact Info</h4>
             <div className="space-y-2 text-sm text-primary-foreground/80">
-              <p>123 Medical Center Drive</p>
-              <p>Healthcare Plaza, Suite 200</p>
-              <p>Cityville, ST 12345</p>
+              <p>Al Danah</p>
+              <p>Abu Dhabi</p>
+              <p>United Arab Emirates</p>
               <p className="mt-3">📞 (555) 123-4567</p>
               <p>✉️ info@quantummedical.com</p>
             </div>
