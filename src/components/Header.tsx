@@ -9,7 +9,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/e5a83eab-625b-4d9c-803e-cd8d42658144.png" 
               alt="Quantum Medical Logo" 
-              className="w-10 h-10"
+              className="w-12 h-12"
             />
             <div>
               <h1 className="text-2xl font-bold text-primary">Quantum Medical</h1>
