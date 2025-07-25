@@ -1,6 +1,5 @@
 const Footer = () => {
-  return (
-    <footer className="bg-primary text-primary-foreground py-12">
+  return <footer className="bg-primary text-primary-foreground py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
@@ -52,13 +51,9 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
-          <p className="text-sm text-primary-foreground/60">
-            © 2024 Quantum Medical. All rights reserved. | Privacy Policy | Terms of Service
-          </p>
+          <p className="text-sm text-primary-foreground/60">© 2025 Quantum Medical. All rights reserved. | Privacy Policy | Terms of Service</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
