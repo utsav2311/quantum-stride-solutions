@@ -28,8 +28,8 @@ const About = () => {
     <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+          <div className="animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 transform hover:scale-105 transition-all duration-300">
               Advancing Lives Through Innovation
             </h2>
             
@@ -62,7 +62,7 @@ const About = () => {
           
           <div className="grid grid-cols-2 gap-6">
             {features.map((feature, index) => (
-              <Card key={index} className="group hover:shadow-card transition-all duration-300 hover:-translate-y-1 border-border/50">
+              <Card key={index} className={`group hover:shadow-card transition-all duration-500 hover:-translate-y-1 border-border/50 animate-fade-in opacity-0 transform hover:rotate-1 hover:shadow-2xl`} style={{animationDelay: `${index * 150 + 500}ms`}}>
                 <CardContent className="p-6 text-center">
                   <div className="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
                     {feature.icon}

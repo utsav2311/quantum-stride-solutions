@@ -15,37 +15,37 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Advanced <span className="text-accent">Prosthetics</span>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in opacity-0 animation-delay-300">
+            Advanced <span className="text-accent animate-pulse">Prosthetics</span>
             <br />
-            & <span className="text-accent">Orthotics</span> Care
+            & <span className="text-accent animate-pulse animation-delay-500">Orthotics</span> Care
           </h1>
           
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-in opacity-0 animation-delay-700">
             Empowering lives through cutting-edge prosthetic and orthotic solutions. 
             Experience the future of mobility and independence.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="appointment" size="lg">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in opacity-0 animation-delay-1000">
+            <Button variant="appointment" size="lg" className="transform hover:scale-105 transition-all duration-300">
               Schedule Consultation
             </Button>
-            <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10">
+            <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 transform hover:scale-105 transition-all duration-300">
               Learn More
             </Button>
           </div>
           
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 mt-16 max-w-2xl mx-auto">
-            <div className="text-center">
+            <div className="text-center animate-fade-in opacity-0 animation-delay-1200 transform hover:scale-110 transition-all duration-300">
               <div className="text-3xl md:text-4xl font-bold text-white">500+</div>
               <div className="text-white/80">Patients Served</div>
             </div>
-            <div className="text-center">
+            <div className="text-center animate-fade-in opacity-0 animation-delay-1400 transform hover:scale-110 transition-all duration-300">
               <div className="text-3xl md:text-4xl font-bold text-white">15+</div>
               <div className="text-white/80">Years Experience</div>
             </div>
-            <div className="text-center">
+            <div className="text-center animate-fade-in opacity-0 animation-delay-1600 transform hover:scale-110 transition-all duration-300">
               <div className="text-3xl md:text-4xl font-bold text-white">98%</div>
               <div className="text-white/80">Satisfaction Rate</div>
             </div>

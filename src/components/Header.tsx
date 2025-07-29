@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const Header = () => {
   return (
-    <header className="bg-background/95 backdrop-blur-md border-b border-border/50 sticky top-0 z-50">
+    <header className="bg-background/95 backdrop-blur-md border-b border-border/50 sticky top-0 z-50 animate-fade-in">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
@@ -18,10 +18,10 @@ const Header = () => {
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-foreground hover:text-primary transition-colors">Home</a>
-            <a href="#services" className="text-foreground hover:text-primary transition-colors">Services</a>
-            <a href="#about" className="text-foreground hover:text-primary transition-colors">About</a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
+            <a href="#" className="text-foreground hover:text-primary transition-all duration-300 transform hover:scale-110 hover:-translate-y-1">Home</a>
+            <a href="#services" className="text-foreground hover:text-primary transition-all duration-300 transform hover:scale-110 hover:-translate-y-1">Services</a>
+            <a href="#about" className="text-foreground hover:text-primary transition-all duration-300 transform hover:scale-110 hover:-translate-y-1">About</a>
+            <a href="#contact" className="text-foreground hover:text-primary transition-all duration-300 transform hover:scale-110 hover:-translate-y-1">Contact</a>
           </nav>
           
           <Button 

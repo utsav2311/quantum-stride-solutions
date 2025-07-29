@@ -29,8 +29,8 @@ const Services = () => {
   return (
     <section id="services" className="py-20 bg-medical-light/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Our Services</h2>
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 transform hover:scale-105 transition-all duration-300">Our Services</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Comprehensive prosthetic and orthotic care tailored to your unique needs
           </p>
@@ -38,7 +38,7 @@ const Services = () => {
         
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-card transition-all duration-300 hover:-translate-y-2 border-border/50">
+            <Card key={index} className={`group hover:shadow-card transition-all duration-500 hover:-translate-y-2 border-border/50 animate-fade-in opacity-0`} style={{animationDelay: `${index * 200 + 300}ms`}}>
               <div className="relative overflow-hidden rounded-t-lg">
                 <img 
                   src={service.image} 
