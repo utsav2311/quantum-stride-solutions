@@ -1,5 +1,8 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-medical.jpg";
+import floatingLeg from "@/assets/floating-prosthetic-leg.png";
+import floatingArm from "@/assets/floating-prosthetic-arm.png";
+import floatingBrace from "@/assets/floating-knee-brace.png";
 
 const Hero = () => {
   return (
@@ -12,6 +15,45 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-accent/90"></div>
       </div>
       
+      {/* Floating Product Images */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Prosthetic Leg - Left Side */}
+        <div className="absolute top-1/4 left-10 animate-[float_6s_ease-in-out_infinite] opacity-20 hover:opacity-40 transition-opacity duration-300">
+          <img 
+            src={floatingLeg} 
+            alt="Advanced Prosthetic Leg" 
+            className="w-32 md:w-48 transform rotate-12 animate-pulse"
+          />
+        </div>
+        
+        {/* Prosthetic Arm - Right Side */}
+        <div className="absolute top-1/3 right-10 animate-[float_8s_ease-in-out_infinite_reverse] opacity-20 hover:opacity-40 transition-opacity duration-300">
+          <img 
+            src={floatingArm} 
+            alt="Bionic Prosthetic Arm" 
+            className="w-28 md:w-40 transform -rotate-12 animate-pulse animation-delay-500"
+          />
+        </div>
+        
+        {/* Knee Brace - Bottom Left */}
+        <div className="absolute bottom-1/4 left-1/4 animate-[float_10s_ease-in-out_infinite] opacity-15 hover:opacity-35 transition-opacity duration-300">
+          <img 
+            src={floatingBrace} 
+            alt="Orthotic Knee Brace" 
+            className="w-20 md:w-32 transform rotate-6 animate-pulse animation-delay-1000"
+          />
+        </div>
+        
+        {/* Duplicate elements for better visual balance */}
+        <div className="absolute top-2/3 right-1/4 animate-[float_7s_ease-in-out_infinite] opacity-10 hover:opacity-30 transition-opacity duration-300">
+          <img 
+            src={floatingLeg} 
+            alt="Advanced Prosthetic Leg" 
+            className="w-24 md:w-36 transform -rotate-6 animate-pulse animation-delay-1500"
+          />
+        </div>
+      </div>
+
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
