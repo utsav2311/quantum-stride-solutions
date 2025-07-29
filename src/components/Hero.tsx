@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import heroImage from "@/assets/hero-medical.jpg";
-import floatingLeg from "@/assets/floating-prosthetic-leg.png";
-import floatingArm from "@/assets/floating-prosthetic-arm.png";
-import floatingBrace from "@/assets/floating-knee-brace.png";
+import slideHand from "@/assets/slide-prosthetic-hand.jpg";
+import slideFoot from "@/assets/slide-prosthetic-foot.jpg";
+import slideSpinal from "@/assets/slide-spinal-brace.jpg";
+import slideWheelchair from "@/assets/slide-wheelchair.jpg";
 
 const Hero = () => {
   return (
@@ -15,42 +18,114 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-accent/90"></div>
       </div>
       
-      {/* Floating Product Images */}
+      {/* Auto-Sliding Product Carousel */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Prosthetic Leg - Left Side */}
-        <div className="absolute top-1/4 left-10 animate-[float_6s_ease-in-out_infinite] opacity-20 hover:opacity-40 transition-opacity duration-300">
-          <img 
-            src={floatingLeg} 
-            alt="Advanced Prosthetic Leg" 
-            className="w-32 md:w-48 transform rotate-12 animate-pulse"
-          />
+        <div className="absolute top-1/4 left-10 w-32 md:w-48 h-32 md:h-48">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            plugins={[
+              Autoplay({
+                delay: 3000,
+              }),
+            ]}
+            className="w-full h-full"
+          >
+            <CarouselContent className="-ml-1">
+              <CarouselItem className="pl-1">
+                <div className="animate-[float_6s_ease-in-out_infinite] opacity-30 hover:opacity-50 transition-opacity duration-300">
+                  <img 
+                    src={slideHand} 
+                    alt="Prosthetic Hand" 
+                    className="w-full h-full object-contain transform rotate-12"
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-1">
+                <div className="animate-[float_6s_ease-in-out_infinite] opacity-30 hover:opacity-50 transition-opacity duration-300">
+                  <img 
+                    src={slideFoot} 
+                    alt="Prosthetic Foot" 
+                    className="w-full h-full object-contain transform rotate-12"
+                  />
+                </div>
+              </CarouselItem>
+            </CarouselContent>
+          </Carousel>
         </div>
         
-        {/* Prosthetic Arm - Right Side */}
-        <div className="absolute top-1/3 right-10 animate-[float_8s_ease-in-out_infinite_reverse] opacity-20 hover:opacity-40 transition-opacity duration-300">
-          <img 
-            src={floatingArm} 
-            alt="Bionic Prosthetic Arm" 
-            className="w-28 md:w-40 transform -rotate-12 animate-pulse animation-delay-500"
-          />
+        <div className="absolute top-1/3 right-10 w-28 md:w-40 h-28 md:h-40">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            plugins={[
+              Autoplay({
+                delay: 4000,
+              }),
+            ]}
+            className="w-full h-full"
+          >
+            <CarouselContent className="-ml-1">
+              <CarouselItem className="pl-1">
+                <div className="animate-[float_8s_ease-in-out_infinite_reverse] opacity-25 hover:opacity-45 transition-opacity duration-300">
+                  <img 
+                    src={slideSpinal} 
+                    alt="Spinal Brace" 
+                    className="w-full h-full object-contain transform -rotate-12"
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-1">
+                <div className="animate-[float_8s_ease-in-out_infinite_reverse] opacity-25 hover:opacity-45 transition-opacity duration-300">
+                  <img 
+                    src={slideWheelchair} 
+                    alt="Wheelchair" 
+                    className="w-full h-full object-contain transform -rotate-12"
+                  />
+                </div>
+              </CarouselItem>
+            </CarouselContent>
+          </Carousel>
         </div>
         
-        {/* Knee Brace - Bottom Left */}
-        <div className="absolute bottom-1/4 left-1/4 animate-[float_10s_ease-in-out_infinite] opacity-15 hover:opacity-35 transition-opacity duration-300">
-          <img 
-            src={floatingBrace} 
-            alt="Orthotic Knee Brace" 
-            className="w-20 md:w-32 transform rotate-6 animate-pulse animation-delay-1000"
-          />
-        </div>
-        
-        {/* Duplicate elements for better visual balance */}
-        <div className="absolute top-2/3 right-1/4 animate-[float_7s_ease-in-out_infinite] opacity-10 hover:opacity-30 transition-opacity duration-300">
-          <img 
-            src={floatingLeg} 
-            alt="Advanced Prosthetic Leg" 
-            className="w-24 md:w-36 transform -rotate-6 animate-pulse animation-delay-1500"
-          />
+        <div className="absolute bottom-1/4 left-1/4 w-20 md:w-32 h-20 md:h-32">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            plugins={[
+              Autoplay({
+                delay: 5000,
+              }),
+            ]}
+            className="w-full h-full"
+          >
+            <CarouselContent className="-ml-1">
+              <CarouselItem className="pl-1">
+                <div className="animate-[float_10s_ease-in-out_infinite] opacity-20 hover:opacity-40 transition-opacity duration-300">
+                  <img 
+                    src={slideHand} 
+                    alt="Medical Device" 
+                    className="w-full h-full object-contain transform rotate-6"
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-1">
+                <div className="animate-[float_10s_ease-in-out_infinite] opacity-20 hover:opacity-40 transition-opacity duration-300">
+                  <img 
+                    src={slideFoot} 
+                    alt="Medical Device" 
+                    className="w-full h-full object-contain transform rotate-6"
+                  />
+                </div>
+              </CarouselItem>
+            </CarouselContent>
+          </Carousel>
         </div>
       </div>
 
