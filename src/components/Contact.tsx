@@ -53,25 +53,6 @@ const Contact = () => {
           ))}
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <Card className="shadow-card border-border/50">
-            <CardHeader className="text-center">
-              <CardTitle className="text-2xl text-primary">Emergency Services</CardTitle>
-              <CardDescription>
-                We provide 24/7 emergency support for urgent prosthetic and orthotic needs
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="text-center">
-              <p className="text-muted-foreground mb-6">
-                If you're experiencing an emergency with your prosthetic or orthotic device, 
-                don't hesitate to contact us immediately. Our on-call team is available to help.
-              </p>
-              <Button variant="destructive" size="lg">
-                Emergency Contact: (555) 123-4568
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
 
         <div className="text-center mt-12">
           <p className="text-muted-foreground mb-4">
