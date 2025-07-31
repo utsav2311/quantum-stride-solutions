@@ -21,7 +21,7 @@ const Contact = () => {
     {
       icon: "✉️",
       title: "Email",
-      details: ["info@quantummedical.com", "appointments@quantummedical.com", "support@quantummedical.com"]
+      details: ["info@quantumuae.ae", "appointments@quantummedical.com", "support@quantummedical.com"]
     }
   ];
 
