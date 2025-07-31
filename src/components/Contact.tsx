@@ -6,7 +6,7 @@ const Contact = () => {
     {
       icon: "📍",
       title: "Location",
-      details: ["123 Medical Center Drive", "Healthcare Plaza, Suite 200", "Cityville, ST 12345"]
+      details: ["Al Danah", "Abu Dhabi", "United Arab Emirates"]
     },
     {
       icon: "📞",
