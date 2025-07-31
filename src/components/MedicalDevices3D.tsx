@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Text, Box, Cylinder, Sphere } from '@react-three/drei';
+import { OrbitControls } from '@react-three/drei';
 import { useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
@@ -17,29 +17,34 @@ const ProstheticLeg = ({ position }: { position: [number, number, number] }) => 
   return (
     <group ref={groupRef} position={position}>
       {/* Upper leg component */}
-      <Cylinder args={[0.15, 0.12, 1.5]} position={[0, 0.75, 0]}>
+      <mesh position={[0, 0.75, 0]}>
+        <cylinderGeometry args={[0.15, 0.12, 1.5]} />
         <meshStandardMaterial color="#2563eb" metalness={0.7} roughness={0.3} />
-      </Cylinder>
+      </mesh>
       
       {/* Knee joint */}
-      <Sphere args={[0.18]} position={[0, 0, 0]}>
+      <mesh position={[0, 0, 0]}>
+        <sphereGeometry args={[0.18]} />
         <meshStandardMaterial color="#1e40af" metalness={0.8} roughness={0.2} />
-      </Sphere>
+      </mesh>
       
       {/* Lower leg component */}
-      <Cylinder args={[0.12, 0.1, 1.2]} position={[0, -0.6, 0]}>
+      <mesh position={[0, -0.6, 0]}>
+        <cylinderGeometry args={[0.12, 0.1, 1.2]} />
         <meshStandardMaterial color="#2563eb" metalness={0.7} roughness={0.3} />
-      </Cylinder>
+      </mesh>
       
       {/* Ankle joint */}
-      <Sphere args={[0.12]} position={[0, -1.2, 0]}>
+      <mesh position={[0, -1.2, 0]}>
+        <sphereGeometry args={[0.12]} />
         <meshStandardMaterial color="#1e40af" metalness={0.8} roughness={0.2} />
-      </Sphere>
+      </mesh>
       
       {/* Foot */}
-      <Box args={[0.3, 0.15, 0.8]} position={[0, -1.35, 0.2]}>
+      <mesh position={[0, -1.35, 0.2]}>
+        <boxGeometry args={[0.3, 0.15, 0.8]} />
         <meshStandardMaterial color="#374151" metalness={0.6} roughness={0.4} />
-      </Box>
+      </mesh>
     </group>
   );
 };
@@ -57,35 +62,41 @@ const ProstheticArm = ({ position }: { position: [number, number, number] }) => 
   return (
     <group ref={groupRef} position={position}>
       {/* Upper arm */}
-      <Cylinder args={[0.1, 0.08, 1]} position={[0, 0.5, 0]}>
+      <mesh position={[0, 0.5, 0]}>
+        <cylinderGeometry args={[0.1, 0.08, 1]} />
         <meshStandardMaterial color="#059669" metalness={0.7} roughness={0.3} />
-      </Cylinder>
+      </mesh>
       
       {/* Elbow joint */}
-      <Sphere args={[0.12]} position={[0, 0, 0]}>
+      <mesh position={[0, 0, 0]}>
+        <sphereGeometry args={[0.12]} />
         <meshStandardMaterial color="#047857" metalness={0.8} roughness={0.2} />
-      </Sphere>
+      </mesh>
       
       {/* Forearm */}
-      <Cylinder args={[0.08, 0.06, 0.8]} position={[0, -0.4, 0]}>
+      <mesh position={[0, -0.4, 0]}>
+        <cylinderGeometry args={[0.08, 0.06, 0.8]} />
         <meshStandardMaterial color="#059669" metalness={0.7} roughness={0.3} />
-      </Cylinder>
+      </mesh>
       
       {/* Wrist joint */}
-      <Sphere args={[0.08]} position={[0, -0.8, 0]}>
+      <mesh position={[0, -0.8, 0]}>
+        <sphereGeometry args={[0.08]} />
         <meshStandardMaterial color="#047857" metalness={0.8} roughness={0.2} />
-      </Sphere>
+      </mesh>
       
       {/* Hand */}
-      <Box args={[0.15, 0.08, 0.25]} position={[0, -0.95, 0]}>
+      <mesh position={[0, -0.95, 0]}>
+        <boxGeometry args={[0.15, 0.08, 0.25]} />
         <meshStandardMaterial color="#374151" metalness={0.6} roughness={0.4} />
-      </Box>
+      </mesh>
       
       {/* Fingers */}
       {[-0.06, -0.02, 0.02, 0.06].map((x, i) => (
-        <Box key={i} args={[0.02, 0.04, 0.15]} position={[x, -0.95, 0.12]}>
+        <mesh key={i} position={[x, -0.95, 0.12]}>
+          <boxGeometry args={[0.02, 0.04, 0.15]} />
           <meshStandardMaterial color="#374151" metalness={0.6} roughness={0.4} />
-        </Box>
+        </mesh>
       ))}
     </group>
   );
@@ -104,22 +115,25 @@ const OrthoticBrace = ({ position }: { position: [number, number, number] }) => 
   return (
     <group ref={groupRef} position={position}>
       {/* Main brace structure */}
-      <Cylinder args={[0.08, 0.08, 1.8]} position={[0, 0, 0]}>
+      <mesh position={[0, 0, 0]}>
+        <cylinderGeometry args={[0.08, 0.08, 1.8]} />
         <meshStandardMaterial color="#7c3aed" metalness={0.5} roughness={0.5} />
-      </Cylinder>
+      </mesh>
       
       {/* Support straps */}
       {[-0.6, -0.2, 0.2, 0.6].map((y, i) => (
-        <Box key={i} args={[0.4, 0.05, 0.02]} position={[0, y, 0.1]}>
+        <mesh key={i} position={[0, y, 0.1]}>
+          <boxGeometry args={[0.4, 0.05, 0.02]} />
           <meshStandardMaterial color="#5b21b6" metalness={0.3} roughness={0.7} />
-        </Box>
+        </mesh>
       ))}
       
       {/* Adjustment mechanisms */}
       {[-0.4, 0, 0.4].map((y, i) => (
-        <Sphere key={i} args={[0.04]} position={[0.12, y, 0]}>
+        <mesh key={i} position={[0.12, y, 0]}>
+          <sphereGeometry args={[0.04]} />
           <meshStandardMaterial color="#4c1d95" metalness={0.8} roughness={0.2} />
-        </Sphere>
+        </mesh>
       ))}
     </group>
   );
