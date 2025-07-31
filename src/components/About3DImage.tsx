@@ -30,7 +30,7 @@ const FloatingImage = () => {
             }}
           >
             <img
-              src="/lovable-uploads/8a84e587-4e0c-45ab-9606-0873ee3b259f.png"
+              src="/lovable-uploads/39f0f388-5eaa-41bd-beee-97c71c8407ed.png"
               alt="Prosthetic runner"
               style={{
                 width: '100%',
