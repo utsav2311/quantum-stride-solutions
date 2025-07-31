@@ -7,22 +7,34 @@ import consultation from "@/assets/consultation-service.jpg";
 const Services = () => {
   const services = [
     {
-      title: "Custom Prosthetics",
-      description: "State-of-the-art prosthetic limbs designed for optimal function and comfort. Using advanced materials and precision engineering.",
+      title: "Lower Limb Prosthetics",
+      description: "Advanced below-knee and above-knee prosthetic solutions with microprocessor-controlled components for natural movement.",
       image: prosthetics,
-      features: ["3D Printing Technology", "Lightweight Materials", "Custom Fitting", "Ongoing Support"]
+      features: ["Below-knee prosthetics", "Above-knee prosthetics", "Microprocessor knees", "Sports prosthetics"]
     },
     {
-      title: "Orthotic Solutions",
-      description: "Comprehensive orthotic devices to support, align, and improve the function of movable parts of the body.",
+      title: "Upper Limb Prosthetics",
+      description: "Innovative arm and hand prosthetics including myoelectric devices for precise control and functionality.",
+      image: prosthetics,
+      features: ["Myoelectric arms", "Body-powered prosthetics", "Partial hand prosthetics", "Activity-specific devices"]
+    },
+    {
+      title: "Custom Orthotics",
+      description: "Personalized orthotic devices to support, align, and improve function of movable parts of the body.",
       image: orthotics,
-      features: ["Custom Braces", "Foot Orthotics", "Spinal Support", "Sports Orthotics"]
+      features: ["Spinal orthotics", "Lower limb braces", "Upper limb supports", "Pediatric orthotics"]
     },
     {
-      title: "Expert Consultation",
-      description: "Professional assessment and personalized treatment planning with our certified prosthetists and orthotists.",
+      title: "Repair & Maintenance",
+      description: "Comprehensive repair services and regular maintenance to ensure optimal performance of your devices.",
       image: consultation,
-      features: ["Initial Assessment", "Treatment Planning", "Progress Monitoring", "Adjustments & Repairs"]
+      features: ["Emergency repairs", "Routine maintenance", "Component upgrades", "Warranty services"]
+    },
+    {
+      title: "Medical Equipments",
+      description: "Wholesale Trading of Medical Equipment. Medical and Laboratories Equipments and Apparatuses Installation, Maintenance and Repairing.",
+      image: consultation,
+      features: ["Medical equipment trading", "Laboratory equipment", "Installation services", "Expert repair services"]
     }
   ];
 
@@ -36,7 +48,7 @@ const Services = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
           {services.map((service, index) => (
             <Card key={index} className={`group hover:shadow-card transition-all duration-500 hover:-translate-y-2 border-border/50 animate-fade-in opacity-0`} style={{animationDelay: `${index * 200 + 300}ms`}}>
               <div className="relative overflow-hidden rounded-t-lg">
