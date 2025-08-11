@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import prosthetics from "@/assets/prosthetics-service.jpg";
+import prostheticProfessional from "@/assets/prosthetic-professional.jpg";
 import orthotics from "@/assets/orthotics-service.jpg";
 import consultation from "@/assets/consultation-service.jpg";
 
@@ -15,7 +16,7 @@ const Services = () => {
     {
       title: "Upper Limb Prosthetics",
       description: "Innovative arm and hand prosthetics including myoelectric devices for precise control and functionality.",
-      image: prosthetics,
+      image: prostheticProfessional,
       features: ["Myoelectric arms", "Body-powered prosthetics", "Partial hand prosthetics", "Activity-specific devices"]
     },
     {
