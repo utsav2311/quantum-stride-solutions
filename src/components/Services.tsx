@@ -10,7 +10,7 @@ const Services = () => {
     {
       title: "Lower Limb Prosthetics",
       description: "Advanced below-knee and above-knee prosthetic solutions with microprocessor-controlled components for natural movement.",
-      image: prosthetics,
+      image: "/lovable-uploads/2ffe22c2-3a59-4bd1-bcc7-6858ceb7c5c3.png",
       features: ["Below-knee prosthetics", "Above-knee prosthetics", "Microprocessor knees", "Sports prosthetics"]
     },
     {
