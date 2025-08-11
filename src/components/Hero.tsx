@@ -13,9 +13,9 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in opacity-0 animation-delay-300">
-            Advanced <span className="text-accent animate-pulse">Prosthetics</span>
+            Advanced <span className="animate-pulse text-red-300">Prosthetics</span>
             <br />
-            & <span className="text-accent animate-pulse animation-delay-500">Orthotics</span> Care
+            & <span className="animate-pulse animation-delay-500 text-red-300">Orthotics</span> Care
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-in opacity-0 animation-delay-700">Empowering mobility and independence through cutting-edge prosthetic and orthotic devices. Our expert team provides personalized care and innovative solutions for enhanced quality of life.</p>
