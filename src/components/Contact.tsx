@@ -11,7 +11,7 @@ const Contact = () => {
     {
       icon: "📞",
       title: "Phone",
-      details: ["Main: (555) 123-4567", "Emergency: (555) 123-4568", "Fax: (555) 123-4569"]
+      details: ["+971 558488759"]
     },
     {
       icon: "⏰",
