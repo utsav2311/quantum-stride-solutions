@@ -4,9 +4,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">Q</span>
-              </div>
+              <img 
+                src="/lovable-uploads/e5a83eab-625b-4d9c-803e-cd8d42658144.png" 
+                alt="Quantum Medical Logo" 
+                className="w-8 h-8"
+              />
               <div>
                 <h3 className="text-xl font-bold">Quantum Medical</h3>
                 <p className="text-xs text-primary-foreground/80">Prosthetics & Orthotics</p>
