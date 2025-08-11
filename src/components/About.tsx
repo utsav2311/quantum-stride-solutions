@@ -1,5 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card";
-import About3DImage from "./About3DImage";
 
 const About = () => {
   const features = [
@@ -51,11 +50,6 @@ const About = () => {
               </Card>
             ))}
           </div>
-        </div>
-        
-        {/* 3D Animated Image Section */}
-        <div className="mt-20 animate-fade-in" style={{animationDelay: '800ms'}}>
-          <About3DImage />
         </div>
       </div>
     </section>
