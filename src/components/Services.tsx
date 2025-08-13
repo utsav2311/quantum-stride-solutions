@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import prosthetics from "@/assets/prosthetics-service.jpg";
 import prostheticProfessional from "@/assets/prosthetic-professional.jpg";
 import orthotics from "@/assets/orthotics-service.jpg";
@@ -11,31 +12,36 @@ const Services = () => {
       title: "Lower Limb Prosthetics",
       description: "Advanced below-knee and above-knee prosthetic solutions with microprocessor-controlled components for natural movement.",
       image: "/lovable-uploads/2ffe22c2-3a59-4bd1-bcc7-6858ceb7c5c3.png",
-      features: ["Below-knee prosthetics", "Above-knee prosthetics", "Microprocessor knees", "Sports prosthetics"]
+      features: ["Below-knee prosthetics", "Above-knee prosthetics", "Microprocessor knees", "Sports prosthetics"],
+      link: "/services/lower-limb-prosthetics"
     },
     {
       title: "Upper Limb Prosthetics",
       description: "Innovative arm and hand prosthetics including myoelectric devices for precise control and functionality.",
       image: "/lovable-uploads/c6c4c140-87fd-44cb-b595-e9333b4a947b.png",
-      features: ["Myoelectric arms", "Body-powered prosthetics", "Partial hand prosthetics", "Activity-specific devices"]
+      features: ["Myoelectric arms", "Body-powered prosthetics", "Partial hand prosthetics", "Activity-specific devices"],
+      link: "/services/upper-limb-prosthetics"
     },
     {
       title: "Custom Orthotics",
       description: "Personalized orthotic devices to support, align, and improve function of movable parts of the body.",
       image: orthotics,
-      features: ["Spinal orthotics", "Lower limb braces", "Upper limb supports", "Pediatric orthotics"]
+      features: ["Spinal orthotics", "Lower limb braces", "Upper limb supports", "Pediatric orthotics"],
+      link: "/services/custom-orthotics"
     },
     {
       title: "Repair & Maintenance",
       description: "Comprehensive repair services and regular maintenance to ensure optimal performance of your devices.",
       image: consultation,
-      features: ["Emergency repairs", "Routine maintenance", "Component upgrades", "Warranty services"]
+      features: ["Emergency repairs", "Routine maintenance", "Component upgrades", "Warranty services"],
+      link: "/services/repair-maintenance"
     },
     {
       title: "Medical Equipments",
       description: "Wholesale Trading of Medical Equipment. Medical and Laboratories Equipments and Apparatuses Installation, Maintenance and Repairing.",
       image: consultation,
-      features: ["Medical equipment trading", "Laboratory equipment", "Installation services", "Expert repair services"]
+      features: ["Medical equipment trading", "Laboratory equipment", "Installation services", "Expert repair services"],
+      link: "/services/medical-equipments"
     }
   ];
 
@@ -77,6 +83,9 @@ const Services = () => {
                   ))}
                 </ul>
                 
+                <Link to={service.link}>
+                  <Button className="w-full">Learn More</Button>
+                </Link>
               </CardContent>
             </Card>
           ))}
