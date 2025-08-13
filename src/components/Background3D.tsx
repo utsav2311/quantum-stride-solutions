@@ -1,6 +1,6 @@
 import React, { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Float, Sphere, Box, Torus } from '@react-three/drei';
+import { Float } from '@react-three/drei';
 import * as THREE from 'three';
 
 const FloatingShape = ({ position, shape, color, speed }: {
@@ -18,18 +18,16 @@ const FloatingShape = ({ position, shape, color, speed }: {
     }
   });
 
-  const ShapeComponent = () => {
-    const material = <meshPhongMaterial color={color} transparent opacity={0.3} />;
-    
+  const getGeometry = () => {
     switch (shape) {
       case 'sphere':
-        return <Sphere ref={meshRef} args={[0.5]}>{material}</Sphere>;
+        return <sphereGeometry args={[0.5, 32, 32]} />;
       case 'box':
-        return <Box ref={meshRef} args={[0.8, 0.8, 0.8]}>{material}</Box>;
+        return <boxGeometry args={[0.8, 0.8, 0.8]} />;
       case 'torus':
-        return <Torus ref={meshRef} args={[0.6, 0.2, 16, 32]}>{material}</Torus>;
+        return <torusGeometry args={[0.6, 0.2, 16, 32]} />;
       default:
-        return <Sphere ref={meshRef} args={[0.5]}>{material}</Sphere>;
+        return <sphereGeometry args={[0.5, 32, 32]} />;
     }
   };
 
@@ -40,7 +38,10 @@ const FloatingShape = ({ position, shape, color, speed }: {
       rotationIntensity={0.5}
       floatIntensity={1}
     >
-      <ShapeComponent />
+      <mesh ref={meshRef}>
+        {getGeometry()}
+        <meshPhongMaterial color={color} transparent opacity={0.3} />
+      </mesh>
     </Float>
   );
 };
