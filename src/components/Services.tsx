@@ -16,7 +16,7 @@ const Services = () => {
     {
       title: "Upper Limb Prosthetics",
       description: "Innovative arm and hand prosthetics including myoelectric devices for precise control and functionality.",
-      image: prostheticProfessional,
+      image: "/lovable-uploads/c6c4c140-87fd-44cb-b595-e9333b4a947b.png",
       features: ["Myoelectric arms", "Body-powered prosthetics", "Partial hand prosthetics", "Activity-specific devices"]
     },
     {
