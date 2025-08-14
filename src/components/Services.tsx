@@ -6,13 +6,14 @@ import prostheticProfessional from "@/assets/prosthetic-professional.jpg";
 import orthotics from "@/assets/orthotics-service.jpg";
 import consultation from "@/assets/consultation-service.jpg";
 import repairMaintenance from "@/assets/repair-maintenance-service.jpg";
+import lowerLimbProsthetics from "@/assets/lower-limb-prosthetics.jpg";
 
 const Services = () => {
   const services = [
     {
       title: "Lower Limb Prosthetics",
       description: "Advanced below-knee and above-knee prosthetic solutions with microprocessor-controlled components for natural movement.",
-      image: "/lovable-uploads/2ffe22c2-3a59-4bd1-bcc7-6858ceb7c5c3.png",
+      image: lowerLimbProsthetics,
       features: ["Below-knee prosthetics", "Above-knee prosthetics", "Microprocessor knees", "Sports prosthetics"],
       link: "/services/lower-limb-prosthetics"
     },
