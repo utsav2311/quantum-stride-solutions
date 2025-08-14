@@ -8,6 +8,7 @@ import consultation from "@/assets/consultation-service.jpg";
 import repairMaintenance from "@/assets/repair-maintenance-service.jpg";
 import lowerLimbProsthetics from "@/assets/lower-limb-prosthetics.jpg";
 import upperLimbProsthetics from "@/assets/upper-limb-prosthetics.jpg";
+import customOrthotics from "@/assets/custom-orthotics-service.jpg";
 
 const Services = () => {
   const services = [
@@ -28,7 +29,7 @@ const Services = () => {
     {
       title: "Custom Orthotics",
       description: "Personalized orthotic devices to support, align, and improve function of movable parts of the body.",
-      image: orthotics,
+      image: customOrthotics,
       features: ["Spinal orthotics", "Lower limb braces", "Upper limb supports", "Pediatric orthotics"],
       link: "/services/custom-orthotics"
     },
