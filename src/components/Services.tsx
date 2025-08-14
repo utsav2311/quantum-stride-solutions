@@ -7,6 +7,7 @@ import orthotics from "@/assets/orthotics-service.jpg";
 import consultation from "@/assets/consultation-service.jpg";
 import repairMaintenance from "@/assets/repair-maintenance-service.jpg";
 import lowerLimbProsthetics from "@/assets/lower-limb-prosthetics.jpg";
+import upperLimbProsthetics from "@/assets/upper-limb-prosthetics.jpg";
 
 const Services = () => {
   const services = [
@@ -20,7 +21,7 @@ const Services = () => {
     {
       title: "Upper Limb Prosthetics",
       description: "Innovative arm and hand prosthetics including myoelectric devices for precise control and functionality.",
-      image: "/lovable-uploads/c6c4c140-87fd-44cb-b595-e9333b4a947b.png",
+      image: upperLimbProsthetics,
       features: ["Myoelectric arms", "Body-powered prosthetics", "Partial hand prosthetics", "Activity-specific devices"],
       link: "/services/upper-limb-prosthetics"
     },
