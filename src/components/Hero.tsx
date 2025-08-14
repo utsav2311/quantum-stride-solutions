@@ -35,16 +35,16 @@ const Hero = () => {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 mt-16 max-w-2xl mx-auto">
             <div className="text-center animate-fade-in opacity-0 animation-delay-1200 transform hover:scale-110 transition-all duration-300">
-              <div className="text-3xl md:text-4xl font-bold text-white">500+</div>
-              <div className="text-white/80">Patients Served</div>
+              
+              
             </div>
             <div className="text-center animate-fade-in opacity-0 animation-delay-1400 transform hover:scale-110 transition-all duration-300">
-              <div className="text-3xl md:text-4xl font-bold text-white">15+</div>
-              <div className="text-white/80">Years Experience</div>
+              
+              
             </div>
             <div className="text-center animate-fade-in opacity-0 animation-delay-1600 transform hover:scale-110 transition-all duration-300">
-              <div className="text-3xl md:text-4xl font-bold text-white">98%</div>
-              <div className="text-white/80">Satisfaction Rate</div>
+              
+              
             </div>
           </div>
         </div>
@@ -52,9 +52,7 @@ const Hero = () => {
       
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60 animate-bounce">
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-        </svg>
+        
       </div>
     </section>;
 };
