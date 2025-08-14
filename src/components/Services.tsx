@@ -5,6 +5,7 @@ import prosthetics from "@/assets/prosthetics-service.jpg";
 import prostheticProfessional from "@/assets/prosthetic-professional.jpg";
 import orthotics from "@/assets/orthotics-service.jpg";
 import consultation from "@/assets/consultation-service.jpg";
+import repairMaintenance from "@/assets/repair-maintenance-service.jpg";
 
 const Services = () => {
   const services = [
@@ -32,7 +33,7 @@ const Services = () => {
     {
       title: "Repair & Maintenance",
       description: "Comprehensive repair services and regular maintenance to ensure optimal performance of your devices.",
-      image: consultation,
+      image: repairMaintenance,
       features: ["Emergency repairs", "Routine maintenance", "Component upgrades", "Warranty services"],
       link: "/services/repair-maintenance"
     },
