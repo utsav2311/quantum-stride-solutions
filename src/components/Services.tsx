@@ -9,6 +9,7 @@ import repairMaintenance from "@/assets/repair-maintenance-service.jpg";
 import lowerLimbProsthetics from "@/assets/lower-limb-prosthetics.jpg";
 import upperLimbProsthetics from "@/assets/upper-limb-prosthetics.jpg";
 import customOrthotics from "@/assets/custom-orthotics-service.jpg";
+import researchBackground from "@/assets/research-background.jpg";
 
 const Services = () => {
   const services = [
@@ -51,6 +52,12 @@ const Services = () => {
 
   return (
     <section id="services" className="py-20 bg-medical-light/30 relative overflow-hidden">
+      {/* Research Background Overlay */}
+      <div className="absolute inset-0 opacity-3">
+        <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: `url(${researchBackground})`}}></div>
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background/98 to-background/95"></div>
+      
       {/* Floating Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-32 h-32 bg-primary/5 rounded-full animate-pulse" style={{animationDelay: '0s', animationDuration: '4s'}}></div>
@@ -58,7 +65,7 @@ const Services = () => {
         <div className="absolute bottom-20 left-1/3 w-20 h-20 bg-primary/3 rounded-full animate-pulse" style={{animationDelay: '1s', animationDuration: '5s'}}></div>
       </div>
       
-      <div className="container mx-auto px-4 relative">
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 transform hover:scale-105 transition-all duration-300">Our Services</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">

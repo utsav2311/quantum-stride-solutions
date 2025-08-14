@@ -1,4 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
+import workshopBackground from "@/assets/workshop-background.jpg";
+import rehabilitationBackground from "@/assets/rehabilitation-background.jpg";
 
 const About = () => {
   const features = [
@@ -20,8 +22,15 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="about" className="py-20 bg-background relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-0 left-0 w-1/2 h-full bg-cover bg-center" style={{backgroundImage: `url(${workshopBackground})`}}></div>
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-cover bg-center" style={{backgroundImage: `url(${rehabilitationBackground})`}}></div>
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 transform hover:scale-105 transition-all duration-300">
@@ -34,6 +43,14 @@ const About = () => {
               solutions. Our state-of-the-art facility combines traditional 
               craftsmanship with cutting-edge technology.
             </p>
+            
+            {/* Additional background image for credibility */}
+            <div className="relative p-6 bg-card/50 backdrop-blur-sm rounded-lg border border-border/20 mb-6">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg"></div>
+              <p className="relative text-muted-foreground italic">
+                "Our commitment to excellence ensures every patient receives personalized care and the most advanced prosthetic and orthotic solutions available."
+              </p>
+            </div>
 
           </div>
           

@@ -1,12 +1,15 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-medical.jpg";
+import clinicBackground from "@/assets/clinic-background.jpg";
 const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image with Multiple Layers */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: `url(${heroImage})`
+      backgroundImage: `url(${clinicBackground})`
     }}>
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-accent/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-accent/90"></div>
+        {/* Additional overlay for depth */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/20 to-primary/40"></div>
       </div>
       
       {/* Content */}
