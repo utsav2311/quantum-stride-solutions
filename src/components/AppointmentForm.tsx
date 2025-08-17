@@ -59,26 +59,37 @@ const AppointmentForm = () => {
   };
 
   return (
-    <section id="appointment" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="appointment" className="py-20 bg-background relative overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-10 right-10 w-40 h-40 bg-primary/5 rounded-full animate-float"></div>
+        <div className="absolute bottom-20 left-10 w-32 h-32 bg-accent/5 rounded-full animate-float animation-delay-1000"></div>
+        <div className="absolute top-1/2 right-1/4 w-20 h-20 bg-primary/3 rounded-full animate-float animation-delay-500"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Book Your Appointment</h2>
-            <p className="text-xl text-muted-foreground">
+          <div className="text-center mb-12 animate-fade-in opacity-0">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 hover-scale">Book Your Appointment</h2>
+            <p className="text-xl text-muted-foreground animate-slide-up opacity-0 animation-delay-300">
               Take the first step towards better mobility and independence
             </p>
+            <div className="mt-6 w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full animate-scale-in opacity-0 animation-delay-500"></div>
           </div>
 
-          <Card className="shadow-card border-border/50">
-            <CardHeader>
+          <Card className="shadow-card border-border/50 hover-lift animate-scale-in opacity-0 animation-delay-700 relative overflow-hidden group">
+            {/* Card glow effect */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            
+            <CardHeader className="relative z-10">
               <CardTitle className="text-2xl text-primary">Schedule a Consultation</CardTitle>
               <CardDescription>
                 Fill out the form below and we'll contact you to confirm your appointment
               </CardDescription>
             </CardHeader>
             
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
+            <CardContent className="relative z-10">
+              <form onSubmit={handleSubmit} className="space-y-6 stagger-animation">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="firstName">First Name *</Label>
@@ -183,8 +194,9 @@ const AppointmentForm = () => {
                   />
                 </div>
 
-                <Button type="submit" variant="medical" size="lg" className="w-full">
-                  Submit Appointment Request
+                <Button type="submit" variant="medical" size="lg" className="w-full hover-lift hover:animate-glow transition-all duration-300 relative overflow-hidden group">
+                  <span className="relative z-10">Submit Appointment Request</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </Button>
               </form>
             </CardContent>

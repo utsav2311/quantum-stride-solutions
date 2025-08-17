@@ -133,46 +133,109 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
+  /* Animation Classes */
   .animate-fade-in {
     animation: fade-in 0.8s ease-out forwards;
   }
   
-  .animation-delay-300 {
-    animation-delay: 300ms;
+  .animate-slide-up {
+    animation: slide-up 0.6s ease-out forwards;
   }
   
-  .animation-delay-500 {
-    animation-delay: 500ms;
+  .animate-slide-left {
+    animation: slide-left 0.6s ease-out forwards;
   }
   
-  .animation-delay-700 {
-    animation-delay: 700ms;
+  .animate-slide-right {
+    animation: slide-right 0.6s ease-out forwards;
   }
   
-  .animation-delay-1000 {
-    animation-delay: 1000ms;
+  .animate-scale-in {
+    animation: scale-in 0.5s ease-out forwards;
   }
   
-  .animation-delay-1200 {
-    animation-delay: 1200ms;
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
   }
   
-  .animation-delay-1400 {
-    animation-delay: 1400ms;
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
   }
   
-  .animation-delay-1600 {
-    animation-delay: 1600ms;
+  .animate-bounce-slow {
+    animation: bounce-slow 3s ease-in-out infinite;
   }
   
-  .animation-delay-1500 {
-    animation-delay: 1500ms;
+  .animate-rotate-slow {
+    animation: rotate-slow 10s linear infinite;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse-slow 3s ease-in-out infinite;
   }
 
+  /* Animation Delays */
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+  .animation-delay-600 { animation-delay: 600ms; }
+  .animation-delay-700 { animation-delay: 700ms; }
+  .animation-delay-800 { animation-delay: 800ms; }
+  .animation-delay-900 { animation-delay: 900ms; }
+  .animation-delay-1000 { animation-delay: 1000ms; }
+  .animation-delay-1100 { animation-delay: 1100ms; }
+  .animation-delay-1200 { animation-delay: 1200ms; }
+  .animation-delay-1300 { animation-delay: 1300ms; }
+  .animation-delay-1400 { animation-delay: 1400ms; }
+  .animation-delay-1500 { animation-delay: 1500ms; }
+  .animation-delay-1600 { animation-delay: 1600ms; }
+  .animation-delay-1700 { animation-delay: 1700ms; }
+  .animation-delay-1800 { animation-delay: 1800ms; }
+  
+  /* Hover Effects */
+  .hover-lift {
+    transition: all 0.3s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -12px hsl(var(--primary) / 0.25);
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 30px hsl(var(--primary) / 0.5);
+  }
+  
+  .hover-scale {
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+
+  /* Stagger Animation Classes */
+  .stagger-animation > * {
+    opacity: 0;
+    animation: fade-in 0.6s ease-out forwards;
+  }
+  
+  .stagger-animation > *:nth-child(1) { animation-delay: 100ms; }
+  .stagger-animation > *:nth-child(2) { animation-delay: 200ms; }
+  .stagger-animation > *:nth-child(3) { animation-delay: 300ms; }
+  .stagger-animation > *:nth-child(4) { animation-delay: 400ms; }
+  .stagger-animation > *:nth-child(5) { animation-delay: 500ms; }
+  .stagger-animation > *:nth-child(6) { animation-delay: 600ms; }
+  .stagger-animation > *:nth-child(7) { animation-delay: 700ms; }
+  .stagger-animation > *:nth-child(8) { animation-delay: 800ms; }
+
+  /* Keyframe Animations */
   @keyframes fade-in {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(30px);
     }
     to {
       opacity: 1;
@@ -180,31 +243,109 @@ All colors MUST be HSL.
     }
   }
   
-  @keyframes pulse {
-    0%, 100% {
-      opacity: 1;
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
     }
-    50% {
-      opacity: 0.7;
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slide-left {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slide-right {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
     }
   }
   
   @keyframes float {
     0%, 100% { 
       transform: translateY(0px) rotate(0deg);
-      opacity: 0.8;
     }
     25% { 
       transform: translateY(-20px) rotate(2deg);
-      opacity: 1;
     }
     50% { 
       transform: translateY(-15px) rotate(-1deg);
-      opacity: 0.9;
     }
     75% { 
       transform: translateY(-25px) rotate(1deg);
+    }
+  }
+  
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.5);
+    }
+    to {
+      box-shadow: 0 0 40px hsl(var(--primary) / 0.8), 0 0 60px hsl(var(--accent) / 0.3);
+    }
+  }
+  
+  @keyframes bounce-slow {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes rotate-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes pulse-slow {
+    0%, 100% {
       opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: -200px 0;
+    }
+    100% {
+      background-position: calc(200px + 100%) 0;
     }
   }
 }
