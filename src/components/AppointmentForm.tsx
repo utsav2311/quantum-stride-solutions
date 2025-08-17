@@ -194,9 +194,8 @@ const AppointmentForm = () => {
                   />
                 </div>
 
-                <Button type="submit" variant="medical" size="lg" className="w-full hover-lift hover:animate-glow transition-all duration-300 relative overflow-hidden group">
-                  <span className="relative z-10">Submit Appointment Request</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <Button type="submit" variant="medical" size="lg" className="w-full">
+                  Submit Appointment Request
                 </Button>
               </form>
             </CardContent>
