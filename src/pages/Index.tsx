@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
+import HeroCarousel from "@/components/HeroCarousel";
 import Services from "@/components/Services";
 import MedicalDevices3D from "@/components/MedicalDevices3D";
 import About from "@/components/About";
@@ -13,7 +13,7 @@ const Index = () => {
     <div className="min-h-screen relative">
       <Background3D />
       <Header />
-      <Hero />
+      <HeroCarousel />
       <Services />
       <MedicalDevices3D />
       <About />
