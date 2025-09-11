@@ -77,8 +77,8 @@ const HeroCarousel = () => {
               
               <div className="relative z-10 h-full flex items-center justify-center">
                 <div className="container mx-auto px-4 text-center">
-                  <div className="max-w-4xl mx-auto">
-                    <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in">
+                  <div className="max-w-6xl mx-auto">
+                    <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-8 leading-tight animate-fade-in">
                       {slide.title.split(' ').map((word, i) => (
                         <span key={i} className={i === 1 || i === 2 ? "text-accent-foreground bg-accent/20 px-2 rounded" : ""}>
                           {word}{' '}
@@ -86,7 +86,7 @@ const HeroCarousel = () => {
                       ))}
                     </h1>
                     
-                    <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed animate-slide-up">
+                    <p className="text-2xl md:text-3xl lg:text-4xl text-white/90 mb-10 max-w-4xl mx-auto leading-relaxed animate-slide-up">
                       {slide.subtitle}
                     </p>
                     
