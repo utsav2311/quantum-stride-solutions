@@ -76,25 +76,25 @@ const HeroCarousel = () => {
               </div>
               
               <div className="relative z-10 h-full flex items-center justify-center px-8">
-                <div className="w-full max-w-full text-center">
+                <div className="w-full max-w-7xl mx-auto text-center">
                   <div className="w-full">
-                    <h1 className="text-7xl md:text-9xl lg:text-[12rem] xl:text-[14rem] font-bold text-white mb-12 leading-tight animate-fade-in">
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-8 leading-tight animate-fade-in font-playfair">
                       {slide.title.split(' ').map((word, i) => (
-                        <span key={i} className={i === 1 || i === 2 ? "text-accent-foreground bg-accent/20 px-4 rounded" : ""}>
+                        <span key={i} className={i === 1 || i === 2 ? "text-accent-foreground bg-accent/20 px-3 rounded-lg" : ""}>
                           {word}{' '}
                         </span>
                       ))}
                     </h1>
                     
-                    <p className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-white/90 mb-16 w-full leading-relaxed animate-slide-up">
+                    <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed animate-slide-up font-light">
                       {slide.subtitle}
                     </p>
                     
                     <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-scale-in">
-                      <Button variant="appointment" size="lg" className="hover-lift transition-all duration-300 text-xl px-8 py-4">
+                      <Button variant="appointment" size="lg" className="hover-lift transition-all duration-300 text-lg px-8 py-4">
                         {slide.cta}
                       </Button>
-                      <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 hover-lift transition-all duration-300 text-xl px-8 py-4">
+                      <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 hover-lift transition-all duration-300 text-lg px-8 py-4">
                         View Portfolio
                       </Button>
                     </div>
