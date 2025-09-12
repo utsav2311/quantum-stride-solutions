@@ -51,7 +51,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-medical-light/30 relative overflow-hidden">
+    <section id="services" className="py-24 md:py-32 bg-medical-light/30 relative overflow-hidden">
       {/* Research Background Overlay */}
       <div className="absolute inset-0 opacity-3">
         <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: `url(${researchBackground})`}}></div>
@@ -65,16 +65,16 @@ const Services = () => {
         <div className="absolute bottom-20 left-1/3 w-20 h-20 bg-primary/3 rounded-full animate-pulse" style={{animationDelay: '1s', animationDuration: '5s'}}></div>
       </div>
       
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 transform hover:scale-105 transition-all duration-300">Our Services</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+      <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
+        <div className="text-center mb-20 md:mb-24 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 transform hover:scale-105 transition-all duration-300">Our Services</h2>
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Comprehensive prosthetic and orthotic care tailored to your unique needs
           </p>
-          <div className="mt-8 w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full animate-fade-in" style={{animationDelay: '500ms'}}></div>
+          <div className="mt-10 w-32 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full animate-fade-in" style={{animationDelay: '500ms'}}></div>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12 max-w-7xl mx-auto">
           {services.map((service, index) => (
             <Card key={index} className={`group hover:shadow-card transition-all duration-700 hover:-translate-y-3 border-border/50 animate-fade-in opacity-0 relative overflow-hidden hover:shadow-2xl hover:shadow-primary/10`} style={{animationDelay: `${index * 150 + 400}ms`}}>
               {/* Card Glow Effect */}
