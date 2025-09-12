@@ -61,7 +61,7 @@ const HeroCarousel = () => {
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/10 to-primary/30"></div>
               </div>
               
-              <div className="relative z-10 h-full flex items-center justify-center px-6 lg:px-12 xl:px-16 2xl:px-20 py-8 lg:py-16 xl:py-20 md:px-10 md:py-12">
+              <div className="relative z-10 h-full flex items-center justify-center px-8 lg:px-20 xl:px-28 2xl:px-32 py-12 lg:py-24 xl:py-32 md:px-16 md:py-20">
                 <div className="w-full max-w-7xl mx-auto text-center">
                   <div className="w-full">
                     <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-8 leading-tight animate-fade-in font-playfair">
