@@ -50,7 +50,7 @@ const HeroCarousel = () => {
   const scrollNext = useCallback(() => {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
-  return <section className="relative h-screen overflow-hidden">
+  return <section className="relative h-[85vh] overflow-hidden">
       <div className="embla" ref={emblaRef}>
         <div className="embla__container flex">
           {slides.map((slide, index) => <div key={index} className="embla__slide flex-none w-full relative">
