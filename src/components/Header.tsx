@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -18,10 +19,10 @@ const Header = () => {
           </div>
           
           <nav className="hidden md:flex items-center space-x-8 stagger-animation">
-            <a href="#" className="text-foreground hover:text-primary transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">Home</a>
-            <a href="#services" className="text-foreground hover:text-primary transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">Services</a>
-            <a href="#about" className="text-foreground hover:text-primary transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">About</a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">Contact</a>
+            <Link to="/" className="text-foreground hover:text-primary transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">Home</Link>
+            <Link to="/services" className="text-foreground hover:text-primary transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">Services</Link>
+            <Link to="/about" className="text-foreground hover:text-primary transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">About</Link>
+            <Link to="/contact" className="text-foreground hover:text-primary transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">Contact</Link>
           </nav>
           
           <Button 
