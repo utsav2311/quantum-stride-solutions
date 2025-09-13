@@ -4,116 +4,80 @@ import Background3D from "@/components/Background3D";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Award, 
-  Users, 
-  Heart, 
-  Target, 
-  Lightbulb, 
-  Shield,
-  Globe,
-  Calendar,
-  CheckCircle,
-  Star
-} from "lucide-react";
+import { Award, Users, Heart, Target, Lightbulb, Shield, Globe, Calendar, CheckCircle, Star } from "lucide-react";
 
 // Import images
 import prostheticProfessional from "@/assets/prosthetic-professional.jpg";
 import researchBackground from "@/assets/research-background.jpg";
 import clinicBackground from "@/assets/clinic-background.jpg";
-
 const About = () => {
-  const values = [
-    {
-      icon: <Heart className="w-8 h-8" />,
-      title: "Compassionate Care",
-      description: "We treat every patient with empathy, understanding their unique challenges and providing personalized support throughout their journey."
-    },
-    {
-      icon: <Target className="w-8 h-8" />,
-      title: "Excellence in Service",
-      description: "Our commitment to excellence drives us to continuously improve our techniques, technologies, and patient outcomes."
-    },
-    {
-      icon: <Lightbulb className="w-8 h-8" />,
-      title: "Innovation & Research",
-      description: "We stay at the forefront of prosthetic and orthotic technology, investing in research and development for better solutions."
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Quality Assurance",
-      description: "Every device we create undergoes rigorous testing and quality control to ensure safety, durability, and optimal performance."
-    }
-  ];
-
-  const team = [
-    {
-      name: "Dr. Sarah Johnson",
-      role: "Chief Prosthetist",
-      credentials: "CPO, PhD",
-      experience: "15+ years",
-      specialization: "Lower Limb Prosthetics",
-      image: prostheticProfessional
-    },
-    {
-      name: "Michael Chen",
-      role: "Senior Orthotist",
-      credentials: "CO, MSc",
-      experience: "12+ years",
-      specialization: "Spinal Orthotics",
-      image: prostheticProfessional
-    },
-    {
-      name: "Dr. Emily Rodriguez",
-      role: "Research Director",
-      credentials: "PhD, CPO",
-      experience: "18+ years",
-      specialization: "Myoelectric Prosthetics",
-      image: prostheticProfessional
-    }
-  ];
-
-  const achievements = [
-    {
-      number: "2,500+",
-      description: "Patients Served",
-      icon: <Users className="w-6 h-6" />
-    },
-    {
-      number: "15+",
-      description: "Years of Excellence",
-      icon: <Calendar className="w-6 h-6" />
-    },
-    {
-      number: "98%",
-      description: "Patient Satisfaction",
-      icon: <Star className="w-6 h-6" />
-    },
-    {
-      number: "50+",
-      description: "Healthcare Partners",
-      icon: <Globe className="w-6 h-6" />
-    }
-  ];
-
-  const certifications = [
-    "ABC Certified Facility",
-    "ISO 9001:2015 Quality Management",
-    "FDA Approved Manufacturing",
-    "AOPA Member Organization",
-    "Joint Commission Accredited",
-    "Medicare & Medicaid Approved"
-  ];
-
-  return (
-    <div className="min-h-screen relative">
+  const values = [{
+    icon: <Heart className="w-8 h-8" />,
+    title: "Compassionate Care",
+    description: "We treat every patient with empathy, understanding their unique challenges and providing personalized support throughout their journey."
+  }, {
+    icon: <Target className="w-8 h-8" />,
+    title: "Excellence in Service",
+    description: "Our commitment to excellence drives us to continuously improve our techniques, technologies, and patient outcomes."
+  }, {
+    icon: <Lightbulb className="w-8 h-8" />,
+    title: "Innovation & Research",
+    description: "We stay at the forefront of prosthetic and orthotic technology, investing in research and development for better solutions."
+  }, {
+    icon: <Shield className="w-8 h-8" />,
+    title: "Quality Assurance",
+    description: "Every device we create undergoes rigorous testing and quality control to ensure safety, durability, and optimal performance."
+  }];
+  const team = [{
+    name: "Dr. Sarah Johnson",
+    role: "Chief Prosthetist",
+    credentials: "CPO, PhD",
+    experience: "15+ years",
+    specialization: "Lower Limb Prosthetics",
+    image: prostheticProfessional
+  }, {
+    name: "Michael Chen",
+    role: "Senior Orthotist",
+    credentials: "CO, MSc",
+    experience: "12+ years",
+    specialization: "Spinal Orthotics",
+    image: prostheticProfessional
+  }, {
+    name: "Dr. Emily Rodriguez",
+    role: "Research Director",
+    credentials: "PhD, CPO",
+    experience: "18+ years",
+    specialization: "Myoelectric Prosthetics",
+    image: prostheticProfessional
+  }];
+  const achievements = [{
+    number: "2,500+",
+    description: "Patients Served",
+    icon: <Users className="w-6 h-6" />
+  }, {
+    number: "15+",
+    description: "Years of Excellence",
+    icon: <Calendar className="w-6 h-6" />
+  }, {
+    number: "98%",
+    description: "Patient Satisfaction",
+    icon: <Star className="w-6 h-6" />
+  }, {
+    number: "50+",
+    description: "Healthcare Partners",
+    icon: <Globe className="w-6 h-6" />
+  }];
+  const certifications = ["ABC Certified Facility", "ISO 9001:2015 Quality Management", "FDA Approved Manufacturing", "AOPA Member Organization", "Joint Commission Accredited", "Medicare & Medicaid Approved"];
+  return <div className="min-h-screen relative">
       <Background3D />
       <Header />
       
       {/* Hero Section */}
       <section className="relative py-24 md:py-32 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: `url(${clinicBackground})`}}></div>
+          <div className="absolute inset-0 bg-cover bg-center" style={{
+          backgroundImage: `url(${clinicBackground})`
+        }}></div>
         </div>
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background/90"></div>
         
@@ -142,20 +106,14 @@ const About = () => {
                 <p>
                   Founded in 2008, Quantum Medical began with a simple yet powerful mission: to restore independence and improve quality of life for individuals requiring prosthetic and orthotic care. What started as a small clinic has grown into a leading healthcare facility serving thousands of patients across the region.
                 </p>
-                <p>
-                  Our founder, Dr. Sarah Johnson, recognized the need for more personalized, technology-driven solutions in the prosthetics and orthotics field. With a background in biomedical engineering and over 15 years of clinical experience, she assembled a team of dedicated professionals who share her vision of excellence in patient care.
-                </p>
+                <p>Our founder, Dr. Rahul Kashyap, recognized the need for more personalized, technology-driven solutions in the prosthetics and orthotics field. With a background in biomedical engineering and over 15 years of clinical experience, she assembled a team of dedicated professionals who share her vision of excellence in patient care.</p>
                 <p>
                   Today, we continue to push the boundaries of what's possible in prosthetic and orthotic technology, while never losing sight of the human element that makes our work so meaningful. Every device we create represents hope, independence, and the possibility of a better tomorrow.
                 </p>
               </div>
             </div>
             <div className="relative">
-              <img 
-                src={prostheticProfessional} 
-                alt="Our professional team" 
-                className="rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
-              />
+              <img src={prostheticProfessional} alt="Our professional team" className="rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300" />
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-lg"></div>
             </div>
           </div>
@@ -173,15 +131,15 @@ const About = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <Card key={index} className="text-center p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border-border/50 animate-fade-in" style={{animationDelay: `${index * 100}ms`}}>
+            {values.map((value, index) => <Card key={index} className="text-center p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border-border/50 animate-fade-in" style={{
+            animationDelay: `${index * 100}ms`
+          }}>
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 text-primary rounded-full mb-6">
                   {value.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-primary mb-4">{value.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{value.description}</p>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -197,14 +155,11 @@ const About = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{animationDelay: `${index * 150}ms`}}>
+            {team.map((member, index) => <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{
+            animationDelay: `${index * 150}ms`
+          }}>
                 <div className="relative">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-full h-64 object-cover"
-                  />
+                  <img src={member.image} alt={member.name} className="w-full h-64 object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 text-white">
                     <Badge variant="secondary">{member.credentials}</Badge>
@@ -226,8 +181,7 @@ const About = () => {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -243,15 +197,15 @@ const About = () => {
           </div>
           
           <div className="grid md:grid-cols-4 gap-8">
-            {achievements.map((achievement, index) => (
-              <Card key={index} className="text-center p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{animationDelay: `${index * 100}ms`}}>
+            {achievements.map((achievement, index) => <Card key={index} className="text-center p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{
+            animationDelay: `${index * 100}ms`
+          }}>
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 text-primary rounded-full mb-4">
                   {achievement.icon}
                 </div>
                 <div className="text-3xl md:text-4xl font-bold text-primary mb-2">{achievement.number}</div>
                 <p className="text-muted-foreground">{achievement.description}</p>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -267,14 +221,14 @@ const About = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {certifications.map((cert, index) => (
-              <Card key={index} className="p-6 flex items-center space-x-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in" style={{animationDelay: `${index * 100}ms`}}>
+            {certifications.map((cert, index) => <Card key={index} className="p-6 flex items-center space-x-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in" style={{
+            animationDelay: `${index * 100}ms`
+          }}>
                 <div className="flex-shrink-0">
                   <CheckCircle className="w-6 h-6 text-primary" />
                 </div>
                 <div className="text-foreground font-medium">{cert}</div>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -282,7 +236,9 @@ const About = () => {
       {/* Mission Statement */}
       <section className="py-20 md:py-24 bg-medical-light/20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: `url(${researchBackground})`}}></div>
+          <div className="absolute inset-0 bg-cover bg-center" style={{
+          backgroundImage: `url(${researchBackground})`
+        }}></div>
         </div>
         
         <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
@@ -299,8 +255,6 @@ const About = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;
