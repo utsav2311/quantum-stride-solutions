@@ -18,11 +18,11 @@ const Header = () => {
             </div>
           </div>
           
-          <nav className="hidden md:flex items-center space-x-8 stagger-animation">
-            <Link to="/" className="text-foreground hover:text-primary transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">Home</Link>
-            <Link to="/services" className="text-foreground hover:text-primary transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">Services</Link>
-            <Link to="/about" className="text-foreground hover:text-primary transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">About</Link>
-            <Link to="/contact" className="text-foreground hover:text-primary transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">Contact</Link>
+          <nav className="hidden md:flex items-center space-x-8 stagger-children">
+            <Link to="/" className="nav-link text-foreground hover:text-primary transition-all duration-300">Home</Link>
+            <Link to="/services" className="nav-link text-foreground hover:text-primary transition-all duration-300">Services</Link>
+            <Link to="/about" className="nav-link text-foreground hover:text-primary transition-all duration-300">About</Link>
+            <Link to="/contact" className="nav-link text-foreground hover:text-primary transition-all duration-300">Contact</Link>
           </nav>
           
           <Button 

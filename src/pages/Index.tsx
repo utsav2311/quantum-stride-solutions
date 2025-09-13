@@ -6,10 +6,12 @@ import AppointmentForm from "@/components/AppointmentForm";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Background3D from "@/components/Background3D";
+import { ScrollProgressBar } from "@/components/animations/ScrollProgressBar";
 
 const Index = () => {
   return (
     <div className="min-h-screen relative">
+      <ScrollProgressBar color="gradient" />
       <Background3D />
       <Header />
       <HeroCarousel />

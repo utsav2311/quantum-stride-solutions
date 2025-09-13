@@ -133,25 +133,46 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
-  /* Animation Classes */
+  /* Performance optimizations */
+  .transform-gpu {
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .will-change-transform {
+    will-change: transform;
+  }
+  
+  .will-change-opacity {
+    will-change: opacity;
+  }
+
+  /* Advanced Animation Classes */
   .animate-fade-in {
-    animation: fade-in 0.8s ease-out forwards;
+    animation: fade-in 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
   
   .animate-slide-up {
-    animation: slide-up 0.6s ease-out forwards;
+    animation: slide-up 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
   
   .animate-slide-left {
-    animation: slide-left 0.6s ease-out forwards;
+    animation: slide-left 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
   
   .animate-slide-right {
-    animation: slide-right 0.6s ease-out forwards;
+    animation: slide-right 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
   
   .animate-scale-in {
-    animation: scale-in 0.5s ease-out forwards;
+    animation: scale-in 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  .animate-zoom-in {
+    animation: zoom-in 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  .animate-rotate-in {
+    animation: rotate-in 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
   
   .animate-float {
@@ -173,6 +194,145 @@ All colors MUST be HSL.
   .animate-pulse-slow {
     animation: pulse-slow 3s ease-in-out infinite;
   }
+  
+  .animate-shimmer {
+    animation: shimmer 2s linear infinite;
+  }
+  
+  .animate-typewriter {
+    animation: typewriter 3s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+  
+  .animate-magnetic {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .animate-magnetic:hover {
+    transform: translate3d(0, -2px, 0);
+  }
+
+  /* Stagger Animation Classes */
+  .stagger-children > * {
+    opacity: 0;
+    animation: fade-in 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  .stagger-children > *:nth-child(1) { animation-delay: 100ms; }
+  .stagger-children > *:nth-child(2) { animation-delay: 200ms; }
+  .stagger-children > *:nth-child(3) { animation-delay: 300ms; }
+  .stagger-children > *:nth-child(4) { animation-delay: 400ms; }
+  .stagger-children > *:nth-child(5) { animation-delay: 500ms; }
+  .stagger-children > *:nth-child(6) { animation-delay: 600ms; }
+  .stagger-children > *:nth-child(7) { animation-delay: 700ms; }
+  .stagger-children > *:nth-child(8) { animation-delay: 800ms; }
+  .stagger-children > *:nth-child(9) { animation-delay: 900ms; }
+  .stagger-children > *:nth-child(10) { animation-delay: 1000ms; }
+
+  /* Micro-interaction Classes */
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .hover-lift:hover {
+    transform: translate3d(0, -8px, 0);
+    box-shadow: 0 20px 40px -12px hsl(var(--primary) / 0.25);
+  }
+  
+  .hover-tilt {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-tilt:hover {
+    transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
+  }
+  
+  .hover-glow {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 30px hsl(var(--primary) / 0.5);
+  }
+  
+  .hover-scale {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+  
+  .hover-bounce {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-bounce:hover {
+    animation: bounce-once 0.6s ease-in-out;
+  }
+
+  /* Button Micro-interactions */
+  .btn-magnetic {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+  }
+  
+  .btn-magnetic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+  }
+  
+  .btn-magnetic:hover::before {
+    left: 100%;
+  }
+  
+  .btn-magnetic:hover {
+    transform: translate3d(0, -2px, 0);
+  }
+
+  /* Navigation Link Animations */
+  .nav-link {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: hsl(var(--primary));
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  /* Parallax Classes */
+  .parallax-slow {
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .parallax-medium {
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .parallax-fast {
+    transform: translate3d(0, 0, 0);
+  }
 
   /* Animation Delays */
   .animation-delay-100 { animation-delay: 100ms; }
@@ -190,23 +350,6 @@ All colors MUST be HSL.
   .animation-delay-1300 { animation-delay: 1300ms; }
   .animation-delay-1400 { animation-delay: 1400ms; }
   .animation-delay-1500 { animation-delay: 1500ms; }
-  .animation-delay-1600 { animation-delay: 1600ms; }
-  .animation-delay-1700 { animation-delay: 1700ms; }
-  .animation-delay-1800 { animation-delay: 1800ms; }
-  
-  /* Hover Effects */
-  .hover-lift {
-    transition: all 0.3s ease;
-  }
-  
-  .hover-lift:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px -12px hsl(var(--primary) / 0.25);
-  }
-  
-  .hover-glow:hover {
-    box-shadow: 0 0 30px hsl(var(--primary) / 0.5);
-  }
 
   /* Embla Carousel Styles */
   .embla {
@@ -219,98 +362,97 @@ All colors MUST be HSL.
     flex: 0 0 100%;
     min-width: 0;
   }
-  
-  .hover-scale {
-    transition: transform 0.3s ease;
-  }
-  
-  .hover-scale:hover {
-    transform: scale(1.05);
-  }
-
-  /* Stagger Animation Classes */
-  .stagger-animation > * {
-    opacity: 0;
-    animation: fade-in 0.6s ease-out forwards;
-  }
-  
-  .stagger-animation > *:nth-child(1) { animation-delay: 100ms; }
-  .stagger-animation > *:nth-child(2) { animation-delay: 200ms; }
-  .stagger-animation > *:nth-child(3) { animation-delay: 300ms; }
-  .stagger-animation > *:nth-child(4) { animation-delay: 400ms; }
-  .stagger-animation > *:nth-child(5) { animation-delay: 500ms; }
-  .stagger-animation > *:nth-child(6) { animation-delay: 600ms; }
-  .stagger-animation > *:nth-child(7) { animation-delay: 700ms; }
-  .stagger-animation > *:nth-child(8) { animation-delay: 800ms; }
 
   /* Keyframe Animations */
   @keyframes fade-in {
     from {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translate3d(0, 30px, 0);
     }
     to {
       opacity: 1;
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
     }
   }
   
   @keyframes slide-up {
     from {
       opacity: 0;
-      transform: translateY(50px);
+      transform: translate3d(0, 50px, 0);
     }
     to {
       opacity: 1;
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
     }
   }
   
   @keyframes slide-left {
     from {
       opacity: 0;
-      transform: translateX(-50px);
+      transform: translate3d(-50px, 0, 0);
     }
     to {
       opacity: 1;
-      transform: translateX(0);
+      transform: translate3d(0, 0, 0);
     }
   }
   
   @keyframes slide-right {
     from {
       opacity: 0;
-      transform: translateX(50px);
+      transform: translate3d(50px, 0, 0);
     }
     to {
       opacity: 1;
-      transform: translateX(0);
+      transform: translate3d(0, 0, 0);
     }
   }
   
   @keyframes scale-in {
     from {
       opacity: 0;
-      transform: scale(0.8);
+      transform: scale3d(0.8, 0.8, 1);
     }
     to {
       opacity: 1;
-      transform: scale(1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  @keyframes zoom-in {
+    from {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 1);
+    }
+    to {
+      opacity: 1;
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  @keyframes rotate-in {
+    from {
+      opacity: 0;
+      transform: rotate3d(0, 0, 1, 45deg) scale3d(0.8, 0.8, 1);
+    }
+    to {
+      opacity: 1;
+      transform: rotate3d(0, 0, 1, 0deg) scale3d(1, 1, 1);
     }
   }
   
   @keyframes float {
     0%, 100% { 
-      transform: translateY(0px) rotate(0deg);
+      transform: translate3d(0, 0, 0) rotate(0deg);
     }
     25% { 
-      transform: translateY(-20px) rotate(2deg);
+      transform: translate3d(0, -20px, 0) rotate(2deg);
     }
     50% { 
-      transform: translateY(-15px) rotate(-1deg);
+      transform: translate3d(0, -15px, 0) rotate(-1deg);
     }
     75% { 
-      transform: translateY(-25px) rotate(1deg);
+      transform: translate3d(0, -25px, 0) rotate(1deg);
     }
   }
   
@@ -325,10 +467,25 @@ All colors MUST be HSL.
   
   @keyframes bounce-slow {
     0%, 100% {
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
     }
     50% {
-      transform: translateY(-10px);
+      transform: translate3d(0, -10px, 0);
+    }
+  }
+  
+  @keyframes bounce-once {
+    0%, 20%, 53%, 80%, 100% {
+      transform: translate3d(0, 0, 0);
+    }
+    40%, 43% {
+      transform: translate3d(0, -30px, 0);
+    }
+    70% {
+      transform: translate3d(0, -15px, 0);
+    }
+    90% {
+      transform: translate3d(0, -4px, 0);
     }
   }
   
@@ -344,11 +501,11 @@ All colors MUST be HSL.
   @keyframes pulse-slow {
     0%, 100% {
       opacity: 1;
-      transform: scale(1);
+      transform: scale3d(1, 1, 1);
     }
     50% {
       opacity: 0.8;
-      transform: scale(1.05);
+      transform: scale3d(1.05, 1.05, 1);
     }
   }
   
@@ -358,6 +515,36 @@ All colors MUST be HSL.
     }
     100% {
       background-position: calc(200px + 100%) 0;
+    }
+  }
+  
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: hsl(var(--primary));
+    }
+  }
+
+  /* Responsive Animation Disabling */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
     }
   }
 }

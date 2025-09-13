@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { AnimatedSection, StaggeredGrid, MicroInteraction } from "@/components/animations";
 import prosthetics from "@/assets/prosthetics-service.jpg";
 import prostheticProfessional from "@/assets/prosthetic-professional.jpg";
 import orthotics from "@/assets/orthotics-service.jpg";
@@ -66,66 +67,60 @@ const Services = () => {
       </div>
       
       <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
-        <div className="text-center mb-20 md:mb-24 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 transform hover:scale-105 transition-all duration-300">Our Services</h2>
+        <AnimatedSection animation="fade-in" className="text-center mb-20 md:mb-24">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">Our Services</h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Comprehensive prosthetic and orthotic care tailored to your unique needs
           </p>
-          <div className="mt-10 w-32 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full animate-fade-in" style={{animationDelay: '500ms'}}></div>
-        </div>
+          <div className="mt-10 w-32 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
+        </AnimatedSection>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12 max-w-7xl mx-auto">
+        <StaggeredGrid 
+          className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12 max-w-7xl mx-auto"
+          animation="scale-in"
+          staggerDelay={150}
+        >
           {services.map((service, index) => (
-            <Card key={index} className={`group hover:shadow-card transition-all duration-700 hover:-translate-y-3 border-border/50 animate-fade-in opacity-0 relative overflow-hidden hover:shadow-2xl hover:shadow-primary/10`} style={{animationDelay: `${index * 150 + 400}ms`}}>
-              {/* Card Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              
-              {/* Floating Icon Animation */}
-              <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
-                <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
-                  <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
+            <MicroInteraction key={index} type="lift" intensity="normal">
+              <Card className="group hover:shadow-card transition-all duration-700 border-border/50 relative overflow-hidden hover:shadow-2xl hover:shadow-primary/10">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div className="relative overflow-hidden rounded-t-lg group">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-48 object-cover transition-all duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-primary/5 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
-              </div>
-              
-              <div className="relative overflow-hidden rounded-t-lg group">
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
-                <img 
-                  src={service.image} 
-                  alt={service.title}
-                  className="w-[120%] h-48 object-contain transition-all duration-700 group-hover:scale-110 group-hover:rotate-1 -mx-[10%] filter group-hover:brightness-110"
-                />
                 
-                {/* Image Overlay Effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-primary/5 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </div>
-              
-              <CardHeader className="relative z-10">
-                <CardTitle className="text-2xl text-primary group-hover:text-primary/90 transition-colors duration-300">{service.title}</CardTitle>
-                <CardDescription className="text-base leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
-                  {service.description}
-                </CardDescription>
-              </CardHeader>
-              
-              <CardContent className="relative z-10">
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-muted-foreground group-hover:text-foreground/70 transition-all duration-300" style={{transitionDelay: `${featureIndex * 50}ms`}}>
-                      <div className="w-2 h-2 bg-accent rounded-full mr-3 transform group-hover:scale-125 transition-transform duration-300"></div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                <CardHeader className="relative z-10">
+                  <CardTitle className="text-2xl text-primary group-hover:text-primary/90 transition-colors duration-300">{service.title}</CardTitle>
+                  <CardDescription className="text-base leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
+                    {service.description}
+                  </CardDescription>
+                </CardHeader>
                 
-                <Link to={service.link}>
-                  <Button className="w-full transform hover:scale-105 transition-all duration-300 relative overflow-hidden group/btn">
-                    <span className="relative z-10">Learn More</span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
+                <CardContent className="relative z-10">
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-muted-foreground group-hover:text-foreground/70 transition-all duration-300">
+                        <div className="w-2 h-2 bg-accent rounded-full mr-3 transform group-hover:scale-125 transition-transform duration-300"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <Link to={service.link}>
+                    <Button variant="magnetic" className="w-full">
+                      Learn More
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            </MicroInteraction>
           ))}
-        </div>
+        </StaggeredGrid>
       </div>
     </section>
   );

@@ -89,20 +89,36 @@ export default {
 					to: { height: '0' }
 				},
 				'fade-in': {
-					'0%': { opacity: '0', transform: 'translateY(20px)' },
-					'100%': { opacity: '1', transform: 'translateY(0)' }
+					'0%': { opacity: '0', transform: 'translate3d(0, 20px, 0)' },
+					'100%': { opacity: '1', transform: 'translate3d(0, 0, 0)' }
 				},
 				'slide-up': {
-					'0%': { opacity: '0', transform: 'translateY(50px)' },
-					'100%': { opacity: '1', transform: 'translateY(0)' }
+					'0%': { opacity: '0', transform: 'translate3d(0, 50px, 0)' },
+					'100%': { opacity: '1', transform: 'translate3d(0, 0, 0)' }
+				},
+				'slide-left': {
+					'0%': { opacity: '0', transform: 'translate3d(-50px, 0, 0)' },
+					'100%': { opacity: '1', transform: 'translate3d(0, 0, 0)' }
+				},
+				'slide-right': {
+					'0%': { opacity: '0', transform: 'translate3d(50px, 0, 0)' },
+					'100%': { opacity: '1', transform: 'translate3d(0, 0, 0)' }
 				},
 				'scale-in': {
-					'0%': { opacity: '0', transform: 'scale(0.9)' },
-					'100%': { opacity: '1', transform: 'scale(1)' }
+					'0%': { opacity: '0', transform: 'scale3d(0.9, 0.9, 1)' },
+					'100%': { opacity: '1', transform: 'scale3d(1, 1, 1)' }
+				},
+				'zoom-in': {
+					'0%': { opacity: '0', transform: 'scale3d(0.3, 0.3, 1)' },
+					'100%': { opacity: '1', transform: 'scale3d(1, 1, 1)' }
+				},
+				'rotate-in': {
+					'0%': { opacity: '0', transform: 'rotate3d(0, 0, 1, 45deg) scale3d(0.8, 0.8, 1)' },
+					'100%': { opacity: '1', transform: 'rotate3d(0, 0, 1, 0deg) scale3d(1, 1, 1)' }
 				},
 				'float': {
-					'0%, 100%': { transform: 'translateY(0px)' },
-					'50%': { transform: 'translateY(-20px)' }
+					'0%, 100%': { transform: 'translate3d(0, 0, 0)' },
+					'50%': { transform: 'translate3d(0, -20px, 0)' }
 				},
 				'glow': {
 					'0%, 100%': { boxShadow: '0 0 20px hsl(var(--primary) / 0.5)' },
@@ -111,17 +127,54 @@ export default {
 				'shimmer': {
 					'0%': { backgroundPosition: '-200px 0' },
 					'100%': { backgroundPosition: 'calc(200px + 100%) 0' }
+				},
+				'bounce-in': {
+					'0%': { opacity: '0', transform: 'scale3d(0.3, 0.3, 1)' },
+					'20%': { transform: 'scale3d(1.1, 1.1, 1)' },
+					'40%': { transform: 'scale3d(0.9, 0.9, 1)' },
+					'60%': { opacity: '1', transform: 'scale3d(1.03, 1.03, 1)' },
+					'80%': { transform: 'scale3d(0.97, 0.97, 1)' },
+					'100%': { opacity: '1', transform: 'scale3d(1, 1, 1)' }
+				},
+				'swing': {
+					'20%': { transform: 'rotate3d(0, 0, 1, 15deg)' },
+					'40%': { transform: 'rotate3d(0, 0, 1, -10deg)' },
+					'60%': { transform: 'rotate3d(0, 0, 1, 5deg)' },
+					'80%': { transform: 'rotate3d(0, 0, 1, -5deg)' },
+					'100%': { transform: 'rotate3d(0, 0, 1, 0deg)' }
+				},
+				'rubber-band': {
+					'0%': { transform: 'scale3d(1, 1, 1)' },
+					'30%': { transform: 'scale3d(1.25, 0.75, 1)' },
+					'40%': { transform: 'scale3d(0.75, 1.25, 1)' },
+					'50%': { transform: 'scale3d(1.15, 0.85, 1)' },
+					'65%': { transform: 'scale3d(0.95, 1.05, 1)' },
+					'75%': { transform: 'scale3d(1.05, 0.95, 1)' },
+					'100%': { transform: 'scale3d(1, 1, 1)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.6s ease-out',
-				'slide-up': 'slide-up 0.6s ease-out',
-				'scale-in': 'scale-in 0.5s ease-out',
+				'fade-in': 'fade-in 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+				'slide-up': 'slide-up 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+				'slide-left': 'slide-left 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+				'slide-right': 'slide-right 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+				'scale-in': 'scale-in 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
+				'zoom-in': 'zoom-in 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+				'rotate-in': 'rotate-in 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
 				'float': 'float 6s ease-in-out infinite',
 				'glow': 'glow 2s ease-in-out infinite alternate',
-				'shimmer': 'shimmer 2s linear infinite'
+				'shimmer': 'shimmer 2s linear infinite',
+				'bounce-in': 'bounce-in 0.75s cubic-bezier(0.4, 0, 0.2, 1)',
+				'swing': 'swing 1s ease-in-out',
+				'rubber-band': 'rubber-band 1s ease-in-out'
+			},
+			transitionTimingFunction: {
+				'out-expo': 'cubic-bezier(0.19, 1, 0.22, 1)',
+				'out-back': 'cubic-bezier(0.34, 1.56, 0.64, 1)',
+				'in-expo': 'cubic-bezier(0.95, 0.05, 0.795, 0.035)',
+				'in-back': 'cubic-bezier(0.36, 0, 0.66, -0.56)'
 			}
 		}
 	},
