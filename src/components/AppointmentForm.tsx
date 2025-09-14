@@ -6,6 +6,10 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import consultationImage from "@/assets/consultation-service.jpg";
+import prostheticArmImage from "@/assets/prosthetic-arm.jpg";
+import orthoticBraceImage from "@/assets/orthotic-brace.jpg";
+import prostheticProfessionalImage from "@/assets/prosthetic-professional.jpg";
 
 const AppointmentForm = () => {
   const { toast } = useToast();
@@ -60,11 +64,52 @@ const AppointmentForm = () => {
 
   return (
     <section id="appointment" className="py-20 bg-background relative overflow-hidden">
-      {/* Animated Background Elements */}
+      {/* Animated Background Images */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 right-10 w-40 h-40 bg-primary/5 rounded-full animate-float"></div>
+        {/* Medical consultation background */}
+        <div className="absolute top-20 left-10 w-48 h-32 opacity-10 animate-float">
+          <img 
+            src={consultationImage} 
+            alt="Medical consultation" 
+            className="w-full h-full object-cover rounded-lg transform rotate-12"
+          />
+        </div>
+        
+        {/* Prosthetic arm image */}
+        <div className="absolute top-40 right-20 w-40 h-40 opacity-15 animate-float animation-delay-700">
+          <img 
+            src={prostheticArmImage} 
+            alt="Prosthetic arm" 
+            className="w-full h-full object-cover rounded-full transform -rotate-6"
+          />
+        </div>
+        
+        {/* Orthotic brace image */}
+        <div className="absolute bottom-32 left-20 w-36 h-48 opacity-12 animate-float animation-delay-1400">
+          <img 
+            src={orthoticBraceImage} 
+            alt="Orthotic brace" 
+            className="w-full h-full object-cover rounded-lg transform rotate-6"
+          />
+        </div>
+        
+        {/* Professional consultation image */}
+        <div className="absolute bottom-20 right-10 w-44 h-28 opacity-10 animate-float animation-delay-500">
+          <img 
+            src={prostheticProfessionalImage} 
+            alt="Prosthetic professional" 
+            className="w-full h-full object-cover rounded-lg transform -rotate-12"
+          />
+        </div>
+        
+        {/* Animated background shapes */}
+        <div className="absolute top-10 right-10 w-40 h-40 bg-primary/5 rounded-full animate-float animation-delay-200"></div>
         <div className="absolute bottom-20 left-10 w-32 h-32 bg-accent/5 rounded-full animate-float animation-delay-1000"></div>
-        <div className="absolute top-1/2 right-1/4 w-20 h-20 bg-primary/3 rounded-full animate-float animation-delay-500"></div>
+        <div className="absolute top-1/2 right-1/4 w-20 h-20 bg-primary/3 rounded-full animate-float animation-delay-300"></div>
+        
+        {/* Additional floating elements */}
+        <div className="absolute top-1/3 left-1/3 w-16 h-16 bg-medical-teal/5 rounded-full animate-pulse-slow animation-delay-800"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-24 h-24 bg-medical-blue/5 rounded-full animate-float animation-delay-1200"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
