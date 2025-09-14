@@ -64,7 +64,59 @@ const AppointmentForm = () => {
 
   return (
     <section id="appointment" className="py-20 bg-background relative overflow-hidden">
-      {/* Animated Background Images */}
+      {/* Corner Images Holding the Form */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Top Left Corner */}
+        <div className="absolute top-10 left-10 w-32 h-32 opacity-20 animate-float z-20">
+          <img 
+            src={consultationImage} 
+            alt="Medical consultation" 
+            className="w-full h-full object-cover rounded-full transform rotate-12 hover:rotate-6 transition-transform duration-700"
+          />
+        </div>
+        
+        {/* Top Right Corner */}
+        <div className="absolute top-10 right-10 w-36 h-36 opacity-25 animate-float animation-delay-500 z-20">
+          <img 
+            src={prostheticArmImage} 
+            alt="Prosthetic arm" 
+            className="w-full h-full object-cover rounded-full transform -rotate-12 hover:-rotate-6 transition-transform duration-700"
+          />
+        </div>
+        
+        {/* Bottom Left Corner */}
+        <div className="absolute bottom-10 left-10 w-40 h-28 opacity-20 animate-float animation-delay-1000 z-20">
+          <img 
+            src={orthoticBraceImage} 
+            alt="Orthotic brace" 
+            className="w-full h-full object-cover rounded-lg transform rotate-6 hover:rotate-3 transition-transform duration-700"
+          />
+        </div>
+        
+        {/* Bottom Right Corner */}
+        <div className="absolute bottom-10 right-10 w-38 h-32 opacity-25 animate-float animation-delay-700 z-20">
+          <img 
+            src={prostheticProfessionalImage} 
+            alt="Prosthetic professional" 
+            className="w-full h-full object-cover rounded-lg transform -rotate-6 hover:-rotate-3 transition-transform duration-700"
+          />
+        </div>
+        
+        {/* Connecting Lines/Frames Effect */}
+        <div className="absolute top-16 left-16 w-20 h-1 bg-gradient-to-r from-primary/30 to-transparent animate-pulse-slow"></div>
+        <div className="absolute top-16 left-16 w-1 h-20 bg-gradient-to-b from-primary/30 to-transparent animate-pulse-slow animation-delay-200"></div>
+        
+        <div className="absolute top-16 right-16 w-20 h-1 bg-gradient-to-l from-primary/30 to-transparent animate-pulse-slow animation-delay-400"></div>
+        <div className="absolute top-16 right-16 w-1 h-20 bg-gradient-to-b from-primary/30 to-transparent animate-pulse-slow animation-delay-600"></div>
+        
+        <div className="absolute bottom-16 left-16 w-20 h-1 bg-gradient-to-r from-primary/30 to-transparent animate-pulse-slow animation-delay-800"></div>
+        <div className="absolute bottom-16 left-16 w-1 h-20 bg-gradient-to-t from-primary/30 to-transparent animate-pulse-slow animation-delay-1000"></div>
+        
+        <div className="absolute bottom-16 right-16 w-20 h-1 bg-gradient-to-l from-primary/30 to-transparent animate-pulse-slow animation-delay-1200"></div>
+        <div className="absolute bottom-16 right-16 w-1 h-20 bg-gradient-to-t from-primary/30 to-transparent animate-pulse-slow animation-delay-1400"></div>
+      </div>
+
+      {/* Additional Background Images (existing) */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Medical consultation background */}
         <div className="absolute top-20 left-10 w-48 h-32 opacity-10 animate-float">
@@ -112,7 +164,7 @@ const AppointmentForm = () => {
         <div className="absolute bottom-1/3 right-1/3 w-24 h-24 bg-medical-blue/5 rounded-full animate-float animation-delay-1200"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-30">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12 animate-fade-in opacity-0">
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 hover-scale">Book Your Appointment</h2>
@@ -122,8 +174,8 @@ const AppointmentForm = () => {
             <div className="mt-6 w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full animate-scale-in opacity-0 animation-delay-500"></div>
           </div>
 
-          <Card className="shadow-card border-border/50 hover-lift animate-scale-in opacity-0 animation-delay-700 relative overflow-hidden group">
-            {/* Card glow effect */}
+          <Card className="shadow-card border-border/50 hover-lift animate-scale-in opacity-0 animation-delay-700 relative overflow-hidden group backdrop-blur-sm bg-background/95">
+            {/* Enhanced card glow effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             
             <CardHeader className="relative z-10">
