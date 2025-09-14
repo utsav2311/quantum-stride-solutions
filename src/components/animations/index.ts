@@ -4,6 +4,9 @@ export { ParallaxContainer } from './ParallaxContainer';
 export { StaggeredGrid } from './StaggeredGrid';
 export { MicroInteraction } from './MicroInteraction';
 export { ScrollProgressBar } from './ScrollProgressBar';
+export { ParticleSystem } from './ParticleSystem';
+export { TextReveal } from './TextReveal';
+export { FloatingElements } from './FloatingElements';
 
 // Export hooks
 export { useIntersectionObserver } from '../../hooks/useIntersectionObserver';

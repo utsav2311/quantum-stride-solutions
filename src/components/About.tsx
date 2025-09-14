@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import workshopBackground from "@/assets/workshop-background.jpg";
 import rehabilitationBackground from "@/assets/rehabilitation-background.jpg";
+import { FloatingElements, TextReveal } from "@/components/animations";
 
 const About = () => {
   const features = [
@@ -23,19 +24,24 @@ const About = () => {
 
   return (
     <section id="about" className="py-20 bg-background relative overflow-hidden">
-      {/* Background Elements */}
+      {/* Enhanced Background Elements */}
+      <FloatingElements count={10} />
+      
+      {/* Background Images with Enhanced Animation */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-0 w-1/2 h-full bg-cover bg-center" style={{backgroundImage: `url(${workshopBackground})`}}></div>
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-cover bg-center" style={{backgroundImage: `url(${rehabilitationBackground})`}}></div>
+        <div className="absolute top-0 left-0 w-1/2 h-full bg-cover bg-center animate-floating-horizontal" style={{backgroundImage: `url(${workshopBackground})`}}></div>
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-cover bg-center animate-wave animation-delay-1000" style={{backgroundImage: `url(${rehabilitationBackground})`}}></div>
       </div>
       <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 transform hover:scale-105 transition-all duration-300">
-              About Quantum Medical
-            </h2>
+            <TextReveal stagger delay={200}>
+              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 transform hover:scale-105 transition-all duration-300 animate-floating-horizontal">
+                About Quantum Medical
+              </h2>
+            </TextReveal>
             
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               With over vast experience in the field of prosthetics and orthotics, 
@@ -56,9 +62,9 @@ const About = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {features.map((feature, index) => (
-              <Card key={index} className={`group hover:shadow-card transition-all duration-500 hover:-translate-y-1 border-border/50 animate-fade-in opacity-0 transform hover:rotate-1 hover:shadow-2xl`} style={{animationDelay: `${index * 150 + 500}ms`}}>
+              <Card key={index} className={`group hover:shadow-card transition-all duration-500 hover:-translate-y-2 border-border/50 animate-fade-in opacity-0 transform hover:rotate-2 hover:scale-105 hover:shadow-2xl hover-glow`} style={{animationDelay: `${index * 150 + 500}ms`}}>
                 <CardContent className="p-6 text-center">
-                  <div className="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-4xl mb-4 transform group-hover:scale-125 transition-transform duration-300 group-hover:animate-elastic-bounce animate-floating-horizontal">
                     {feature.icon}
                   </div>
                   <h3 className="text-lg font-semibold text-primary mb-2">{feature.title}</h3>
