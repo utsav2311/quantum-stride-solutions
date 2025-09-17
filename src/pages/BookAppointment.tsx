@@ -13,6 +13,8 @@ import { useToast } from '@/hooks/use-toast';
 import { CalendarIcon, Clock, MapPin, Phone, Mail, FileText, User, Heart } from 'lucide-react';
 import { format } from 'date-fns';
 import { cn } from '@/lib/utils';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 // Import background images
 import clinicBackground from '@/assets/clinic-background.jpg';
@@ -90,7 +92,9 @@ const BookAppointment = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background relative overflow-hidden">
+    <div className="min-h-screen">
+      <Header />
+      <div className="bg-background relative overflow-hidden pt-20">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-64 h-40 opacity-5 animate-float">
@@ -493,7 +497,9 @@ const BookAppointment = () => {
             </CardContent>
           </Card>
         </div>
+        </div>
       </div>
+      <Footer />
     </div>
   );
 };
