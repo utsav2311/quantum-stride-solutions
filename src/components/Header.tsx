@@ -29,14 +29,9 @@ const Header = () => {
             variant="medical" 
             size="sm"
             className="animate-slide-right animation-delay-400 hover-lift hover:animate-glow transition-all duration-300"
-            onClick={() => {
-              const appointmentSection = document.getElementById('appointment');
-              if (appointmentSection) {
-                appointmentSection.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
+            asChild
           >
-            Book Appointment
+            <Link to="/book-appointment">Book Appointment</Link>
           </Button>
         </div>
       </div>

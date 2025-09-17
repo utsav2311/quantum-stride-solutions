@@ -3,6 +3,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 // Import hero images
 import heroMedical from "@/assets/hero-medical.jpg";
@@ -79,9 +80,9 @@ const HeroCarousel = () => {
                         variant="appointment" 
                         size="lg" 
                         className="hover-lift transition-all duration-300 text-lg px-8 py-4"
-                        onClick={() => document.getElementById('appointment')?.scrollIntoView({ behavior: 'smooth' })}
+                        asChild
                       >
-                        {slide.cta}
+                        <Link to="/book-appointment">{slide.cta}</Link>
                       </Button>
                     </div>
                   </div>

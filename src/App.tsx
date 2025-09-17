@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import BookAppointment from "./pages/BookAppointment";
 import LowerLimbProsthetics from "./pages/services/LowerLimbProsthetics";
 import UpperLimbProsthetics from "./pages/services/UpperLimbProsthetics";
 import CustomOrthotics from "./pages/services/CustomOrthotics";
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/book-appointment" element={<BookAppointment />} />
           <Route path="/services/lower-limb-prosthetics" element={<LowerLimbProsthetics />} />
           <Route path="/services/upper-limb-prosthetics" element={<UpperLimbProsthetics />} />
           <Route path="/services/custom-orthotics" element={<CustomOrthotics />} />
