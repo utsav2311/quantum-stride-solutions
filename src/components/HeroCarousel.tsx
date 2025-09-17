@@ -75,7 +75,12 @@ const HeroCarousel = () => {
                     </p>
                     
                     <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-scale-in">
-                      <Button variant="appointment" size="lg" className="hover-lift transition-all duration-300 text-lg px-8 py-4">
+                      <Button 
+                        variant="appointment" 
+                        size="lg" 
+                        className="hover-lift transition-all duration-300 text-lg px-8 py-4"
+                        onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+                      >
                         {slide.cta}
                       </Button>
                     </div>
