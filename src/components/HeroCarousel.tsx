@@ -79,7 +79,7 @@ const HeroCarousel = () => {
                         variant="appointment" 
                         size="lg" 
                         className="hover-lift transition-all duration-300 text-lg px-8 py-4"
-                        onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+                        onClick={() => document.getElementById('appointment')?.scrollIntoView({ behavior: 'smooth' })}
                       >
                         {slide.cta}
                       </Button>
