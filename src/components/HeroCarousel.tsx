@@ -78,9 +78,6 @@ const HeroCarousel = () => {
                       <Button variant="appointment" size="lg" className="hover-lift transition-all duration-300 text-lg px-8 py-4">
                         {slide.cta}
                       </Button>
-                      <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 hover-lift transition-all duration-300 text-lg px-8 py-4">
-                        View Portfolio
-                      </Button>
                     </div>
                   </div>
                 </div>
