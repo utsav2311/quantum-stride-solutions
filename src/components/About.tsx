@@ -38,7 +38,7 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="animate-fade-in">
             <TextReveal stagger delay={200}>
-              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 transform hover:scale-105 transition-all duration-300 animate-floating-horizontal">
+              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
                 About Quantum Medical
               </h2>
             </TextReveal>
