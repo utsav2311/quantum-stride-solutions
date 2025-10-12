@@ -15,6 +15,7 @@ import { format } from 'date-fns';
 import { cn } from '@/lib/utils';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { supabase } from '@/integrations/supabase/client';
 
 // Import background images
 import clinicBackground from '@/assets/clinic-background.jpg';
@@ -24,6 +25,7 @@ import orthoticBraceImage from '@/assets/orthotic-brace.jpg';
 
 const BookAppointment = () => {
   const [date, setDate] = useState<Date>();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -73,7 +75,7 @@ const BookAppointment = () => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!formData.consentToTreatment || !formData.privacyPolicy) {
@@ -85,10 +87,80 @@ const BookAppointment = () => {
       return;
     }
 
-    toast({
-      title: "Appointment Request Submitted!",
-      description: "We'll contact you within 24 hours to confirm your appointment.",
-    });
+    if (!date) {
+      toast({
+        title: "Please select a date",
+        description: "You must select an appointment date to proceed.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase.from('appointments').insert({
+        full_name: `${formData.firstName} ${formData.lastName}`,
+        email: formData.email,
+        phone: formData.phone,
+        date_of_birth: formData.dateOfBirth || null,
+        gender: 'Not specified',
+        appointment_date: format(date, 'yyyy-MM-dd'),
+        appointment_time: formData.preferredTime,
+        appointment_type: formData.appointmentType,
+        preferred_location: 'Main Clinic',
+        medical_condition: formData.currentCondition,
+        previous_devices: formData.previousDevices ? true : false,
+        previous_devices_details: formData.previousDevices,
+        current_medications: formData.medicalHistory,
+        emergency_contact_name: formData.emergencyContact,
+        emergency_contact_relationship: 'Not specified',
+        emergency_contact_phone: formData.emergencyPhone,
+        special_requests: formData.specialRequirements,
+        consent_treatment: formData.consentToTreatment,
+        consent_privacy: formData.privacyPolicy,
+        consent_contact: true,
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Appointment Request Submitted!",
+        description: "We'll contact you within 24 hours to confirm your appointment.",
+      });
+
+      // Reset form
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        dateOfBirth: '',
+        serviceType: '',
+        appointmentType: '',
+        preferredTime: '',
+        medicalHistory: '',
+        currentCondition: '',
+        previousDevices: '',
+        insuranceProvider: '',
+        referralSource: '',
+        emergencyContact: '',
+        emergencyPhone: '',
+        specialRequirements: '',
+        consentToTreatment: false,
+        privacyPolicy: false
+      });
+      setDate(undefined);
+    } catch (error: any) {
+      console.error('Error submitting appointment:', error);
+      toast({
+        title: "Error",
+        description: "Failed to book appointment. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -458,8 +530,9 @@ const BookAppointment = () => {
                   type="submit" 
                   className="w-full text-lg py-6 hover-lift animate-glow"
                   size="lg"
+                  disabled={isSubmitting}
                 >
-                  Submit Appointment Request
+                  {isSubmitting ? 'Submitting...' : 'Submit Appointment Request'}
                 </Button>
                 <p className="text-center text-sm text-muted-foreground mt-4">
                   We'll contact you within 24 hours to confirm your appointment details.

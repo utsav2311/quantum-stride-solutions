@@ -14,7 +14,111 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      appointments: {
+        Row: {
+          address: string | null
+          allergies: string | null
+          appointment_date: string
+          appointment_time: string
+          appointment_type: string
+          city: string | null
+          consent_contact: boolean | null
+          consent_privacy: boolean | null
+          consent_treatment: boolean | null
+          created_at: string
+          current_medications: string | null
+          date_of_birth: string
+          email: string
+          emergency_contact_name: string
+          emergency_contact_phone: string
+          emergency_contact_relationship: string
+          full_name: string
+          gender: string
+          id: string
+          interpreter_language: string | null
+          interpreter_needed: boolean | null
+          medical_condition: string | null
+          mobility_assistance: boolean | null
+          phone: string
+          physician_contact: string | null
+          physician_name: string | null
+          postal_code: string | null
+          preferred_location: string
+          previous_devices: boolean | null
+          previous_devices_details: string | null
+          special_requests: string | null
+          updated_at: string
+        }
+        Insert: {
+          address?: string | null
+          allergies?: string | null
+          appointment_date: string
+          appointment_time: string
+          appointment_type: string
+          city?: string | null
+          consent_contact?: boolean | null
+          consent_privacy?: boolean | null
+          consent_treatment?: boolean | null
+          created_at?: string
+          current_medications?: string | null
+          date_of_birth: string
+          email: string
+          emergency_contact_name: string
+          emergency_contact_phone: string
+          emergency_contact_relationship: string
+          full_name: string
+          gender: string
+          id?: string
+          interpreter_language?: string | null
+          interpreter_needed?: boolean | null
+          medical_condition?: string | null
+          mobility_assistance?: boolean | null
+          phone: string
+          physician_contact?: string | null
+          physician_name?: string | null
+          postal_code?: string | null
+          preferred_location: string
+          previous_devices?: boolean | null
+          previous_devices_details?: string | null
+          special_requests?: string | null
+          updated_at?: string
+        }
+        Update: {
+          address?: string | null
+          allergies?: string | null
+          appointment_date?: string
+          appointment_time?: string
+          appointment_type?: string
+          city?: string | null
+          consent_contact?: boolean | null
+          consent_privacy?: boolean | null
+          consent_treatment?: boolean | null
+          created_at?: string
+          current_medications?: string | null
+          date_of_birth?: string
+          email?: string
+          emergency_contact_name?: string
+          emergency_contact_phone?: string
+          emergency_contact_relationship?: string
+          full_name?: string
+          gender?: string
+          id?: string
+          interpreter_language?: string | null
+          interpreter_needed?: boolean | null
+          medical_condition?: string | null
+          mobility_assistance?: boolean | null
+          phone?: string
+          physician_contact?: string | null
+          physician_name?: string | null
+          postal_code?: string | null
+          preferred_location?: string
+          previous_devices?: boolean | null
+          previous_devices_details?: string | null
+          special_requests?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
