@@ -17,11 +17,6 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { supabase } from '@/integrations/supabase/client';
 
-// Import background images
-import clinicBackground from '@/assets/clinic-background.jpg';
-import consultationImage from '@/assets/consultation-service.jpg';
-import prostheticArmImage from '@/assets/prosthetic-arm.jpg';
-import orthoticBraceImage from '@/assets/orthotic-brace.jpg';
 
 const BookAppointment = () => {
   const [date, setDate] = useState<Date>();
@@ -167,21 +162,6 @@ const BookAppointment = () => {
     <div className="min-h-screen">
       <Header />
       <div className="bg-background relative overflow-hidden pt-20">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 w-64 h-40 opacity-5 animate-float">
-          <img src={clinicBackground} alt="Clinic background" className="w-full h-full object-cover rounded-lg" />
-        </div>
-        <div className="absolute top-1/3 right-10 w-48 h-48 opacity-10 animate-float animation-delay-500">
-          <img src={consultationImage} alt="Consultation" className="w-full h-full object-cover rounded-full" />
-        </div>
-        <div className="absolute bottom-20 left-1/4 w-40 h-32 opacity-8 animate-float animation-delay-1000">
-          <img src={prostheticArmImage} alt="Prosthetic arm" className="w-full h-full object-cover rounded-lg" />
-        </div>
-        <div className="absolute bottom-1/3 right-1/4 w-36 h-36 opacity-6 animate-float animation-delay-700">
-          <img src={orthoticBraceImage} alt="Orthotic brace" className="w-full h-full object-cover rounded-full" />
-        </div>
-      </div>
 
       <div className="container mx-auto px-4 py-12 relative z-10">
         {/* Header Section */}
