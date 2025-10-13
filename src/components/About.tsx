@@ -38,7 +38,7 @@ const About = () => {
         <div className="flex flex-col items-center gap-16 max-w-4xl mx-auto text-center">
           <div className="animate-fade-in">
             <TextReveal stagger delay={200}>
-              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 animate-fade-in">
+              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 animate-fade-in transform hover:scale-105 transition-all duration-300">
                 About Quantum Medical
               </h2>
             </TextReveal>
