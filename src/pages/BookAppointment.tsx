@@ -15,6 +15,7 @@ import { format } from 'date-fns';
 import { cn } from '@/lib/utils';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Background3D from '@/components/Background3D';
 import { supabase } from '@/integrations/supabase/client';
 
 
@@ -159,7 +160,8 @@ const BookAppointment = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <Background3D />
       <Header />
       <div className="bg-background relative overflow-hidden pt-20">
 
