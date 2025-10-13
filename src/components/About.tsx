@@ -35,7 +35,7 @@ const About = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background"></div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="flex flex-col items-center gap-16 max-w-4xl mx-auto text-center">
           <div className="animate-fade-in">
             <TextReveal stagger delay={200}>
               <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
