@@ -15,6 +15,7 @@ import CustomOrthotics from "./pages/services/CustomOrthotics";
 import RepairMaintenance from "./pages/services/RepairMaintenance";
 import MedicalEquipments from "./pages/services/MedicalEquipments";
 import Background3D from "@/components/Background3D";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
