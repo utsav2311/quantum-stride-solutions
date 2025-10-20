@@ -22,6 +22,7 @@ import {
 
 // Import images
 import clinicBackground from "@/assets/clinic-background.jpg";
+import consultationService from "@/assets/consultation-service.jpg";
 
 const Contact = () => {
   const contactInfo = [
@@ -125,11 +126,11 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="relative py-24 md:py-32 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-cover bg-center animate-floating-slow" style={{backgroundImage: `url(${clinicBackground})`}}></div>
+          <div className="absolute inset-0 bg-cover bg-center animate-floating-slow" style={{backgroundImage: `url(${consultationService})`}}></div>
         </div>
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background/90">
           {/* Animated gradient overlay with background */}
-          <div className="absolute inset-0 bg-cover bg-center opacity-10 animate-pulse" style={{backgroundImage: `url(${clinicBackground})`}}></div>
+          <div className="absolute inset-0 bg-cover bg-center opacity-10 animate-pulse" style={{backgroundImage: `url(${consultationService})`}}></div>
           <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5"></div>
         </div>
         
