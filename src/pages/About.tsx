@@ -29,21 +29,21 @@ const About = () => {
     description: "Every device we create undergoes rigorous testing and quality control to ensure safety, durability, and optimal performance."
   }];
   const team = [{
-    name: "Dr. Sarah Johnson",
+    name: "",
     role: "Chief Prosthetist",
     credentials: "CPO, PhD",
     experience: "15+ years",
     specialization: "Lower Limb Prosthetics",
     image: prostheticProfessional
   }, {
-    name: "Michael Chen",
+    name: "",
     role: "Senior Orthotist",
     credentials: "CO, MSc",
     experience: "12+ years",
     specialization: "Spinal Orthotics",
     image: prostheticProfessional
   }, {
-    name: "Dr. Emily Rodriguez",
+    name: "",
     role: "Research Director",
     credentials: "PhD, CPO",
     experience: "18+ years",
