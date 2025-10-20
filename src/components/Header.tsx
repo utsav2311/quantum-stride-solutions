@@ -1,7 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Menu } from "lucide-react";
+import { useState } from "react";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header className="bg-background/95 backdrop-blur-md border-b border-border/50 sticky top-0 z-50 animate-slide-up">
       <div className="container mx-auto px-4 py-4">
@@ -25,14 +34,65 @@ const Header = () => {
             <Link to="/contact" className="nav-link text-foreground hover:text-primary transition-all duration-300">Contact</Link>
           </nav>
           
-          <Button 
-            variant="medical" 
-            size="sm"
-            className="animate-slide-right animation-delay-400 hover-lift hover:animate-glow transition-all duration-300"
-            asChild
-          >
-            <Link to="/book-appointment">Book Appointment</Link>
-          </Button>
+          <div className="flex items-center gap-4">
+            <Button 
+              variant="medical" 
+              size="sm"
+              className="hidden md:flex animate-slide-right animation-delay-400 hover-lift hover:animate-glow transition-all duration-300"
+              asChild
+            >
+              <Link to="/book-appointment">Book Appointment</Link>
+            </Button>
+
+            {/* Mobile Menu */}
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="sm" className="md:hidden">
+                  <Menu className="h-6 w-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px]">
+                <nav className="flex flex-col gap-6 mt-8">
+                  <Link 
+                    to="/" 
+                    className="nav-link text-foreground hover:text-primary transition-all duration-300 text-lg"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Home
+                  </Link>
+                  <Link 
+                    to="/services" 
+                    className="nav-link text-foreground hover:text-primary transition-all duration-300 text-lg"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Services
+                  </Link>
+                  <Link 
+                    to="/about" 
+                    className="nav-link text-foreground hover:text-primary transition-all duration-300 text-lg"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    About
+                  </Link>
+                  <Link 
+                    to="/contact" 
+                    className="nav-link text-foreground hover:text-primary transition-all duration-300 text-lg"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Contact
+                  </Link>
+                  <Button 
+                    variant="medical" 
+                    size="sm"
+                    className="w-full mt-4"
+                    asChild
+                  >
+                    <Link to="/book-appointment" onClick={() => setIsOpen(false)}>Book Appointment</Link>
+                  </Button>
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>
