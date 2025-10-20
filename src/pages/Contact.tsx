@@ -128,8 +128,9 @@ const Contact = () => {
           <div className="absolute inset-0 bg-cover bg-center animate-floating-slow" style={{backgroundImage: `url(${clinicBackground})`}}></div>
         </div>
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background/90">
-          {/* Animated gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 animate-pulse"></div>
+          {/* Animated gradient overlay with background */}
+          <div className="absolute inset-0 bg-cover bg-center opacity-10 animate-pulse" style={{backgroundImage: `url(${clinicBackground})`}}></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5"></div>
         </div>
         
         <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
