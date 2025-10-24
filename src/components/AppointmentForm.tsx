@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import Background3D from "@/components/Background3D";
 
 const AppointmentForm = () => {
   const { toast } = useToast();
@@ -60,13 +61,7 @@ const AppointmentForm = () => {
 
   return (
     <section id="appointment" className="py-20 bg-background relative overflow-hidden">
-      {/* Animated Floating Circles */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-primary/5 rounded-full animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-24 h-24 bg-accent/5 rounded-full animate-float animation-delay-1000"></div>
-        <div className="absolute top-1/2 left-1/3 w-16 h-16 bg-primary/3 rounded-full animate-float animation-delay-500"></div>
-        <div className="absolute top-1/3 right-1/4 w-20 h-20 bg-accent/4 rounded-full animate-float animation-delay-700"></div>
-      </div>
+      <Background3D />
 
       <div className="container mx-auto px-4 relative z-30 animate-fade-in">
         <div className="max-w-2xl mx-auto">
