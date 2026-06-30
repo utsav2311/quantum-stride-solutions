@@ -1,4 +1,4 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Clock, Mail, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 
@@ -7,67 +7,65 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Location",
-      details: ["Al Danah", "Abu Dhabi", "United Arab Emirates"]
+      details: ["Al Danah", "Abu Dhabi", "United Arab Emirates"],
     },
     {
       icon: Phone,
       title: "Phone",
-      details: ["+971 558488759"]
+      details: ["+971 558488759"],
     },
     {
       icon: Clock,
       title: "Hours",
-      details: ["Sat-Thu: 9:00 AM - 6:00 PM"]
+      details: ["Sat-Thu: 9:00 AM - 6:00 PM"],
     },
     {
       icon: Mail,
       title: "Email",
-      details: ["info@quantumuae.ae"]
-    }
+      details: ["info@quantumuae.ae"],
+    },
   ];
 
   const socialLinks = [
     { icon: Facebook, name: "Facebook", href: "#" },
     { icon: Instagram, name: "Instagram", href: "#" },
     { icon: Linkedin, name: "LinkedIn", href: "#" },
-    { icon: Youtube, name: "YouTube", href: "#" }
+    { icon: Youtube, name: "YouTube", href: "#" },
   ];
 
   return (
-    <section id="contact" className="py-20 bg-medical-light/30 relative overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-primary/5 rounded-full animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-24 h-24 bg-accent/5 rounded-full animate-float animation-delay-1000"></div>
-        <div className="absolute top-1/2 left-1/3 w-16 h-16 bg-primary/3 rounded-full animate-float animation-delay-500"></div>
-      </div>
+    <section id="contact" className="py-24 md:py-32 bg-background relative overflow-hidden">
+      <div className="absolute -top-24 -left-24 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+      <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16 animate-fade-in opacity-0">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 hover-scale">Get In Touch</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-slide-up opacity-0 animation-delay-300">
-            Ready to start your journey? Contact us today to schedule your consultation
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-3xl mb-16 md:mb-20">
+          <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">
+            Get In Touch
           </p>
-          <div className="mt-6 w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full animate-scale-in opacity-0 animation-delay-500"></div>
+          <h2 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.05] mb-6">
+            Let's <span className="italic text-accent">connect</span>.
+          </h2>
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+            Ready to start your journey? Reach out and our clinical team will get back to you within 24 hours.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 stagger-animation">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-16 max-w-7xl">
           {contactInfo.map((info, index) => {
-            const IconComponent = info.icon;
+            const Icon = info.icon;
             return (
-              <Card key={index} className="text-center hover-lift border-border/50 group relative overflow-hidden">
-                {/* Card glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
-                <CardHeader className="relative z-10">
-                  <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 group-hover:animate-glow transition-all duration-300">
-                    <IconComponent className="text-primary w-8 h-8 group-hover:scale-110 transition-transform duration-300" />
+              <Card
+                key={index}
+                className="group border-border/60 hover:border-accent transition-all duration-500 hover:-translate-y-1 hover:shadow-xl bg-card"
+              >
+                <CardContent className="p-6">
+                  <div className="w-14 h-14 flex items-center justify-center rounded-full bg-accent/10 group-hover:bg-accent group-hover:scale-110 transition-all duration-500 mb-5">
+                    <Icon className="text-accent group-hover:text-accent-foreground w-6 h-6 transition-colors duration-500" />
                   </div>
-                  <CardTitle className="text-xl text-primary group-hover:text-primary/80 transition-colors duration-300">{info.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="relative z-10">
-                  {info.details.map((detail, detailIndex) => (
-                    <p key={detailIndex} className="text-sm text-muted-foreground mb-1 group-hover:text-foreground/80 transition-colors duration-300">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">{info.title}</h3>
+                  {info.details.map((detail, i) => (
+                    <p key={i} className="text-sm text-muted-foreground leading-relaxed">
                       {detail}
                     </p>
                   ))}
@@ -77,39 +75,53 @@ const Contact = () => {
           })}
         </div>
 
-        <div className="text-center mt-12">
-          <p className="text-muted-foreground mb-6 animate-fade-in opacity-0 animation-delay-800">
-            Follow us on social media for updates and patient success stories
-          </p>
-          <div className="flex justify-center space-x-4 stagger-animation">
-            {socialLinks.map((social, index) => {
-              const IconComponent = social.icon;
-              return (
-                <Button 
-                  key={index} 
-                  variant="ghost" 
-                  size="sm" 
-                  className="hover-lift group relative overflow-hidden"
-                  asChild
-                >
-                  <a href={social.href} className="flex items-center gap-2">
-                    <IconComponent className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
-                    {social.name}
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </a>
-                </Button>
-              );
-            })}
-          </div>
-        </div>
+        <div className="grid lg:grid-cols-2 gap-8 max-w-7xl items-stretch">
+          <Card className="border-border/60 bg-card">
+            <CardContent className="p-8 md:p-10">
+              <p className="text-xs tracking-[0.3em] text-accent font-semibold mb-3 uppercase">
+                Follow Us
+              </p>
+              <h3 className="font-playfair text-2xl md:text-3xl font-semibold text-foreground mb-6">
+                Stories from the clinic.
+              </h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Updates, patient milestones and behind-the-scenes glimpses from our team.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {socialLinks.map((social, index) => {
+                  const Icon = social.icon;
+                  return (
+                    <Button
+                      key={index}
+                      variant="outline"
+                      size="sm"
+                      className="group border-border/60 hover:border-accent hover:text-accent"
+                      asChild
+                    >
+                      <a href={social.href} className="flex items-center gap-2">
+                        <Icon className="w-4 h-4" />
+                        {social.name}
+                      </a>
+                    </Button>
+                  );
+                })}
+              </div>
+            </CardContent>
+          </Card>
 
-        {/* Floating Contact CTA */}
-        <div className="mt-16 text-center animate-scale-in opacity-0 animation-delay-1200">
-          <Card className="max-w-md mx-auto hover-glow border-primary/20 bg-gradient-to-br from-background to-primary/5">
-            <CardContent className="p-6">
-              <h3 className="text-xl font-semibold text-primary mb-2">Need Immediate Assistance?</h3>
-              <p className="text-muted-foreground mb-4">Our team is ready to help you</p>
-              <Button variant="medical" size="lg" className="w-full hover-lift animate-pulse-slow">
+          <Card className="border-border/60 bg-card relative overflow-hidden">
+            <div className="absolute -top-12 -right-12 w-48 h-48 bg-accent/10 rounded-full blur-2xl" />
+            <CardContent className="p-8 md:p-10 relative z-10 flex flex-col h-full">
+              <p className="text-xs tracking-[0.3em] text-accent font-semibold mb-3 uppercase">
+                Immediate Assistance
+              </p>
+              <h3 className="font-playfair text-2xl md:text-3xl font-semibold text-foreground mb-4">
+                Speak with our team <span className="italic text-accent">today</span>.
+              </h3>
+              <p className="text-muted-foreground mb-8 leading-relaxed">
+                Have an urgent question or need a same-week consultation? We're one call away.
+              </p>
+              <Button variant="medical" size="lg" className="mt-auto">
                 Call Now: +971 558488759
               </Button>
             </CardContent>

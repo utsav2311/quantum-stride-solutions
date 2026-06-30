@@ -60,17 +60,26 @@ const AppointmentForm = () => {
   const inputClass = "w-full px-4 py-3 rounded-xl bg-muted/50 border border-border/60 focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:border-primary transition-all duration-200";
 
   return (
-    <section id="appointment" className="py-20 md:py-28 bg-background relative overflow-hidden">
-      {/* Decorative glass blobs */}
+    <section id="appointment" className="py-24 md:py-32 bg-background relative overflow-hidden">
+      {/* Decorative blobs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute -top-24 -left-24 w-80 h-80 bg-primary/10 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" />
-        <div className="absolute -bottom-24 -right-24 w-80 h-80 bg-accent/10 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-medical-teal/5 rounded-full filter blur-3xl opacity-60 animate-blob animation-delay-4000" />
+        <div className="absolute -top-24 -left-24 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+        <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
+          <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">
+            Book Your Visit
+          </p>
+          <h2 className="font-playfair text-5xl md:text-6xl font-bold text-foreground leading-[1.05]">
+            Ready for your <span className="italic text-accent">next step</span>?
+          </h2>
+        </div>
+
         <AnimatedSection animation="scale-in" duration="normal" className="max-w-5xl mx-auto">
-          <Card className="bg-card/80 backdrop-blur-xl border border-card/50 shadow-2xl shadow-primary/10 overflow-hidden rounded-3xl">
+          <Card className="bg-card/80 backdrop-blur-xl border border-border/60 shadow-2xl shadow-primary/10 overflow-hidden rounded-3xl">
+
             <div className="flex flex-col lg:flex-row">
               {/* Left info panel */}
               <div className="lg:w-2/5 bg-primary p-8 md:p-12 text-primary-foreground flex flex-col justify-between relative overflow-hidden">
