@@ -52,9 +52,9 @@ const HeroCarousel = () => {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
   return <section className="relative h-screen overflow-hidden">
-      <div className="embla" ref={emblaRef}>
-        <div className="embla__container flex">
-          {slides.map((slide, index) => <div key={index} className="embla__slide flex-none w-full relative">
+      <div className="embla h-full" ref={emblaRef}>
+        <div className="embla__container h-full flex">
+          {slides.map((slide, index) => <div key={index} className="embla__slide h-full flex-none w-full relative">
               <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
             backgroundImage: `url(${slide.image})`
           }}>
