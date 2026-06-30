@@ -49,7 +49,7 @@ const Services = () => {
   return (
     <section id="services" className="pt-0 pb-24 md:pb-32 bg-medical-light/30 relative">
       <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
-        <div className="text-center mb-20 md:mb-24">
+        <div className="text-center mt-12 mb-20 md:mb-24">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">Our Services</h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Comprehensive prosthetic and orthotic care tailored to your unique needs
