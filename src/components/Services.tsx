@@ -48,42 +48,41 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="pt-24 pb-24 md:pb-32 bg-xtreme-dark text-white relative overflow-hidden">
-      <ParticleSystem count={12} className="opacity-30" />
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 -right-32 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
+    <section id="services" className="pt-24 pb-24 md:pb-32 bg-background relative overflow-hidden">
+      <ParticleSystem count={12} className="opacity-20" />
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 -right-32 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
         <AnimatedSection animation="slide-up" duration="slow" className="max-w-4xl mb-16 md:mb-20">
           <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">What We Do</p>
-          <h2 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.05]">
+          <h2 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.05] text-foreground">
             Solutions that <span className="italic text-accent">move with you</span>.
           </h2>
-          <p className="text-lg md:text-xl text-white/70 max-w-2xl leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
             Comprehensive prosthetic and orthotic care, custom-built around your body and your life.
           </p>
         </AnimatedSection>
 
         <StaggeredGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl" staggerDelay={120} animation="slide-up">
           {services.map((service, index) => (
-            <Card key={index} className="group relative overflow-hidden border border-white/10 bg-white/[0.03] backdrop-blur-sm rounded-2xl hover:border-accent/60 transition-all duration-500 hover:-translate-y-2">
+            <Card key={index} className="group relative overflow-hidden border border-border/60 bg-card rounded-2xl hover:border-accent/60 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
               <div className="relative overflow-hidden h-56">
                 <img
                   src={service.image}
                   alt={service.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-xtreme-dark via-xtreme-dark/40 to-transparent" />
-                <span className="absolute top-4 left-4 text-xs tracking-widest text-accent font-semibold">
+                <span className="absolute top-4 left-4 text-xs tracking-widest text-accent font-semibold bg-background/80 backdrop-blur-sm rounded-full px-3 py-1">
                   0{index + 1}
                 </span>
               </div>
 
               <CardHeader className="relative z-10 pb-3">
-                <CardTitle className="text-2xl font-playfair text-white group-hover:text-accent transition-colors duration-300">
+                <CardTitle className="text-2xl font-playfair text-foreground group-hover:text-accent transition-colors duration-300">
                   {service.title}
                 </CardTitle>
-                <CardDescription className="text-base leading-relaxed text-white/65">
+                <CardDescription className="text-base leading-relaxed text-muted-foreground">
                   {service.description}
                 </CardDescription>
               </CardHeader>
@@ -91,7 +90,7 @@ const Services = () => {
               <CardContent className="relative z-10">
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-white/70">
+                    <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
                       <div className="w-1.5 h-1.5 bg-accent rounded-full mr-3" />
                       {feature}
                     </li>
@@ -115,3 +114,4 @@ const Services = () => {
 };
 
 export default Services;
+
