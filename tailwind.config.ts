@@ -63,6 +63,10 @@ export default {
 					light: 'hsl(var(--medical-light))',
 					dark: 'hsl(var(--medical-dark))'
 				},
+				xtreme: {
+					dark: 'hsl(var(--xtreme-dark))',
+					orange: 'hsl(var(--xtreme-orange))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
