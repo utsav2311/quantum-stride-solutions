@@ -15,17 +15,17 @@ const Header = () => {
     <header className="bg-background/95 backdrop-blur-md border-b border-border/50 sticky top-0 z-50 animate-slide-up">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2 animate-slide-left animation-delay-200">
+          <Link to="/" className="flex items-center space-x-2 animate-slide-left animation-delay-200 group">
             <img 
               src="/lovable-uploads/e5a83eab-625b-4d9c-803e-cd8d42658144.png" 
               alt="Quantum Medical Logo" 
-              className="w-12 h-12 hover-scale transition-all duration-300"
+              className="w-12 h-12 hover-scale transition-all duration-300 group-hover:opacity-80"
             />
             <div>
               <h1 className="text-2xl font-bold text-primary hover:text-primary/80 transition-colors duration-300">Quantum Medical</h1>
               <p className="text-xs text-muted-foreground">Prosthetics & Orthotics</p>
             </div>
-          </div>
+          </Link>
           
           <nav className="hidden md:flex items-center space-x-8 stagger-children">
             <Link to="/" className="nav-link text-foreground hover:text-primary transition-all duration-300">Home</Link>
