@@ -73,7 +73,7 @@ const AppointmentForm = () => {
           <Card className="bg-card/80 backdrop-blur-xl border border-card/50 shadow-2xl shadow-primary/10 overflow-hidden rounded-3xl">
             <div className="flex flex-col lg:flex-row">
               {/* Left info panel */}
-              <div className="lg:w-2/5 bg-medical-dark p-8 md:p-12 text-primary-foreground flex flex-col justify-between relative overflow-hidden">
+              <div className="lg:w-2/5 bg-primary p-8 md:p-12 text-primary-foreground flex flex-col justify-between relative overflow-hidden">
                 <div className="relative z-10">
                   <div className="h-1 w-14 bg-accent mb-8 rounded-full"></div>
                   <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 font-playfair">
