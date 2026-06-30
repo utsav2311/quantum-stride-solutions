@@ -6,6 +6,7 @@ import AppointmentForm from "@/components/AppointmentForm";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Background3D from "@/components/Background3D";
+import TrustBadges from "@/components/TrustBadges";
 import { ScrollProgressBar } from "@/components/animations/ScrollProgressBar";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
