@@ -132,7 +132,22 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Xtremity-style headings: bold uppercase sans-serif */
+  .font-playfair {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    font-weight: 800;
+  }
+  .font-playfair .italic,
+  .font-playfair em,
+  .font-playfair i {
+    font-style: normal;
+    color: hsl(var(--accent));
+  }
 }
+
 
 @layer utilities {
   /* Performance optimizations */
