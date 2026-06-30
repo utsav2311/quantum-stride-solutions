@@ -135,19 +135,20 @@ const Contact = () => {
         </div>
         
         <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <Badge variant="outline" className="mb-6 text-lg px-4 py-2">
+          <div className="max-w-4xl mx-auto">
+            <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">
               Get In Touch
-            </Badge>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary mb-6 animate-fade-in">
-              Contact Us
+            </p>
+            <h1 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.05] mb-6 animate-fade-in">
+              Let's <span className="italic text-accent">connect</span>.
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed animate-slide-up">
-              We're here to help you on your journey to enhanced mobility and independence
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl">
+              We're here to help you on your journey to enhanced mobility and independence.
             </p>
           </div>
         </div>
       </section>
+
 
       {/* Contact Form & Info */}
       <section className="py-20 md:py-24">
@@ -241,11 +242,13 @@ const Contact = () => {
       <section className="py-20 md:py-24 bg-medical-light/30">
         <div className="container mx-auto px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">How Can We Help?</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Choose the option that best describes what you need assistance with
+            <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">Quick Actions</p>
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-4">How can we <span className="italic text-accent">help</span>?</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Choose the option that best describes what you need assistance with.
             </p>
           </div>
+
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
@@ -268,11 +271,13 @@ const Contact = () => {
       <section className="py-20 md:py-24">
         <div className="container mx-auto px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">Department Contacts</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Reach out directly to the department that can best assist you
+            <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">Direct Lines</p>
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-4">Department <span className="italic text-accent">contacts</span>.</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Reach out directly to the department that can best assist you.
             </p>
           </div>
+
           
           <div className="grid md:grid-cols-2 gap-8">
             {departments.map((dept, index) => (

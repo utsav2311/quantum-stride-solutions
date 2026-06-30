@@ -82,17 +82,18 @@ const About = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background/90"></div>
         
         <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <Badge variant="outline" className="mb-6 text-lg px-4 py-2">
+          <div className="max-w-4xl mx-auto">
+            <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">
               Our Story
-            </Badge>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary mb-6 animate-fade-in">
-              About Quantum Medical
+            </p>
+            <h1 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.05] mb-6 animate-fade-in">
+              About <span className="italic text-accent">Quantum Medical</span>.
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed animate-slide-up">
-              Dedicated to transforming lives through innovative prosthetic and orthotic solutions
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl">
+              Dedicated to transforming lives through innovative prosthetic and orthotic solutions.
             </p>
           </div>
+
         </div>
       </section>
 
@@ -101,7 +102,8 @@ const About = () => {
         <div className="container mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">Our Story</h2>
+              <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">Our Journey</p>
+              <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-6">Our <span className="italic text-accent">story</span>.</h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
                   Founded in 2008, Quantum Medical began with a simple yet powerful mission: to restore independence and improve quality of life for individuals requiring prosthetic and orthotic care. What started as a small clinic has grown into a leading healthcare facility serving thousands of patients across the region.
@@ -124,11 +126,13 @@ const About = () => {
       <section className="py-20 md:py-24 bg-medical-light/30">
         <div className="container mx-auto px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">Our Values</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              The principles that guide everything we do and every decision we make
+            <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">What Guides Us</p>
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-4">Our <span className="italic text-accent">values</span>.</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              The principles that guide everything we do and every decision we make.
             </p>
           </div>
+
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => <Card key={index} className="text-center p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border-border/50 animate-fade-in" style={{
@@ -148,11 +152,13 @@ const About = () => {
       <section className="py-20 md:py-24">
         <div className="container mx-auto px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">Meet Our Team</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Experienced professionals dedicated to your care and success
+            <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">The People</p>
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-4">Meet our <span className="italic text-accent">team</span>.</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Experienced professionals dedicated to your care and success.
             </p>
           </div>
+
           
           <div className="grid md:grid-cols-3 gap-8">
             {team.map((member, index) => <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{
@@ -190,11 +196,13 @@ const About = () => {
       <section className="py-20 md:py-24 bg-gradient-to-r from-primary/10 to-accent/10">
         <div className="container mx-auto px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">Our Achievements</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Numbers that reflect our commitment to excellence and patient satisfaction
+            <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">Milestones</p>
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-4">Our <span className="italic text-accent">achievements</span>.</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Numbers that reflect our commitment to excellence and patient satisfaction.
             </p>
           </div>
+
           
           <div className="grid md:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => <Card key={index} className="text-center p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{
@@ -214,11 +222,13 @@ const About = () => {
       <section className="py-20 md:py-24">
         <div className="container mx-auto px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">Certifications & Accreditations</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our commitment to quality is recognized by leading healthcare organizations
+            <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">Recognized For</p>
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-4">Certifications & <span className="italic text-accent">accreditations</span>.</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Our commitment to quality is recognized by leading healthcare organizations.
             </p>
           </div>
+
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, index) => <Card key={index} className="p-6 flex items-center space-x-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in" style={{
@@ -243,14 +253,16 @@ const About = () => {
         
         <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-8">Our Mission</h2>
-            <div className="text-2xl md:text-3xl text-muted-foreground leading-relaxed mb-8 italic">
+            <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">Our Mission</p>
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-8">Built for <span className="italic text-accent">movement</span>. Engineered for <span className="italic text-accent">life</span>.</h2>
+            <blockquote className="border-l-4 border-accent pl-6 py-2 italic text-foreground/80 text-xl md:text-2xl text-left max-w-3xl mx-auto mb-8">
               "To empower individuals with mobility challenges by providing innovative, personalized prosthetic and orthotic solutions that restore independence, enhance quality of life, and inspire confidence in every step forward."
-            </div>
+            </blockquote>
             <Button size="lg" className="px-8 py-4 text-lg">
               Join Our Mission
             </Button>
           </div>
+
         </div>
       </section>
 
