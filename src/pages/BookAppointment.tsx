@@ -167,15 +167,16 @@ const BookAppointment = () => {
 
       <div className="container mx-auto px-4 py-12 relative z-10">
         {/* Header Section */}
-        <div className="text-center mb-12 animate-fade-in">
-          <h1 className="text-5xl md:text-6xl font-bold text-primary mb-6 font-playfair">
-            Book Your <span className="text-accent">Appointment</span>
+        <div className="text-center mb-12 animate-fade-in max-w-4xl mx-auto">
+          <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">Book Your Visit</p>
+          <h1 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.05] mb-6">
+            Book your <span className="italic text-accent">appointment</span>.
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
             Take the first step towards improved mobility and independence. Our comprehensive appointment booking ensures we have all the information needed to provide you with the best possible care.
           </p>
-          <div className="mt-8 w-32 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
         </div>
+
 
         {/* Quick Info Cards */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">

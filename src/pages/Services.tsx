@@ -161,19 +161,20 @@ const Services = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background/90"></div>
         
         <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <Badge variant="outline" className="mb-6 text-lg px-4 py-2">
+          <div className="max-w-4xl mx-auto">
+            <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">
               Comprehensive Healthcare Solutions
-            </Badge>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary mb-6 animate-fade-in">
-              Our Services
+            </p>
+            <h1 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.05] mb-6 animate-fade-in">
+              Our <span className="italic text-accent">services</span>.
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed animate-slide-up">
-              From advanced prosthetics to custom orthotics, we provide complete solutions for enhanced mobility and independence
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl">
+              From advanced prosthetics to custom orthotics, we provide complete solutions for enhanced mobility and independence.
             </p>
           </div>
         </div>
       </section>
+
 
       {/* Services Grid */}
       <section className="py-20 md:py-24 bg-medical-light/30">
@@ -239,11 +240,13 @@ const Services = () => {
       <section className="py-20 md:py-24">
         <div className="container mx-auto px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">Why Choose Quantum Medical</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We combine expertise, technology, and compassion to deliver exceptional results
+            <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">Why Us</p>
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-4">Why choose <span className="italic text-accent">Quantum Medical</span>.</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              We combine expertise, technology, and compassion to deliver exceptional results.
             </p>
           </div>
+
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -263,11 +266,13 @@ const Services = () => {
       <section className="py-20 md:py-24 bg-medical-light/20">
         <div className="container mx-auto px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">Our Process</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              A systematic approach ensuring the best possible outcome for every patient
+            <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">How We Work</p>
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-4">Our <span className="italic text-accent">process</span>.</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              A systematic approach ensuring the best possible outcome for every patient.
             </p>
           </div>
+
           
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-primary to-accent hidden lg:block"></div>
@@ -303,11 +308,12 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-24 bg-gradient-to-r from-primary/20 to-accent/20">
+      <section className="py-20 md:py-24 bg-secondary/40">
         <div className="container mx-auto px-6 md:px-8 lg:px-12 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">Ready to Get Started?</h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Schedule a consultation with our experts and take the first step towards enhanced mobility
+          <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">Next Step</p>
+          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-4">Ready to <span className="italic text-accent">get started</span>?</h2>
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Schedule a consultation with our experts and take the first step towards enhanced mobility.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="px-8 py-4 text-lg">
@@ -317,6 +323,7 @@ const Services = () => {
               Contact Us
             </Button>
           </div>
+
         </div>
       </section>
 
