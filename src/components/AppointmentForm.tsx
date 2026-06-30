@@ -240,7 +240,7 @@ const AppointmentForm = () => {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full group bg-medical-dark text-primary-foreground hover:bg-medical-dark/90 rounded-xl shadow-lg hover:shadow-primary/20 transition-all duration-300 py-6 text-base font-semibold"
+                    className="w-full group bg-primary text-primary-foreground hover:bg-primary-hover rounded-xl shadow-lg hover:shadow-primary/30 transition-all duration-300 py-6 text-base font-semibold"
                   >
                     <span>Submit Appointment Request</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
