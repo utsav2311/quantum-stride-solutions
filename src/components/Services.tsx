@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { AnimatedSection, StaggeredGrid, ParticleSystem, FloatingElements } from "@/components/animations";
+import { AnimatedSection, StaggeredGrid, ParticleSystem } from "@/components/animations";
 import lowerLimbProsthetics from "@/assets/lower-limb-prosthetics.jpg";
 import upperLimbProsthetics from "@/assets/upper-limb-prosthetics.jpg";
 import customOrthotics from "@/assets/custom-orthotics-service.jpg";
