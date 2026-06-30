@@ -48,37 +48,42 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="pt-0 pb-24 md:pb-32 bg-medical-light/30 relative overflow-hidden">
-      <ParticleSystem count={20} className="opacity-60" />
-      <FloatingElements count={8} className="opacity-40" />
+    <section id="services" className="pt-24 pb-24 md:pb-32 bg-xtreme-dark text-white relative overflow-hidden">
+      <ParticleSystem count={12} className="opacity-30" />
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 -right-32 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
-        <AnimatedSection animation="slide-up" duration="slow" className="text-center mt-12 mb-20 md:mb-24">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">Our Services</h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Comprehensive prosthetic and orthotic care tailored to your unique needs
+        <AnimatedSection animation="slide-up" duration="slow" className="max-w-4xl mb-16 md:mb-20">
+          <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">What We Do</p>
+          <h2 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.05]">
+            Solutions that <span className="italic text-accent">move with you</span>.
+          </h2>
+          <p className="text-lg md:text-xl text-white/70 max-w-2xl leading-relaxed">
+            Comprehensive prosthetic and orthotic care, custom-built around your body and your life.
           </p>
-          <div className="mt-10 w-32 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full animate-pulse-slow"></div>
         </AnimatedSection>
 
-        <StaggeredGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12 max-w-7xl mx-auto" staggerDelay={120} animation="slide-up">
+        <StaggeredGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl" staggerDelay={120} animation="slide-up">
           {services.map((service, index) => (
-            <Card key={index} className="group border-border/50 relative overflow-hidden hover-lift hover-glow bg-card/80 backdrop-blur-sm">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-white/10 to-primary/0 opacity-0 group-hover:opacity-100 animate-shimmer -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-
-              <div className="relative overflow-hidden rounded-t-lg">
+            <Card key={index} className="group relative overflow-hidden border border-white/10 bg-white/[0.03] backdrop-blur-sm rounded-2xl hover:border-accent/60 transition-all duration-500 hover:-translate-y-2">
+              <div className="relative overflow-hidden h-56">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-48 object-cover transform-gpu transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-primary/5 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-xtreme-dark via-xtreme-dark/40 to-transparent" />
+                <span className="absolute top-4 left-4 text-xs tracking-widest text-accent font-semibold">
+                  0{index + 1}
+                </span>
               </div>
 
-              <CardHeader className="relative z-10">
-                <CardTitle className="text-2xl text-primary group-hover:text-primary/90 transition-colors duration-300">{service.title}</CardTitle>
-                <CardDescription className="text-base leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
+              <CardHeader className="relative z-10 pb-3">
+                <CardTitle className="text-2xl font-playfair text-white group-hover:text-accent transition-colors duration-300">
+                  {service.title}
+                </CardTitle>
+                <CardDescription className="text-base leading-relaxed text-white/65">
                   {service.description}
                 </CardDescription>
               </CardHeader>
@@ -86,18 +91,19 @@ const Services = () => {
               <CardContent className="relative z-10">
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-muted-foreground group-hover:text-foreground/70 transition-all duration-300">
-                      <div className="w-2 h-2 bg-accent rounded-full mr-3 group-hover:scale-125 transition-transform duration-300"></div>
+                    <li key={featureIndex} className="flex items-center text-sm text-white/70">
+                      <div className="w-1.5 h-1.5 bg-accent rounded-full mr-3" />
                       {feature}
                     </li>
                   ))}
                 </ul>
 
-                <Link to={service.link} className="block">
-                  <Button className="w-full relative overflow-hidden btn-magnetic">
-                    <span className="relative z-10">Learn More</span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </Button>
+                <Link
+                  to={service.link}
+                  className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-accent group-hover:gap-3 transition-all duration-300"
+                >
+                  Learn More
+                  <span aria-hidden>→</span>
                 </Link>
               </CardContent>
             </Card>
