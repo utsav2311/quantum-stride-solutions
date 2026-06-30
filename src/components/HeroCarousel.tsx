@@ -106,12 +106,6 @@ const HeroCarousel = () => {
         {slides.map((_, index) => <button key={index} className="w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-colors duration-300" onClick={() => emblaApi?.scrollTo(index)} />)}
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 text-white/60 animate-bounce cursor-pointer z-20" onClick={() => document.getElementById('services')?.scrollIntoView({
-      behavior: 'smooth'
-    })}>
-        <p className="text-xs animate-pulse-slow">Scroll Down</p>
-      </div>
     </section>;
 };
 export default HeroCarousel;
