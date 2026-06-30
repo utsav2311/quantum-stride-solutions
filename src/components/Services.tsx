@@ -52,7 +52,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-24 md:py-32 bg-medical-light/30 relative overflow-hidden">
+    <section id="services" className="pt-0 pb-24 md:pb-32 bg-medical-light/30 relative overflow-hidden">
       {/* Particle System */}
       <ParticleSystem count={30} />
       
