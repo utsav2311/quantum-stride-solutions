@@ -30,6 +30,7 @@ const Index = () => {
       <Background3D />
       <Header />
       <HeroCarousel />
+      <TrustBadges />
       <Services />
       <MoreLink to="/services" label="View All Services" />
       <About />
