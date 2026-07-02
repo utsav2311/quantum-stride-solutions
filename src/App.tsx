@@ -24,27 +24,29 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      {/* <Background3D /> */}
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/book-appointment" element={<BookAppointment />} />
-          <Route path="/services/lower-limb-prosthetics" element={<LowerLimbProsthetics />} />
-          <Route path="/services/upper-limb-prosthetics" element={<UpperLimbProsthetics />} />
-          <Route path="/services/custom-orthotics" element={<CustomOrthotics />} />
-          <Route path="/services/repair-maintenance" element={<RepairMaintenance />} />
-          <Route path="/services/medical-equipments" element={<MedicalEquipments />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        <WhatsAppButton />
-      </BrowserRouter>
+      <BackgroundModeProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/book-appointment" element={<BookAppointment />} />
+            <Route path="/services/lower-limb-prosthetics" element={<LowerLimbProsthetics />} />
+            <Route path="/services/upper-limb-prosthetics" element={<UpperLimbProsthetics />} />
+            <Route path="/services/custom-orthotics" element={<CustomOrthotics />} />
+            <Route path="/services/repair-maintenance" element={<RepairMaintenance />} />
+            <Route path="/services/medical-equipments" element={<MedicalEquipments />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          <WhatsAppButton />
+          <BackgroundStyleToggle />
+        </BrowserRouter>
+      </BackgroundModeProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );
