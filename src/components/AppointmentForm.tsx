@@ -280,9 +280,10 @@ const AppointmentForm = () => {
                   <Button
                     type="submit"
                     size="lg"
+                    disabled={isSubmitting}
                     className="w-full group bg-primary text-primary-foreground hover:bg-primary-hover rounded-xl shadow-lg hover:shadow-primary/30 transition-all duration-300 py-6 text-base font-semibold"
                   >
-                    <span>Submit Appointment Request</span>
+                    <span>{isSubmitting ? "Submitting..." : "Submit Appointment Request"}</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </form>
