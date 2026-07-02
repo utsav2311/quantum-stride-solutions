@@ -43,11 +43,11 @@ const FloatingShape = ({ position, shape, color, speed }: {
         <meshStandardMaterial
           color={color}
           emissive={color}
-          emissiveIntensity={0.6}
-          metalness={0.4}
-          roughness={0.25}
+          emissiveIntensity={0.15}
+          metalness={0.2}
+          roughness={0.6}
           transparent
-          opacity={0.9}
+          opacity={0.35}
         />
       </mesh>
     </Float>
@@ -56,26 +56,26 @@ const FloatingShape = ({ position, shape, color, speed }: {
 
 const Background3D = () => {
   const shapes = useMemo(() => [
-    { position: [-8, 4, -5], shape: 'sphere', color: '#3b82f6', speed: 1 },
-    { position: [8, -2, -8], shape: 'box', color: '#06b6d4', speed: 0.8 },
-    { position: [-5, -4, -6], shape: 'torus', color: '#8b5cf6', speed: 1.2 },
-    { position: [6, 3, -10], shape: 'sphere', color: '#10b981', speed: 0.9 },
-    { position: [-10, 0, -7], shape: 'box', color: '#f59e0b', speed: 1.1 },
-    { position: [10, -6, -9], shape: 'torus', color: '#ef4444', speed: 0.7 },
-    { position: [0, 8, -12], shape: 'sphere', color: '#ec4899', speed: 1.3 },
-    { position: [4, -8, -6], shape: 'box', color: '#6366f1', speed: 0.6 },
+    { position: [-8, 4, -5], shape: 'sphere', color: '#93c5fd', speed: 1 },
+    { position: [8, -2, -8], shape: 'box', color: '#a5f3fc', speed: 0.8 },
+    { position: [-5, -4, -6], shape: 'torus', color: '#c4b5fd', speed: 1.2 },
+    { position: [6, 3, -10], shape: 'sphere', color: '#a7f3d0', speed: 0.9 },
+    { position: [-10, 0, -7], shape: 'box', color: '#fde68a', speed: 1.1 },
+    { position: [10, -6, -9], shape: 'torus', color: '#fecaca', speed: 0.7 },
+    { position: [0, 8, -12], shape: 'sphere', color: '#fbcfe8', speed: 1.3 },
+    { position: [4, -8, -6], shape: 'box', color: '#c7d2fe', speed: 0.6 },
   ], []);
 
   return (
-    <div className="fixed inset-0 -z-10 opacity-90 pointer-events-none">
+    <div className="fixed inset-0 -z-10 opacity-30 pointer-events-none">
       <Canvas
         camera={{ position: [0, 0, 5], fov: 75 }}
         gl={{ alpha: true, antialias: true }}
       >
-        <ambientLight intensity={0.8} />
-        <directionalLight position={[10, 10, 5]} intensity={1.2} />
-        <pointLight position={[-10, -10, -5]} intensity={0.8} color="#3b82f6" />
-        <pointLight position={[10, 10, 5]} intensity={0.6} color="#f97316" />
+        <ambientLight intensity={0.4} />
+        <directionalLight position={[10, 10, 5]} intensity={0.6} />
+        <pointLight position={[-10, -10, -5]} intensity={0.3} color="#93c5fd" />
+        <pointLight position={[10, 10, 5]} intensity={0.2} color="#fdba74" />
         
         {shapes.map((shape, index) => (
           <FloatingShape
