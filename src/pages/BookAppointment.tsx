@@ -10,7 +10,7 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Checkbox } from '@/components/ui/checkbox';
 import { useToast } from '@/hooks/use-toast';
-import { CalendarIcon, Clock, MapPin, Phone, Mail, FileText, User, Heart } from 'lucide-react';
+import { CalendarIcon, Clock, MapPin, Phone, Mail, User, Heart } from 'lucide-react';
 import { format } from 'date-fns';
 import { cn } from '@/lib/utils';
 import Header from '@/components/Header';
@@ -363,73 +363,6 @@ const BookAppointment = () => {
                 </div>
               </div>
 
-              {/* Medical Information */}
-              <div className="space-y-6">
-                <h3 className="text-2xl font-semibold text-primary flex items-center gap-2">
-                  <FileText className="h-6 w-6" />
-                  Medical Information
-                </h3>
-                
-                <div className="space-y-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="currentCondition">Current Condition/Reason for Visit *</Label>
-                    <Textarea 
-                      id="currentCondition"
-                      value={formData.currentCondition}
-                      onChange={(e) => handleInputChange('currentCondition', e.target.value)}
-                      placeholder="Please describe your current condition and what you hope to achieve from this appointment..."
-                      className="min-h-[100px] transition-all duration-300 focus:scale-105"
-                      required
-                    />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="medicalHistory">Relevant Medical History</Label>
-                    <Textarea 
-                      id="medicalHistory"
-                      value={formData.medicalHistory}
-                      onChange={(e) => handleInputChange('medicalHistory', e.target.value)}
-                      placeholder="Please include any relevant medical conditions, surgeries, or treatments..."
-                      className="min-h-[80px] transition-all duration-300 focus:scale-105"
-                    />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="previousDevices">Previous Prosthetic/Orthotic Experience</Label>
-                    <Textarea 
-                      id="previousDevices"
-                      value={formData.previousDevices}
-                      onChange={(e) => handleInputChange('previousDevices', e.target.value)}
-                      placeholder="Have you used prosthetics or orthotics before? Please describe your experience..."
-                      className="min-h-[80px] transition-all duration-300 focus:scale-105"
-                    />
-                  </div>
-                  
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="insuranceProvider">Insurance Provider</Label>
-                      <Input 
-                        id="insuranceProvider"
-                        value={formData.insuranceProvider}
-                        onChange={(e) => handleInputChange('insuranceProvider', e.target.value)}
-                        placeholder="Insurance company name"
-                        className="transition-all duration-300 focus:scale-105"
-                      />
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <Label htmlFor="referralSource">How did you hear about us?</Label>
-                      <Input 
-                        id="referralSource"
-                        value={formData.referralSource}
-                        onChange={(e) => handleInputChange('referralSource', e.target.value)}
-                        placeholder="Doctor referral, online, friend, etc."
-                        className="transition-all duration-300 focus:scale-105"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
 
               {/* Emergency Contact */}
               <div className="space-y-6">
