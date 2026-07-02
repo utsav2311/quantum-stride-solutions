@@ -10,7 +10,7 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Checkbox } from '@/components/ui/checkbox';
 import { useToast } from '@/hooks/use-toast';
-import { CalendarIcon, Clock, MapPin, Phone, Mail, FileText, User, Heart } from 'lucide-react';
+import { CalendarIcon, Clock, MapPin, Phone, Mail, User, Heart } from 'lucide-react';
 import { format } from 'date-fns';
 import { cn } from '@/lib/utils';
 import Header from '@/components/Header';
