@@ -29,11 +29,11 @@ export type Database = {
           current_medications: string | null
           date_of_birth: string
           email: string
-          emergency_contact_name: string
-          emergency_contact_phone: string
-          emergency_contact_relationship: string
+          emergency_contact_name: string | null
+          emergency_contact_phone: string | null
+          emergency_contact_relationship: string | null
           full_name: string
-          gender: string
+          gender: string | null
           id: string
           interpreter_language: string | null
           interpreter_needed: boolean | null
@@ -63,11 +63,11 @@ export type Database = {
           current_medications?: string | null
           date_of_birth: string
           email: string
-          emergency_contact_name: string
-          emergency_contact_phone: string
-          emergency_contact_relationship: string
+          emergency_contact_name?: string | null
+          emergency_contact_phone?: string | null
+          emergency_contact_relationship?: string | null
           full_name: string
-          gender: string
+          gender?: string | null
           id?: string
           interpreter_language?: string | null
           interpreter_needed?: boolean | null
@@ -97,11 +97,11 @@ export type Database = {
           current_medications?: string | null
           date_of_birth?: string
           email?: string
-          emergency_contact_name?: string
-          emergency_contact_phone?: string
-          emergency_contact_relationship?: string
+          emergency_contact_name?: string | null
+          emergency_contact_phone?: string | null
+          emergency_contact_relationship?: string | null
           full_name?: string
-          gender?: string
+          gender?: string | null
           id?: string
           interpreter_language?: string | null
           interpreter_needed?: boolean | null
