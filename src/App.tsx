@@ -14,9 +14,10 @@ import UpperLimbProsthetics from "./pages/services/UpperLimbProsthetics";
 import CustomOrthotics from "./pages/services/CustomOrthotics";
 import RepairMaintenance from "./pages/services/RepairMaintenance";
 import MedicalEquipments from "./pages/services/MedicalEquipments";
-import Background3D from "@/components/Background3D";
 import ScrollToTop from "@/components/ScrollToTop";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import BackgroundStyleToggle from "@/components/BackgroundStyleToggle";
+import { BackgroundModeProvider } from "@/contexts/BackgroundModeContext";
 
 const queryClient = new QueryClient();
 
