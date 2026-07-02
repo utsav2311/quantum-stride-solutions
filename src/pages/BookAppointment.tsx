@@ -364,36 +364,6 @@ const BookAppointment = () => {
               </div>
 
 
-              {/* Emergency Contact */}
-              <div className="space-y-6">
-                <h3 className="text-2xl font-semibold text-primary flex items-center gap-2">
-                  <Phone className="h-6 w-6" />
-                  Emergency Contact
-                </h3>
-                
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="emergencyContact">Emergency Contact Name</Label>
-                    <Input 
-                      id="emergencyContact"
-                      value={formData.emergencyContact}
-                      onChange={(e) => handleInputChange('emergencyContact', e.target.value)}
-                      className="transition-all duration-300 focus:scale-105"
-                    />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="emergencyPhone">Emergency Contact Phone</Label>
-                    <Input 
-                      id="emergencyPhone"
-                      type="tel"
-                      value={formData.emergencyPhone}
-                      onChange={(e) => handleInputChange('emergencyPhone', e.target.value)}
-                      className="transition-all duration-300 focus:scale-105"
-                    />
-                  </div>
-                </div>
-              </div>
 
               {/* Special Requirements */}
               <div className="space-y-6">
