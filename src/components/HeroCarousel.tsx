@@ -76,22 +76,22 @@ const HeroCarousel = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-black/20" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30" />
 
-              <div className="relative z-10 h-full flex items-center px-6 md:px-16 lg:px-28">
-                <div className="max-w-4xl">
-                  <p className="text-sm md:text-base lg:text-lg tracking-[0.3em] text-white/80 mb-4 md:mb-6 animate-fade-in font-sans">
+              <div className="relative z-10 h-full flex items-center px-4 sm:px-6 md:px-16 lg:px-28">
+                <div className="max-w-4xl w-full">
+                  <p className="text-xs sm:text-sm md:text-base lg:text-lg tracking-[0.3em] text-white/80 mb-3 md:mb-6 animate-fade-in font-sans">
                     {slide.eyebrow}
                   </p>
-                  <h1 className="font-playfair font-bold text-white leading-[0.95] mb-6 md:mb-8 animate-slide-up">
-                    <span className="block text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] tracking-tight">
+                  <h1 className="font-playfair font-bold text-white leading-[0.95] mb-5 md:mb-8 animate-slide-up">
+                    <span className="block text-5xl sm:text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] tracking-tight break-words">
                       {slide.title}
                     </span>
                     {slide.titleAccent && (
-                      <span className="block text-5xl md:text-7xl lg:text-8xl xl:text-9xl italic font-light text-accent mt-2">
+                      <span className="block text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl italic font-light text-accent mt-2 break-words">
                         {slide.titleAccent}
                       </span>
                     )}
                   </h1>
-                  <p className="text-base md:text-xl lg:text-2xl text-white/85 mb-8 md:mb-10 max-w-2xl leading-relaxed animate-fade-in font-light">
+                  <p className="text-sm sm:text-base md:text-xl lg:text-2xl text-white/85 mb-6 md:mb-10 max-w-2xl leading-relaxed animate-fade-in font-light">
                     {slide.subtitle}
                   </p>
                   <div className="flex items-center gap-4 animate-scale-in">
