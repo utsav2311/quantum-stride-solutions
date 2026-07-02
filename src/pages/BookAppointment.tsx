@@ -169,7 +169,7 @@ const BookAppointment = () => {
         {/* Header Section */}
         <div className="text-center mb-12 animate-fade-in max-w-4xl mx-auto">
           <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">Book Your Visit</p>
-          <h1 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.05] mb-6">
+          <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.05] mb-6 break-words">
             Book your <span className="italic text-accent">appointment</span>.
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
