@@ -27,7 +27,7 @@ export type Database = {
           consent_treatment: boolean | null
           created_at: string
           current_medications: string | null
-          date_of_birth: string
+          date_of_birth: string | null
           email: string
           emergency_contact_name: string | null
           emergency_contact_phone: string | null
@@ -43,7 +43,7 @@ export type Database = {
           physician_contact: string | null
           physician_name: string | null
           postal_code: string | null
-          preferred_location: string
+          preferred_location: string | null
           previous_devices: boolean | null
           previous_devices_details: string | null
           special_requests: string | null
@@ -61,7 +61,7 @@ export type Database = {
           consent_treatment?: boolean | null
           created_at?: string
           current_medications?: string | null
-          date_of_birth: string
+          date_of_birth?: string | null
           email: string
           emergency_contact_name?: string | null
           emergency_contact_phone?: string | null
@@ -77,7 +77,7 @@ export type Database = {
           physician_contact?: string | null
           physician_name?: string | null
           postal_code?: string | null
-          preferred_location: string
+          preferred_location?: string | null
           previous_devices?: boolean | null
           previous_devices_details?: string | null
           special_requests?: string | null
@@ -95,7 +95,7 @@ export type Database = {
           consent_treatment?: boolean | null
           created_at?: string
           current_medications?: string | null
-          date_of_birth?: string
+          date_of_birth?: string | null
           email?: string
           emergency_contact_name?: string | null
           emergency_contact_phone?: string | null
@@ -111,7 +111,7 @@ export type Database = {
           physician_contact?: string | null
           physician_name?: string | null
           postal_code?: string | null
-          preferred_location?: string
+          preferred_location?: string | null
           previous_devices?: boolean | null
           previous_devices_details?: string | null
           special_requests?: string | null
