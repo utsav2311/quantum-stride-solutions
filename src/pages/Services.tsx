@@ -165,7 +165,7 @@ const Services = () => {
             <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">
               Comprehensive Healthcare Solutions
             </p>
-            <h1 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.05] mb-6 animate-fade-in">
+            <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.05] mb-6 animate-fade-in break-words">
               Our <span className="italic text-accent">services</span>.
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl">
@@ -241,7 +241,7 @@ const Services = () => {
         <div className="container mx-auto px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
             <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">Why Us</p>
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-4">Why choose <span className="italic text-accent">Quantum Medical</span>.</h2>
+            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-4">Why choose <span className="italic text-accent">Quantum Medical</span>.</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               We combine expertise, technology, and compassion to deliver exceptional results.
             </p>
@@ -267,7 +267,7 @@ const Services = () => {
         <div className="container mx-auto px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
             <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">How We Work</p>
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-4">Our <span className="italic text-accent">process</span>.</h2>
+            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-4">Our <span className="italic text-accent">process</span>.</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               A systematic approach ensuring the best possible outcome for every patient.
             </p>
@@ -311,7 +311,7 @@ const Services = () => {
       <section className="py-20 md:py-24 bg-secondary/40">
         <div className="container mx-auto px-6 md:px-8 lg:px-12 text-center">
           <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">Next Step</p>
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-4">Ready to <span className="italic text-accent">get started</span>?</h2>
+          <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-4">Ready to <span className="italic text-accent">get started</span>?</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Schedule a consultation with our experts and take the first step towards enhanced mobility.
           </p>
