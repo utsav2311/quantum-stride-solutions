@@ -8,15 +8,21 @@ const WhatsAppButton = () => {
   const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(DEFAULT_MESSAGE)}`;
 
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
-    // Lovable runs the app inside a preview iframe. WhatsApp blocks iframe loads
-    // (X-Frame-Options), so when embedded we navigate the top window instead.
-    if (typeof window !== 'undefined' && window.top && window.self !== window.top) {
-      e.preventDefault();
+    e.preventDefault();
+
+    const opened = window.open(href, '_blank', 'noopener,noreferrer');
+
+    if (!opened && window.top && window.self !== window.top) {
       try {
         window.top.location.href = href;
       } catch {
-        window.open(href, '_blank', 'noopener,noreferrer');
+        window.location.href = href;
       }
+      return;
+    }
+
+    if (!opened) {
+      window.location.href = href;
     }
   };
 
