@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -11,6 +12,7 @@ import { CheckCircle, Shield, Lock, ArrowRight } from "lucide-react";
 
 const AppointmentForm = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -22,35 +24,64 @@ const AppointmentForm = () => {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.service) {
+
+    if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.service || !formData.preferredDate || !formData.preferredTime) {
       toast({
         title: "Missing Information",
-        description: "Please fill in all required fields.",
+        description: "Please fill in all required fields including date and time.",
         variant: "destructive"
       });
       return;
     }
 
-    console.log("Appointment request:", formData);
-    
-    toast({
-      title: "Appointment Request Submitted",
-      description: "We'll contact you within 24 hours to confirm your appointment.",
-    });
+    setIsSubmitting(true);
+    try {
+      const { error } = await supabase.from("appointments").insert({
+        full_name: `${formData.firstName} ${formData.lastName}`,
+        email: formData.email,
+        phone: formData.phone,
+        date_of_birth: "1900-01-01",
+        gender: "Not specified",
+        appointment_date: formData.preferredDate,
+        appointment_time: formData.preferredTime,
+        appointment_type: formData.service,
+        preferred_location: "Main Clinic",
+        emergency_contact_name: "Not provided",
+        emergency_contact_relationship: "Not provided",
+        emergency_contact_phone: "Not provided",
+        special_requests: formData.message,
+        consent_contact: true,
+      });
 
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      service: "",
-      preferredDate: "",
-      preferredTime: "",
-      message: ""
-    });
+      if (error) throw error;
+
+      toast({
+        title: "Appointment Request Submitted",
+        description: "We'll contact you within 24 hours to confirm your appointment.",
+      });
+
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        service: "",
+        preferredDate: "",
+        preferredTime: "",
+        message: ""
+      });
+    } catch (err: any) {
+      console.error("Appointment submit error:", err);
+      toast({
+        title: "Submission Failed",
+        description: err.message ?? "Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -249,9 +280,10 @@ const AppointmentForm = () => {
                   <Button
                     type="submit"
                     size="lg"
+                    disabled={isSubmitting}
                     className="w-full group bg-primary text-primary-foreground hover:bg-primary-hover rounded-xl shadow-lg hover:shadow-primary/30 transition-all duration-300 py-6 text-base font-semibold"
                   >
-                    <span>Submit Appointment Request</span>
+                    <span>{isSubmitting ? "Submitting..." : "Submit Appointment Request"}</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </form>
