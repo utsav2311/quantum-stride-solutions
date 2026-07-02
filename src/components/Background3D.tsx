@@ -2,16 +2,12 @@ import React, { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Float } from '@react-three/drei';
 import * as THREE from 'three';
-import { useBackgroundMode } from '@/contexts/BackgroundModeContext';
 
-type BackgroundMode = 'subtle' | 'vivid';
-
-const FloatingShape = ({ position, shape, color, speed, mode }: {
+const FloatingShape = ({ position, shape, color, speed }: {
   position: [number, number, number];
   shape: 'sphere' | 'box' | 'torus';
   color: string;
   speed: number;
-  mode: BackgroundMode;
 }) => {
   const meshRef = useRef<THREE.Mesh>(null);
 
@@ -35,25 +31,23 @@ const FloatingShape = ({ position, shape, color, speed, mode }: {
     }
   };
 
-  const isVivid = mode === 'vivid';
-
   return (
     <Float
       position={position}
       speed={speed}
-      rotationIntensity={isVivid ? 0.5 : 0.3}
-      floatIntensity={isVivid ? 1 : 0.6}
+      rotationIntensity={0.5}
+      floatIntensity={1}
     >
       <mesh ref={meshRef}>
         {getGeometry()}
         <meshStandardMaterial
           color={color}
           emissive={color}
-          emissiveIntensity={isVivid ? 0.6 : 0.15}
-          metalness={isVivid ? 0.4 : 0.1}
-          roughness={isVivid ? 0.25 : 0.7}
+          emissiveIntensity={0.6}
+          metalness={0.4}
+          roughness={0.25}
           transparent
-          opacity={isVivid ? 0.9 : 0.35}
+          opacity={0.9}
         />
       </mesh>
     </Float>
@@ -61,9 +55,6 @@ const FloatingShape = ({ position, shape, color, speed, mode }: {
 };
 
 const Background3D = () => {
-  const { mode } = useBackgroundMode();
-  const isVivid = mode === 'vivid';
-
   const shapes = useMemo(() => [
     { position: [-8, 4, -5], shape: 'sphere', color: '#3b82f6', speed: 1 },
     { position: [8, -2, -8], shape: 'box', color: '#06b6d4', speed: 0.8 },
@@ -76,15 +67,15 @@ const Background3D = () => {
   ], []);
 
   return (
-    <div className={`fixed inset-0 -z-10 pointer-events-none ${isVivid ? 'opacity-90' : 'opacity-50'}`}>
+    <div className="fixed inset-0 -z-10 opacity-90 pointer-events-none">
       <Canvas
         camera={{ position: [0, 0, 5], fov: 75 }}
         gl={{ alpha: true, antialias: true }}
       >
-        <ambientLight intensity={isVivid ? 0.8 : 0.35} />
-        <directionalLight position={[10, 10, 5]} intensity={isVivid ? 1.2 : 0.5} />
-        <pointLight position={[-10, -10, -5]} intensity={isVivid ? 0.8 : 0.25} color="#3b82f6" />
-        <pointLight position={[10, 10, 5]} intensity={isVivid ? 0.6 : 0.2} color="#f97316" />
+        <ambientLight intensity={0.8} />
+        <directionalLight position={[10, 10, 5]} intensity={1.2} />
+        <pointLight position={[-10, -10, -5]} intensity={0.8} color="#3b82f6" />
+        <pointLight position={[10, 10, 5]} intensity={0.6} color="#f97316" />
         
         {shapes.map((shape, index) => (
           <FloatingShape
@@ -93,7 +84,6 @@ const Background3D = () => {
             shape={shape.shape as 'sphere' | 'box' | 'torus'}
             color={shape.color}
             speed={shape.speed}
-            mode={mode}
           />
         ))}
       </Canvas>
