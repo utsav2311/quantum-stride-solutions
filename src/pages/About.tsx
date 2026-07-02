@@ -86,7 +86,7 @@ const About = () => {
             <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">
               Our Story
             </p>
-            <h1 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.05] mb-6 animate-fade-in">
+            <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.05] mb-6 animate-fade-in break-words">
               About <span className="italic text-accent">Quantum Medical</span>.
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl">
@@ -103,7 +103,7 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
               <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">Our Journey</p>
-              <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-6">Our <span className="italic text-accent">story</span>.</h2>
+              <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-6">Our <span className="italic text-accent">story</span>.</h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
                   Founded in 2008, Quantum Medical began with a simple yet powerful mission: to restore independence and improve quality of life for individuals requiring prosthetic and orthotic care. What started as a small clinic has grown into a leading healthcare facility serving thousands of patients across the region.
@@ -127,7 +127,7 @@ const About = () => {
         <div className="container mx-auto px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
             <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">What Guides Us</p>
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-4">Our <span className="italic text-accent">values</span>.</h2>
+            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-4">Our <span className="italic text-accent">values</span>.</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               The principles that guide everything we do and every decision we make.
             </p>
@@ -153,7 +153,7 @@ const About = () => {
         <div className="container mx-auto px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
             <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">The People</p>
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-4">Meet our <span className="italic text-accent">team</span>.</h2>
+            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-4">Meet our <span className="italic text-accent">team</span>.</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Experienced professionals dedicated to your care and success.
             </p>
@@ -197,7 +197,7 @@ const About = () => {
         <div className="container mx-auto px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
             <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">Milestones</p>
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-4">Our <span className="italic text-accent">achievements</span>.</h2>
+            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-4">Our <span className="italic text-accent">achievements</span>.</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Numbers that reflect our commitment to excellence and patient satisfaction.
             </p>
@@ -223,7 +223,7 @@ const About = () => {
         <div className="container mx-auto px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
             <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">Recognized For</p>
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-4">Certifications & <span className="italic text-accent">accreditations</span>.</h2>
+            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-4">Certifications & <span className="italic text-accent">accreditations</span>.</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Our commitment to quality is recognized by leading healthcare organizations.
             </p>
@@ -254,7 +254,7 @@ const About = () => {
         <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">Our Mission</p>
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-8">Built for <span className="italic text-accent">movement</span>. Engineered for <span className="italic text-accent">life</span>.</h2>
+            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-8">Built for <span className="italic text-accent">movement</span>. Engineered for <span className="italic text-accent">life</span>.</h2>
             <blockquote className="border-l-4 border-accent pl-6 py-2 italic text-foreground/80 text-xl md:text-2xl text-left max-w-3xl mx-auto mb-8">
               "To empower individuals with mobility challenges by providing innovative, personalized prosthetic and orthotic solutions that restore independence, enhance quality of life, and inspire confidence in every step forward."
             </blockquote>
