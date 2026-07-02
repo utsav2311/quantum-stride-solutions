@@ -67,15 +67,15 @@ const Background3D = () => {
   ], []);
 
   return (
-    <div className="fixed inset-0 -z-10 opacity-90 pointer-events-none">
+    <div className="fixed inset-0 -z-10 opacity-30 pointer-events-none">
       <Canvas
         camera={{ position: [0, 0, 5], fov: 75 }}
         gl={{ alpha: true, antialias: true }}
       >
-        <ambientLight intensity={0.8} />
-        <directionalLight position={[10, 10, 5]} intensity={1.2} />
-        <pointLight position={[-10, -10, -5]} intensity={0.8} color="#3b82f6" />
-        <pointLight position={[10, 10, 5]} intensity={0.6} color="#f97316" />
+        <ambientLight intensity={0.4} />
+        <directionalLight position={[10, 10, 5]} intensity={0.6} />
+        <pointLight position={[-10, -10, -5]} intensity={0.3} color="#93c5fd" />
+        <pointLight position={[10, 10, 5]} intensity={0.2} color="#fdba74" />
         
         {shapes.map((shape, index) => (
           <FloatingShape
