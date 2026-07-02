@@ -43,11 +43,11 @@ const FloatingShape = ({ position, shape, color, speed }: {
         <meshStandardMaterial
           color={color}
           emissive={color}
-          emissiveIntensity={0.6}
-          metalness={0.4}
-          roughness={0.25}
+          emissiveIntensity={0.15}
+          metalness={0.2}
+          roughness={0.6}
           transparent
-          opacity={0.9}
+          opacity={0.35}
         />
       </mesh>
     </Float>
