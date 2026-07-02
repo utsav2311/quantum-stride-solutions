@@ -40,7 +40,15 @@ const FloatingShape = ({ position, shape, color, speed }: {
     >
       <mesh ref={meshRef}>
         {getGeometry()}
-        <meshPhongMaterial color={color} transparent opacity={0.3} />
+        <meshStandardMaterial
+          color={color}
+          emissive={color}
+          emissiveIntensity={0.6}
+          metalness={0.4}
+          roughness={0.25}
+          transparent
+          opacity={0.9}
+        />
       </mesh>
     </Float>
   );
