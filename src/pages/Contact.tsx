@@ -134,12 +134,12 @@ const Contact = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5"></div>
         </div>
         
-        <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 relative z-10">
           <div className="max-w-4xl mx-auto">
             <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">
               Get In Touch
             </p>
-            <h1 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.05] mb-6 animate-fade-in">
+            <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.05] mb-6 animate-fade-in break-words">
               Let's <span className="italic text-accent">connect</span>.
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl">
@@ -152,10 +152,10 @@ const Contact = () => {
 
       {/* Contact Form & Info */}
       <section className="py-20 md:py-24">
-        <div className="container mx-auto px-6 md:px-8 lg:px-12">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <Card className="p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+            <Card className="p-5 sm:p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300">
               <CardHeader className="pb-6">
                 <CardTitle className="text-3xl text-primary mb-2">Send Us a Message</CardTitle>
                 <CardDescription className="text-lg">
@@ -240,7 +240,7 @@ const Contact = () => {
 
       {/* Quick Actions */}
       <section className="py-20 md:py-24 bg-medical-light/30">
-        <div className="container mx-auto px-6 md:px-8 lg:px-12">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
             <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">Quick Actions</p>
             <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-4">How can we <span className="italic text-accent">help</span>?</h2>
@@ -269,7 +269,7 @@ const Contact = () => {
 
       {/* Department Contacts */}
       <section className="py-20 md:py-24">
-        <div className="container mx-auto px-6 md:px-8 lg:px-12">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           <div className="text-center mb-16">
             <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">Direct Lines</p>
             <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-4">Department <span className="italic text-accent">contacts</span>.</h2>
@@ -306,7 +306,7 @@ const Contact = () => {
 
       {/* Emergency Contact */}
       <section className="py-20 md:py-24 bg-gradient-to-r from-red-500/10 to-orange-500/10">
-        <div className="container mx-auto px-6 md:px-8 lg:px-12">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           <Card className="max-w-4xl mx-auto p-8 border-red-200 bg-red-50/50">
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 text-red-600 rounded-full mb-6">
