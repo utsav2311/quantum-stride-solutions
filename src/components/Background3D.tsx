@@ -40,7 +40,15 @@ const FloatingShape = ({ position, shape, color, speed }: {
     >
       <mesh ref={meshRef}>
         {getGeometry()}
-        <meshPhongMaterial color={color} transparent opacity={0.3} />
+        <meshStandardMaterial
+          color={color}
+          emissive={color}
+          emissiveIntensity={0.6}
+          metalness={0.4}
+          roughness={0.25}
+          transparent
+          opacity={0.9}
+        />
       </mesh>
     </Float>
   );
@@ -59,14 +67,15 @@ const Background3D = () => {
   ], []);
 
   return (
-    <div className="fixed inset-0 -z-10 opacity-40">
+    <div className="fixed inset-0 -z-10 opacity-90 pointer-events-none">
       <Canvas
         camera={{ position: [0, 0, 5], fov: 75 }}
         gl={{ alpha: true, antialias: true }}
       >
-        <ambientLight intensity={0.3} />
-        <directionalLight position={[10, 10, 5]} intensity={0.5} />
-        <pointLight position={[-10, -10, -5]} intensity={0.3} color="#3b82f6" />
+        <ambientLight intensity={0.8} />
+        <directionalLight position={[10, 10, 5]} intensity={1.2} />
+        <pointLight position={[-10, -10, -5]} intensity={0.8} color="#3b82f6" />
+        <pointLight position={[10, 10, 5]} intensity={0.6} color="#f97316" />
         
         {shapes.map((shape, index) => (
           <FloatingShape
