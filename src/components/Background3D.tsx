@@ -56,14 +56,14 @@ const FloatingShape = ({ position, shape, color, speed }: {
 
 const Background3D = () => {
   const shapes = useMemo(() => [
-    { position: [-8, 4, -5], shape: 'sphere', color: '#3b82f6', speed: 1 },
-    { position: [8, -2, -8], shape: 'box', color: '#06b6d4', speed: 0.8 },
-    { position: [-5, -4, -6], shape: 'torus', color: '#8b5cf6', speed: 1.2 },
-    { position: [6, 3, -10], shape: 'sphere', color: '#10b981', speed: 0.9 },
-    { position: [-10, 0, -7], shape: 'box', color: '#f59e0b', speed: 1.1 },
-    { position: [10, -6, -9], shape: 'torus', color: '#ef4444', speed: 0.7 },
-    { position: [0, 8, -12], shape: 'sphere', color: '#ec4899', speed: 1.3 },
-    { position: [4, -8, -6], shape: 'box', color: '#6366f1', speed: 0.6 },
+    { position: [-8, 4, -5], shape: 'sphere', color: '#93c5fd', speed: 1 },
+    { position: [8, -2, -8], shape: 'box', color: '#a5f3fc', speed: 0.8 },
+    { position: [-5, -4, -6], shape: 'torus', color: '#c4b5fd', speed: 1.2 },
+    { position: [6, 3, -10], shape: 'sphere', color: '#a7f3d0', speed: 0.9 },
+    { position: [-10, 0, -7], shape: 'box', color: '#fde68a', speed: 1.1 },
+    { position: [10, -6, -9], shape: 'torus', color: '#fecaca', speed: 0.7 },
+    { position: [0, 8, -12], shape: 'sphere', color: '#fbcfe8', speed: 1.3 },
+    { position: [4, -8, -6], shape: 'box', color: '#c7d2fe', speed: 0.6 },
   ], []);
 
   return (
