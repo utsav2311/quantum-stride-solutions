@@ -66,7 +66,7 @@ const HeroCarousel = () => {
           {slides.map((slide, index) => (
             <div key={index} className="embla__slide h-full flex-none w-full relative">
               <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                 style={{ backgroundImage: `url(${slide.image})` }}
               />
               {/* Cinematic dark overlay — xtremity-inspired */}
