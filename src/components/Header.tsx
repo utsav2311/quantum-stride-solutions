@@ -8,11 +8,31 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-const Header = () => {
+interface HeaderProps {
+  transparent?: boolean;
+}
+
+const Header = ({ transparent = false }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const headerClasses = transparent
+    ? "bg-transparent absolute top-0 left-0 right-0 z-50 animate-slide-up"
+    : "bg-background/95 backdrop-blur-md border-b border-border/50 sticky top-0 z-50 animate-slide-up";
+
+  const titleClasses = transparent
+    ? "text-lg sm:text-2xl font-bold text-white hover:text-white/80 transition-colors duration-300 truncate drop-shadow-lg"
+    : "text-lg sm:text-2xl font-bold text-primary hover:text-primary/80 transition-colors duration-300 truncate";
+
+  const subtitleClasses = transparent
+    ? "text-[10px] sm:text-xs text-white/80 truncate drop-shadow"
+    : "text-[10px] sm:text-xs text-muted-foreground truncate";
+
+  const navLinkClasses = transparent
+    ? "nav-link text-white hover:text-accent transition-all duration-300 drop-shadow"
+    : "nav-link text-foreground hover:text-primary transition-all duration-300";
+
   return (
-    <header className="bg-background/95 backdrop-blur-md border-b border-border/50 sticky top-0 z-50 animate-slide-up">
+    <header className={headerClasses}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2 animate-slide-left animation-delay-200 group min-w-0">
@@ -22,16 +42,16 @@ const Header = () => {
               className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 hover-scale transition-all duration-300 group-hover:opacity-80"
             />
             <div className="min-w-0">
-              <h1 className="text-lg sm:text-2xl font-bold text-primary hover:text-primary/80 transition-colors duration-300 truncate">Quantum Medical</h1>
-              <p className="text-[10px] sm:text-xs text-muted-foreground truncate">Prosthetics & Orthotics</p>
+              <h1 className={titleClasses}>Quantum Medical</h1>
+              <p className={subtitleClasses}>Prosthetics & Orthotics</p>
             </div>
           </Link>
           
           <nav className="hidden md:flex items-center space-x-8 stagger-children">
-            <Link to="/" className="nav-link text-foreground hover:text-primary transition-all duration-300">Home</Link>
-            <Link to="/services" className="nav-link text-foreground hover:text-primary transition-all duration-300">Services</Link>
-            <Link to="/about" className="nav-link text-foreground hover:text-primary transition-all duration-300">About</Link>
-            <Link to="/contact" className="nav-link text-foreground hover:text-primary transition-all duration-300">Contact</Link>
+            <Link to="/" className={navLinkClasses}>Home</Link>
+            <Link to="/services" className={navLinkClasses}>Services</Link>
+            <Link to="/about" className={navLinkClasses}>About</Link>
+            <Link to="/contact" className={navLinkClasses}>Contact</Link>
           </nav>
           
           <div className="flex items-center gap-4">
