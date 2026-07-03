@@ -59,7 +59,6 @@ const HeroCarousel = () => {
     [Autoplay({ delay: 5500, stopOnInteraction: false })]
   );
 
-
   return (
     <section className="relative h-screen overflow-hidden bg-xtreme-dark">
       <div className="embla h-full" ref={emblaRef}>
