@@ -41,7 +41,7 @@ const socialLinks = [
     name: "YouTube",
     href: "#",
     bg: "bg-[#FF0000] hover:shadow-[0_0_20px_rgba(255,0,0,0.5)]",
-    icon: Youtube,
+    icon: YouTubeIcon,
   },
   {
     name: "TikTok",
