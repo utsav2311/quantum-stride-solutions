@@ -87,7 +87,7 @@ const SocialSidebar = () => {
               ${social.bg}
             `}
           >
-            <Icon className="w-6 h-6 fill-current" strokeWidth={1.5} />
+            <Icon className="w-6 h-6 fill-current" />
           </a>
         );
       })}
