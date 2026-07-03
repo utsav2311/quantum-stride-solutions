@@ -17,6 +17,7 @@ import MedicalEquipments from "./pages/services/MedicalEquipments";
 import Background3D from "@/components/Background3D";
 import ScrollToTop from "@/components/ScrollToTop";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import FloatingCallButton from "@/components/FloatingCallButton";
 
 const queryClient = new QueryClient();
 
