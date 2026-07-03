@@ -10,7 +10,6 @@ import { Award, Users, Heart, Target, Lightbulb, Shield, Globe, Calendar, CheckC
 import prostheticProfessional from "@/assets/prosthetic-professional.jpg";
 import researchBackground from "@/assets/research-background.jpg";
 import clinicBackground from "@/assets/clinic-background.jpg";
-import rahulKashyap from "@/assets/rahul-kashyap.png.asset.json";
 const About = () => {
   const values = [{
     icon: <Heart className="w-8 h-8" />,
@@ -30,12 +29,12 @@ const About = () => {
     description: "Every device we create undergoes rigorous testing and quality control to ensure safety, durability, and optimal performance."
   }];
   const team = [{
-    name: "Mr Rahul Kashyap",
-    role: "Founder, Director & Certified Orthotist Prosthetist",
-    credentials: "DHA, DOH & SHA Licensed",
+    name: "",
+    role: "Chief Prosthetist",
+    credentials: "CPO, PhD",
     experience: "15+ years",
-    specialization: "Prosthetics & Orthotics",
-    image: rahulKashyap.url
+    specialization: "Lower Limb Prosthetics",
+    image: prostheticProfessional
   }, {
     name: "",
     role: "Senior Orthotist",
