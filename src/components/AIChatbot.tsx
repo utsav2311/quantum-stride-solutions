@@ -71,7 +71,7 @@ const AIChatbot = () => {
         {!open && (
           <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-30" />
         )}
-        {open ? <X className="relative h-6 w-6" /> : <MessageCircle className="relative h-6 w-6 fill-current" />}
+        {open ? <X className="relative h-6 w-6" /> : <Bot className="relative h-6 w-6" />}
       </button>
 
       {/* Chat window */}
