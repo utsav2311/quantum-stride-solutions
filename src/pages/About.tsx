@@ -10,6 +10,7 @@ import { Award, Users, Heart, Target, Lightbulb, Shield, Globe, Calendar, CheckC
 import prostheticProfessional from "@/assets/prosthetic-professional.jpg";
 import researchBackground from "@/assets/research-background.jpg";
 import clinicBackground from "@/assets/clinic-background.jpg";
+import rahulKashyap from "@/assets/rahul-kashyap.png.asset.json";
 const About = () => {
   const values = [{
     icon: <Heart className="w-8 h-8" />,
