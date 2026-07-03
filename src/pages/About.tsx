@@ -30,12 +30,12 @@ const About = () => {
     description: "Every device we create undergoes rigorous testing and quality control to ensure safety, durability, and optimal performance."
   }];
   const team = [{
-    name: "",
-    role: "Chief Prosthetist",
-    credentials: "CPO, PhD",
+    name: "Mr Rahul Kashyap",
+    role: "Founder, Director & Certified Orthotist Prosthetist",
+    credentials: "DHA, DOH & SHA Licensed",
     experience: "15+ years",
-    specialization: "Lower Limb Prosthetics",
-    image: prostheticProfessional
+    specialization: "Prosthetics & Orthotics",
+    image: rahulKashyap.url
   }, {
     name: "",
     role: "Senior Orthotist",
