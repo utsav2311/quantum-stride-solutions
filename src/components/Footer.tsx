@@ -19,7 +19,7 @@ const Footer = () => {
                 className="w-8 h-8 group-hover:scale-110 transition-transform duration-300"
               />
               <div>
-                <h3 className="text-xl font-bold group-hover:text-accent transition-colors duration-300">Quantum Medical</h3>
+                <h3 className="text-xl font-bold group-hover:text-primary-foreground transition-colors duration-300">Quantum Medical</h3>
                 <p className="text-xs text-primary-foreground/80">Prosthetics & Orthotics</p>
               </div>
             </div>
@@ -31,20 +31,20 @@ const Footer = () => {
           <div className="hover-lift">
             <h4 className="font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/80">
-              <li><a href="#" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Custom Prosthetics</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Orthotic Solutions</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Consultations</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors hover:translate-x-1 inline-block">Repairs & Adjustments</a></li>
+              <li><a href="#" className="hover:text-primary-foreground transition-colors hover:translate-x-1 inline-block">Custom Prosthetics</a></li>
+              <li><a href="#" className="hover:text-primary-foreground transition-colors hover:translate-x-1 inline-block">Orthotic Solutions</a></li>
+              <li><a href="#" className="hover:text-primary-foreground transition-colors hover:translate-x-1 inline-block">Consultations</a></li>
+              <li><a href="#" className="hover:text-primary-foreground transition-colors hover:translate-x-1 inline-block">Repairs & Adjustments</a></li>
             </ul>
           </div>
           
           <div className="hover-lift">
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/80">
-              <li><a href="#about" className="hover:text-accent transition-colors">About Us</a></li>
-              <li><a href="#services" className="hover:text-accent transition-colors">Our Services</a></li>
-              <li><a href="#appointment" className="hover:text-accent transition-colors">Book Appointment</a></li>
-              <li><a href="#contact" className="hover:text-accent transition-colors">Contact</a></li>
+              <li><a href="#about" className="hover:text-primary-foreground transition-colors">About Us</a></li>
+              <li><a href="#services" className="hover:text-primary-foreground transition-colors">Our Services</a></li>
+              <li><a href="#appointment" className="hover:text-primary-foreground transition-colors">Book Appointment</a></li>
+              <li><a href="#contact" className="hover:text-primary-foreground transition-colors">Contact</a></li>
             </ul>
           </div>
           
