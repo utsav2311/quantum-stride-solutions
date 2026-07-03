@@ -1,11 +1,10 @@
-
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
-
 import heroMedical from "@/assets/hero-medical.jpg";
+
 import clinicBackground from "@/assets/clinic-background.jpg";
 import rehabilitationBackground from "@/assets/rehabilitation-background.jpg";
 import workshopBackground from "@/assets/workshop-background.jpg";
