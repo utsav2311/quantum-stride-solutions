@@ -80,7 +80,7 @@ const AIChatbot = () => {
           {/* Header */}
           <div className="flex items-center gap-3 border-b border-border bg-gradient-to-r from-primary to-primary/80 px-4 py-3 text-primary-foreground">
             <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20">
-              <MessageCircle className="h-5 w-5 fill-current" />
+              <Bot className="h-5 w-5" />
             </div>
             <div className="flex-1">
               <div className="text-sm font-semibold">Utsav World Assistant</div>
