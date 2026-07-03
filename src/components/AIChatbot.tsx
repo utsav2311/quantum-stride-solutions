@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react';
-import { MessageCircle, X, Send, Loader2, Bot } from 'lucide-react';
+import { X, Send, Loader2, Bot } from 'lucide-react';
 
 type ChatMessage = { role: 'user' | 'assistant'; content: string };
 
