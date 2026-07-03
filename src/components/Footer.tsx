@@ -71,7 +71,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center animate-fade-in opacity-0 animation-delay-1000">
-          <p className="text-sm text-primary-foreground/60">© 2025 Quantum Medical. All rights reserved.</p>
+          <p className="text-sm text-primary-foreground/60">© 2026 Quantum Medical. All rights reserved.</p>
         </div>
       </div>
     </footer>
