@@ -2,8 +2,8 @@ import { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
+
 
 import heroMedical from "@/assets/hero-medical.jpg";
 import clinicBackground from "@/assets/clinic-background.jpg";
@@ -59,8 +59,7 @@ const HeroCarousel = () => {
     { loop: true, duration: 30 },
     [Autoplay({ delay: 5500, stopOnInteraction: false })]
   );
-  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
-  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+
 
   return (
     <section className="relative h-screen overflow-hidden bg-xtreme-dark">
@@ -114,24 +113,8 @@ const HeroCarousel = () => {
         </div>
       </div>
 
-      <Button
-        variant="ghost"
-        size="icon"
-        className="absolute left-6 top-1/2 -translate-y-1/2 z-20 rounded-full h-12 w-12 bg-white/10 hover:bg-accent hover:text-accent-foreground text-white backdrop-blur-sm border border-white/20"
-        onClick={scrollPrev}
-      >
-        <ChevronLeft className="h-5 w-5" />
-      </Button>
-      <Button
-        variant="ghost"
-        size="icon"
-        className="absolute right-6 top-1/2 -translate-y-1/2 z-20 rounded-full h-12 w-12 bg-white/10 hover:bg-accent hover:text-accent-foreground text-white backdrop-blur-sm border border-white/20"
-        onClick={scrollNext}
-      >
-        <ChevronRight className="h-5 w-5" />
-      </Button>
-
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+
         {slides.map((_, index) => (
           <button
             key={index}
