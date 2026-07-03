@@ -28,8 +28,10 @@ const Index = () => {
     <div className="min-h-screen relative">
       <ScrollProgressBar color="gradient" />
       <Background3D />
-      <Header />
-      <HeroCarousel />
+      <div className="relative">
+        <Header transparent />
+        <HeroCarousel />
+      </div>
       <TrustBadges />
       <Services />
       <MoreLink to="/services" label="View All Services" />
