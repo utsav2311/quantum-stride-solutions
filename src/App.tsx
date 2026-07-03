@@ -18,6 +18,7 @@ import Background3D from "@/components/Background3D";
 import ScrollToTop from "@/components/ScrollToTop";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import FloatingCallButton from "@/components/FloatingCallButton";
+import SocialSidebar from "@/components/SocialSidebar";
 
 const queryClient = new QueryClient();
 
@@ -45,6 +46,7 @@ const App = () => (
         </Routes>
         <WhatsAppButton />
         <FloatingCallButton />
+        <SocialSidebar />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
