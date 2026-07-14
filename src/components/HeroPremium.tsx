@@ -1,7 +1,23 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Phone, ShieldCheck, Star } from "lucide-react";
+import { useEffect, useState } from "react";
 import heroPatient from "@/assets/hero-patient.jpg";
+import hero1 from "@/assets/hero-1.jpg";
+import hero2 from "@/assets/hero-2.jpg";
+import hero3 from "@/assets/hero-3.jpg";
+import hero4 from "@/assets/hero-4.jpg";
+import hero5 from "@/assets/hero-5.jpg";
+
+const heroImages = [
+  { src: heroPatient, alt: "Patient walking confidently with a custom prosthetic device" },
+  { src: hero1, alt: "Young man walking outdoors with a modern prosthetic leg at golden hour" },
+  { src: hero2, alt: "Prosthetist fitting a custom prosthetic limb in a modern clinic" },
+  { src: hero3, alt: "Craftsman precision-shaping a custom orthotic brace in the workshop" },
+  { src: hero4, alt: "Smiling child with a colorful pediatric prosthetic giving a thumbs up" },
+  { src: hero5, alt: "Athlete running on a track with a sport running-blade prosthetic" },
+];
+
 
 const HeroPremium = () => {
   return (
