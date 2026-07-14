@@ -19,14 +19,9 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['"Work Sans"', "system-ui", "sans-serif"],
-				serif: ['"Instrument Serif"', "Georgia", "serif"],
-				display: ['"Instrument Serif"', "Georgia", "serif"],
-				playfair: ['"Instrument Serif"', "Georgia", "serif"],
-			},
-			spacing: {
-				'section': '6rem',
-				'section-sm': '4rem',
+				sans: ["Inter", "sans-serif"],
+				playfair: ["Montserrat", "sans-serif"],
+				display: ["Montserrat", "sans-serif"],
 			},
 
 			colors: {

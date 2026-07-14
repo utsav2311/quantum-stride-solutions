@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react';
-import { X, Send, Loader2, Bot } from 'lucide-react';
+import { MessageCircle, X, Send, Loader2 } from 'lucide-react';
 
 type ChatMessage = { role: 'user' | 'assistant'; content: string };
 
@@ -71,7 +71,7 @@ const AIChatbot = () => {
         {!open && (
           <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-30" />
         )}
-        {open ? <X className="relative h-6 w-6" /> : <Bot className="relative h-6 w-6" />}
+        {open ? <X className="relative h-6 w-6" /> : <MessageCircle className="relative h-6 w-6 fill-current" />}
       </button>
 
       {/* Chat window */}
@@ -80,7 +80,7 @@ const AIChatbot = () => {
           {/* Header */}
           <div className="flex items-center gap-3 border-b border-border bg-gradient-to-r from-primary to-primary/80 px-4 py-3 text-primary-foreground">
             <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20">
-              <Bot className="h-5 w-5" />
+              <MessageCircle className="h-5 w-5 fill-current" />
             </div>
             <div className="flex-1">
               <div className="text-sm font-semibold">Utsav World Assistant</div>
