@@ -82,11 +82,11 @@ const SocialSidebar = () => {
 
   return (
     <div
-      className="fixed bottom-6 left-6 z-50 flex flex-col-reverse items-center"
+      className="fixed bottom-6 left-6 z-50 flex flex-col items-center"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      {socialLinks.map((social, index) => {
+      {[...socialLinks].reverse().map((social, index) => {
         const Icon = social.icon;
         return (
           <div
