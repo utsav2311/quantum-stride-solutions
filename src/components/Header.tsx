@@ -39,7 +39,7 @@ const Header = ({ transparent = false }: HeaderProps) => {
             <img 
               src="/lovable-uploads/e5a83eab-625b-4d9c-803e-cd8d42658144.png" 
               alt="Quantum Medical Logo" 
-              className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 hover-scale transition-all duration-300 group-hover:opacity-80"
+              className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 hover-scale transition-all duration-300 group-hover:opacity-80 border-2 border-[#9C7017] rounded-full"
             />
             <div className="min-w-0">
               <h1 className={titleClasses}>Quantum Medical</h1>
