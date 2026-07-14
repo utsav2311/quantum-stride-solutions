@@ -16,7 +16,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/e5a83eab-625b-4d9c-803e-cd8d42658144.png" 
                 alt="Quantum Medical Logo" 
-                className="w-8 h-8 group-hover:scale-110 transition-transform duration-300"
+                className="w-8 h-8 group-hover:scale-110 transition-transform duration-300 border-2 border-[#9C7017] rounded-full"
               />
               <div>
                 <h3 className="text-xl font-bold group-hover:text-primary-foreground transition-colors duration-300">Quantum Medical</h3>
