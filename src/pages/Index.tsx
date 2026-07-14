@@ -28,10 +28,8 @@ const Index = () => {
   return (
     <div className="min-h-screen relative bg-background">
       <ScrollProgressBar color="gradient" />
-      <div className="relative">
-        <Header transparent />
-        <HeroPremium />
-      </div>
+      <Header />
+      <HeroPremium />
       <ClientLogos />
       <Services />
       <MoreLink to="/services" label="View All Services" />
