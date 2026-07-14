@@ -102,17 +102,38 @@ const HeroPremium = () => {
 
           {/* Image */}
           <div className="lg:col-span-5 relative animate-scale-in">
-            <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl">
-              <img
-                src={heroPatient}
-                alt="Patient walking confidently with a custom prosthetic device"
-                width={1280}
-                height={1600}
-                fetchPriority="high"
-                className="w-full h-full object-cover"
-              />
+            <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl bg-muted">
+              {heroImages.map((img, i) => (
+                <img
+                  key={i}
+                  src={img.src}
+                  alt={img.alt}
+                  width={1280}
+                  height={1600}
+                  loading={i === 0 ? undefined : "lazy"}
+                  fetchPriority={i === 0 ? "high" : "low"}
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+                    i === current ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+              ))}
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 via-transparent to-transparent" />
+
+              {/* Slide indicators */}
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                {heroImages.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setCurrent(i)}
+                    aria-label={`Show slide ${i + 1}`}
+                    className={`h-1.5 rounded-full transition-all ${
+                      i === current ? "w-6 bg-primary" : "w-1.5 bg-background/70 hover:bg-background"
+                    }`}
+                  />
+                ))}
+              </div>
             </div>
+
 
             {/* Floating stat card */}
             <div className="absolute -bottom-6 -left-6 lg:-left-10 bg-card border border-border rounded-2xl shadow-soft p-5 w-56 backdrop-blur">
