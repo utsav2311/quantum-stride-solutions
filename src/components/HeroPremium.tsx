@@ -61,18 +61,16 @@ const HeroPremium = () => {
               <span className="font-medium">ISO 13485 Certified · 15+ Years of Care</span>
             </div>
 
-            <h1 className="font-serif text-[3.25rem] sm:text-6xl lg:text-7xl xl:text-[5.5rem] leading-[0.98] tracking-tight text-foreground animate-slide-up">
-              Mobility crafted
+            <h1 className="font-display font-bold text-[3.25rem] sm:text-6xl lg:text-7xl xl:text-[5.25rem] leading-[1.02] tracking-tight text-foreground animate-slide-up">
+              Restoring <span className="text-primary">Mobility</span>.
               <br />
-              with <em className="italic text-primary">precision</em>,
-              <br />
-              worn with <em className="italic text-primary">pride.</em>
+              Transforming <span className="text-accent">Lives</span>.
             </h1>
 
             <p className="text-lg lg:text-xl text-muted-foreground max-w-xl leading-relaxed font-light animate-fade-in animation-delay-300">
-              Custom prosthetics and orthotics engineered around your body,
-              your goals, and your life — delivered by India's most trusted
-              rehabilitation team.
+              Advanced prosthetic & orthotic solutions in Dubai with
+              personalized care, world-class technology, and a team that
+              walks every step with you.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-2 animate-fade-in animation-delay-500">

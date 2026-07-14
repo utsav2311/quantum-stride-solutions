@@ -14,6 +14,12 @@ import UpperLimbProsthetics from "./pages/services/UpperLimbProsthetics";
 import CustomOrthotics from "./pages/services/CustomOrthotics";
 import RepairMaintenance from "./pages/services/RepairMaintenance";
 import MedicalEquipments from "./pages/services/MedicalEquipments";
+import Products from "./pages/Products";
+import Technology from "./pages/Technology";
+import Team from "./pages/Team";
+import Gallery from "./pages/Gallery";
+import FAQ from "./pages/FAQ";
+import Blog from "./pages/Blog";
 import Background3D from "@/components/Background3D";
 import ScrollToTop from "@/components/ScrollToTop";
 import AIChatbot from "@/components/AIChatbot";
@@ -41,6 +47,12 @@ const App = () => (
           <Route path="/services/custom-orthotics" element={<CustomOrthotics />} />
           <Route path="/services/repair-maintenance" element={<RepairMaintenance />} />
           <Route path="/services/medical-equipments" element={<MedicalEquipments />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/technology" element={<Technology />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/blog" element={<Blog />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
