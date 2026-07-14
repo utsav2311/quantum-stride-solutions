@@ -8,84 +8,86 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Light theme — pristine white with dark mustard yellow */
-    --background: 40 20% 98%;
-    --foreground: 30 15% 12%;
+    /* Light theme — medical white with premium blue + teal */
+    --background: 0 0% 100%;
+    --foreground: 215 30% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 30 15% 12%;
+    --card-foreground: 215 30% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 30 15% 12%;
+    --popover-foreground: 215 30% 15%;
 
-    --primary: 40 75% 35%;
-    --primary-foreground: 40 25% 98%;
-    --primary-hover: 40 80% 28%;
+    /* Primary: #0A74DA */
+    --primary: 210 92% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 210 92% 38%;
 
-    --secondary: 40 20% 94%;
-    --secondary-foreground: 30 15% 15%;
+    --secondary: 210 30% 96%;
+    --secondary-foreground: 215 30% 15%;
 
-    --muted: 40 15% 95%;
-    --muted-foreground: 30 8% 40%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 15% 45%;
 
-    --accent: 40 75% 35%;
-    --accent-foreground: 40 25% 98%;
-    --xtreme-dark: 30 15% 12%;
-    --xtreme-orange: 40 75% 35%;
+    /* Accent: #00A99D teal */
+    --accent: 175 100% 33%;
+    --accent-foreground: 0 0% 100%;
+    --xtreme-dark: 215 30% 15%;
+    --xtreme-orange: 175 100% 33%;
 
     --destructive: 0 84% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 40 15% 88%;
-    --input: 40 15% 88%;
-    --ring: 40 75% 35%;
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 210 92% 45%;
 
-    --medical-blue: 40 75% 35%;
-    --medical-teal: 40 70% 45%;
-    --medical-light: 40 20% 95%;
-    --medical-dark: 30 15% 12%;
+    --medical-blue: 210 92% 45%;
+    --medical-teal: 175 100% 33%;
+    --medical-light: 210 30% 97%;
+    --medical-dark: 215 30% 15%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(40 75% 35%), hsl(40 85% 45%));
-    --gradient-hero: linear-gradient(135deg, hsl(30 15% 12% / 0.75), hsl(30 15% 8% / 0.55));
-    --gradient-warm: linear-gradient(180deg, hsl(40 20% 98%), hsl(40 25% 94%));
+    --gradient-primary: linear-gradient(135deg, hsl(210 92% 45%), hsl(175 100% 33%));
+    --gradient-hero: linear-gradient(135deg, hsl(215 30% 12% / 0.75), hsl(215 30% 8% / 0.55));
+    --gradient-warm: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 30% 97%));
 
-    --shadow-medical: 0 20px 50px -20px hsl(40 75% 35% / 0.35);
-    --shadow-card: 0 8px 30px -8px hsl(30 15% 12% / 0.08);
-    --shadow-soft: 0 1px 3px hsl(30 15% 12% / 0.04), 0 8px 24px -6px hsl(30 15% 12% / 0.06);
+    --shadow-medical: 0 20px 50px -20px hsl(210 92% 45% / 0.35);
+    --shadow-card: 0 8px 30px -8px hsl(215 30% 15% / 0.08);
+    --shadow-soft: 0 1px 3px hsl(215 30% 15% / 0.04), 0 8px 24px -6px hsl(215 30% 15% / 0.06);
 
-    --radius: 0.75rem;
+    --radius: 0.875rem;
 
-    --sidebar-background: 40 20% 98%;
-    --sidebar-foreground: 30 15% 20%;
-    --sidebar-primary: 40 75% 35%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 215 30% 20%;
+    --sidebar-primary: 210 92% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 40 20% 94%;
-    --sidebar-accent-foreground: 30 15% 15%;
-    --sidebar-border: 40 15% 88%;
-    --sidebar-ring: 40 75% 35%;
+    --sidebar-accent: 210 30% 96%;
+    --sidebar-accent-foreground: 215 30% 15%;
+    --sidebar-border: 210 20% 90%;
+    --sidebar-ring: 210 92% 45%;
   }
 
   .dark {
-    --background: 30 15% 8%;
-    --foreground: 40 20% 96%;
-    --card: 30 12% 12%;
-    --card-foreground: 40 20% 96%;
-    --popover: 30 12% 12%;
-    --popover-foreground: 40 20% 96%;
-    --primary: 40 80% 55%;
-    --primary-foreground: 30 15% 10%;
-    --primary-hover: 40 85% 48%;
-    --secondary: 30 10% 18%;
-    --secondary-foreground: 40 20% 96%;
-    --muted: 30 10% 18%;
-    --muted-foreground: 40 10% 65%;
-    --accent: 40 80% 55%;
-    --accent-foreground: 30 15% 10%;
+    --background: 215 35% 8%;
+    --foreground: 210 20% 96%;
+    --card: 215 30% 12%;
+    --card-foreground: 210 20% 96%;
+    --popover: 215 30% 12%;
+    --popover-foreground: 210 20% 96%;
+    --primary: 210 92% 58%;
+    --primary-foreground: 215 35% 8%;
+    --primary-hover: 210 92% 65%;
+    --secondary: 215 25% 18%;
+    --secondary-foreground: 210 20% 96%;
+    --muted: 215 25% 18%;
+    --muted-foreground: 210 15% 65%;
+    --accent: 175 90% 45%;
+    --accent-foreground: 215 35% 8%;
     --destructive: 0 75% 55%;
     --destructive-foreground: 0 0% 98%;
-    --border: 30 10% 22%;
-    --input: 30 10% 22%;
-    --ring: 40 80% 55%;
+    --border: 215 25% 22%;
+    --input: 215 25% 22%;
+    --ring: 210 92% 58%;
   }
 }
 
@@ -106,20 +108,21 @@ All colors MUST be HSL.
   }
 
   h1, h2, h3, h4 {
-    @apply font-serif tracking-tight;
+    @apply font-display tracking-tight;
     font-feature-settings: "liga", "dlig";
   }
 
   .font-playfair {
-    font-family: "Instrument Serif", Georgia, serif;
+    font-family: "Poppins", "Inter", system-ui, sans-serif;
     text-transform: none;
-    letter-spacing: -0.02em;
-    font-weight: 400;
+    letter-spacing: -0.03em;
+    font-weight: 700;
   }
   .font-playfair .italic,
   .font-playfair em,
   .font-playfair i {
-    font-style: italic;
+    font-style: normal;
+    font-weight: 600;
     color: hsl(var(--accent));
   }
 }
