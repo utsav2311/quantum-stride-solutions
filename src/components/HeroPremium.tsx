@@ -30,18 +30,33 @@ const HeroPremium = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen bg-background overflow-hidden">
-      {/* Ambient warm glow */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-32 -left-32 w-[36rem] h-[36rem] rounded-full bg-primary/10 blur-3xl" />
-        <div className="absolute top-1/3 -right-40 w-[28rem] h-[28rem] rounded-full bg-primary/[0.06] blur-3xl" />
+    <section className="relative min-h-screen overflow-hidden">
+      {/* Full-bleed carousel background */}
+      <div className="absolute inset-0">
+        {heroImages.map((img, i) => (
+          <img
+            key={i}
+            src={img.src}
+            alt={img.alt}
+            width={1920}
+            height={1080}
+            loading={i === 0 ? undefined : "lazy"}
+            fetchPriority={i === 0 ? "high" : "low"}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+              i === current ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        ))}
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/75 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40" />
       </div>
 
       <div className="container mx-auto px-6 lg:px-8 pt-32 lg:pt-40 pb-16 lg:pb-24 relative">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
           {/* Copy */}
           <div className="lg:col-span-7 space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card/60 backdrop-blur text-sm text-muted-foreground animate-fade-in">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/60 bg-card/70 backdrop-blur text-sm text-muted-foreground animate-fade-in">
               <ShieldCheck className="w-4 h-4 text-primary" />
               <span className="font-medium">ISO 13485 Certified · 15+ Years of Care</span>
             </div>
@@ -73,7 +88,7 @@ const HeroPremium = () => {
               </Button>
               <a
                 href="tel:+919999999999"
-                className="group inline-flex items-center gap-3 h-14 px-6 rounded-full border border-border hover:border-primary/40 hover:bg-primary/5 transition-all text-foreground font-medium"
+                className="group inline-flex items-center gap-3 h-14 px-6 rounded-full border border-border/60 bg-card/40 backdrop-blur hover:border-primary/40 hover:bg-primary/5 transition-all text-foreground font-medium"
               >
                 <span className="w-9 h-9 rounded-full bg-primary/10 grid place-items-center group-hover:bg-primary/20 transition-colors">
                   <Phone className="w-4 h-4 text-primary" />
@@ -100,56 +115,28 @@ const HeroPremium = () => {
             </div>
           </div>
 
-          {/* Image */}
-          <div className="lg:col-span-5 relative animate-scale-in">
-            <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl bg-muted">
-              {heroImages.map((img, i) => (
-                <img
-                  key={i}
-                  src={img.src}
-                  alt={img.alt}
-                  width={1280}
-                  height={1600}
-                  loading={i === 0 ? undefined : "lazy"}
-                  fetchPriority={i === 0 ? "high" : "low"}
-                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
-                    i === current ? "opacity-100" : "opacity-0"
-                  }`}
-                />
-              ))}
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 via-transparent to-transparent" />
-
-              {/* Slide indicators */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-                {heroImages.map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setCurrent(i)}
-                    aria-label={`Show slide ${i + 1}`}
-                    className={`h-1.5 rounded-full transition-all ${
-                      i === current ? "w-6 bg-primary" : "w-1.5 bg-background/70 hover:bg-background"
-                    }`}
-                  />
-                ))}
-              </div>
-            </div>
-
-
-            {/* Floating stat card */}
-            <div className="absolute -bottom-6 -left-6 lg:-left-10 bg-card border border-border rounded-2xl shadow-soft p-5 w-56 backdrop-blur">
+          {/* Floating stat card */}
+          <div className="lg:col-span-5 relative hidden lg:block animate-scale-in">
+            <div className="absolute bottom-0 left-0 bg-card/80 border border-border/60 rounded-2xl shadow-soft p-5 w-56 backdrop-blur">
               <p className="text-4xl font-serif text-foreground leading-none">98<span className="text-primary">%</span></p>
               <p className="text-sm text-muted-foreground mt-2">Patient satisfaction across fittings in 2025.</p>
             </div>
-
-            {/* Floating cert badge */}
-            <div className="absolute -top-4 -right-4 bg-primary text-primary-foreground rounded-full h-24 w-24 grid place-items-center text-center shadow-medical rotate-6">
-              <div>
-                <p className="font-serif text-xl leading-none">15+</p>
-                <p className="text-[10px] uppercase tracking-widest mt-1">Years</p>
-              </div>
-            </div>
           </div>
         </div>
+      </div>
+
+      {/* Slide indicators */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+        {heroImages.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            aria-label={`Show slide ${i + 1}`}
+            className={`h-1.5 rounded-full transition-all ${
+              i === current ? "w-6 bg-primary" : "w-1.5 bg-background/70 hover:bg-background"
+            }`}
+          />
+        ))}
       </div>
     </section>
   );
