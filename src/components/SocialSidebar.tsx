@@ -60,9 +60,7 @@ const socialLinks: SocialLink[] = [
 ];
 
 const SocialSidebar = () => {
-  const [hovered, setHovered] = useState(false);
-  const [pinned, setPinned] = useState(false);
-  const isOpen = pinned || hovered;
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
     if (href.startsWith("#")) {
@@ -82,47 +80,40 @@ const SocialSidebar = () => {
 
   return (
     <div
-      className="fixed bottom-6 left-6 z-50 flex flex-col items-center"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      className="fixed bottom-6 left-6 z-50 flex flex-col-reverse items-center gap-3"
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
     >
-      {[...socialLinks].reverse().map((social, index) => {
+      {socialLinks.map((social, index) => {
         const Icon = social.icon;
         return (
-          <div
+          <a
             key={social.name}
+            href={social.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={social.name}
+            onClick={(e) => handleClick(e, social.href)}
             className={`
-              overflow-hidden transition-all duration-300 ease-out
-              ${isOpen ? "max-h-12 opacity-100 mb-3" : "max-h-0 opacity-0 mb-0"}
+              absolute bottom-0 left-0 w-12 h-12 rounded-full flex items-center justify-center text-white
+              transition-all duration-300 ease-out hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2
+              ${social.bg}
+              ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none scale-75"}
             `}
             style={{
+              transform: isOpen ? `translateY(-${(index + 1) * 3.5}rem)` : "translateY(0) scale(0.75)",
               transitionDelay: isOpen ? `${index * 60}ms` : `${(socialLinks.length - 1 - index) * 40}ms`,
             }}
           >
-            <a
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={social.name}
-              onClick={(e) => handleClick(e, social.href)}
-              className={`
-                block w-12 h-12 rounded-full flex items-center justify-center text-white
-                transition-transform duration-300 ease-out hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2
-                ${social.bg}
-              `}
-            >
-              <Icon className="w-6 h-6 fill-current" />
-            </a>
-          </div>
+            <Icon className="w-6 h-6 fill-current" />
+          </a>
         );
       })}
 
       <button
         type="button"
-        aria-label={pinned ? "Close social links" : "Open social links"}
+        aria-label="Open social links"
         aria-expanded={isOpen}
-        aria-pressed={pinned}
-        onClick={() => setPinned((p) => !p)}
         className={`
           relative w-12 h-12 rounded-full flex items-center justify-center text-white
           transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2
@@ -130,10 +121,7 @@ const SocialSidebar = () => {
           hover:shadow-[0_0_20px_hsl(var(--primary)/0.5)]
         `}
       >
-        <Share2
-          className={`w-6 h-6 ${pinned ? "" : "transition-transform duration-300"}`}
-          style={{ transform: pinned ? "rotate(0deg)" : isOpen ? "rotate(90deg)" : "rotate(0deg)" }}
-        />
+        <Share2 className="w-6 h-6 transition-transform duration-300" style={{ transform: isOpen ? "rotate(90deg)" : "rotate(0deg)" }} />
       </button>
     </div>
   );

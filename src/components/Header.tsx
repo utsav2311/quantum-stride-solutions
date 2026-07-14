@@ -39,7 +39,7 @@ const Header = ({ transparent = false }: HeaderProps) => {
             <img 
               src="/lovable-uploads/e5a83eab-625b-4d9c-803e-cd8d42658144.png" 
               alt="Quantum Medical Logo" 
-              className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 rounded-full object-contain bg-white p-0.5 ring-2 ring-primary ring-offset-2 ring-offset-background shadow-[0_0_15px_hsl(var(--primary)/0.35)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_0_20px_hsl(var(--primary)/0.5)]"
+              className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 hover-scale transition-all duration-300 group-hover:opacity-80"
             />
             <div className="min-w-0">
               <h1 className={titleClasses}>Quantum Medical</h1>
@@ -47,12 +47,9 @@ const Header = ({ transparent = false }: HeaderProps) => {
             </div>
           </Link>
           
-          <nav className="hidden md:flex items-center space-x-6 lg:space-x-7 stagger-children">
+          <nav className="hidden md:flex items-center space-x-8 stagger-children">
             <Link to="/" className={navLinkClasses}>Home</Link>
             <Link to="/services" className={navLinkClasses}>Services</Link>
-            <Link to="/products" className={navLinkClasses}>Products</Link>
-            <Link to="/technology" className={navLinkClasses}>Technology</Link>
-            <Link to="/team" className={navLinkClasses}>Team</Link>
             <Link to="/about" className={navLinkClasses}>About</Link>
             <Link to="/contact" className={navLinkClasses}>Contact</Link>
           </nav>

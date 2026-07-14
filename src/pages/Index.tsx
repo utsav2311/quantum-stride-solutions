@@ -4,11 +4,7 @@ import ClientLogos from "@/components/ClientLogos";
 import Services from "@/components/Services";
 import Achievements from "@/components/Achievements";
 import About from "@/components/About";
-import ProcessTimeline from "@/components/ProcessTimeline";
-import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import Testimonials from "@/components/Testimonials";
-import InsurancePartners from "@/components/InsurancePartners";
-import FAQSection from "@/components/FAQSection";
 import AppointmentForm from "@/components/AppointmentForm";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -32,20 +28,17 @@ const Index = () => {
   return (
     <div className="min-h-screen relative bg-background">
       <ScrollProgressBar color="gradient" />
-      <Header />
-      <HeroPremium />
+      <div className="relative">
+        <Header transparent />
+        <HeroPremium />
+      </div>
       <ClientLogos />
       <Services />
       <MoreLink to="/services" label="View All Services" />
       <Achievements />
-      <ProcessTimeline />
       <About />
       <MoreLink to="/about" label="Learn More About Us" />
-      <BeforeAfterSlider />
       <Testimonials />
-      <InsurancePartners />
-      <FAQSection />
-      <MoreLink to="/faq" label="See All FAQs" />
       <AppointmentForm />
       <MoreLink to="/book-appointment" label="Full Appointment Form" />
       <Contact />

@@ -19,10 +19,10 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['"Inter"', '"Poppins"', "system-ui", "sans-serif"],
-				serif: ['"Poppins"', '"Inter"', "system-ui", "sans-serif"],
-				display: ['"Poppins"', '"Manrope"', "system-ui", "sans-serif"],
-				playfair: ['"Poppins"', '"Manrope"', "system-ui", "sans-serif"],
+				sans: ['"Work Sans"', "system-ui", "sans-serif"],
+				serif: ['"Instrument Serif"', "Georgia", "serif"],
+				display: ['"Instrument Serif"', "Georgia", "serif"],
+				playfair: ['"Instrument Serif"', "Georgia", "serif"],
 			},
 			spacing: {
 				'section': '6rem',
