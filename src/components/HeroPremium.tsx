@@ -20,6 +20,15 @@ const heroImages = [
 
 
 const HeroPremium = () => {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setCurrent((c) => (c + 1) % heroImages.length);
+    }, 4000);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <section className="relative min-h-screen bg-background overflow-hidden">
       {/* Ambient warm glow */}
