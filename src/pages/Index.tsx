@@ -1,3 +1,4 @@
+import Seo from "@/components/Seo";
 import Header from "@/components/Header";
 import HeroCarousel from "@/components/HeroCarousel";
 import Services from "@/components/Services";
@@ -26,6 +27,11 @@ const MoreLink = ({ to, label }: { to: string; label: string }) => (
 const Index = () => {
   return (
     <div className="min-h-screen relative">
+      <Seo
+        title="Quantum Medical — Advanced Prosthetics & Orthotics"
+        description="Custom prosthetic limbs, orthotic bracing, and mobility care for kids and adults. Expert clinicians, myoelectric technology, personalized fittings."
+        path="/"
+      />
       <ScrollProgressBar color="gradient" />
       <Background3D />
       <div className="relative">
