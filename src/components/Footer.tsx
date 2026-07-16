@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail, ExternalLink } from "lucide-react";
+import logoAsset from "@/assets/quantum-logo.png.asset.json";
 
 const Footer = () => {
   return (
