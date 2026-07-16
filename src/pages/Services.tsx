@@ -1,3 +1,4 @@
+import Seo from "@/components/Seo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Background3D from "@/components/Background3D";
@@ -150,6 +151,11 @@ const Services = () => {
 
   return (
     <div className="min-h-screen relative">
+      <Seo
+        title="Services — Prosthetics, Orthotics & Medical Equipment"
+        description="Explore Quantum Medical's full service catalog: lower/upper limb prosthetics, custom orthotics, repairs, and medical equipment supply and installation."
+        path="/services"
+      />
       <Background3D />
       <Header />
       

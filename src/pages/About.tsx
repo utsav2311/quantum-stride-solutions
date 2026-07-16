@@ -1,3 +1,4 @@
+import Seo from "@/components/Seo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Background3D from "@/components/Background3D";
@@ -69,6 +70,11 @@ const About = () => {
   }];
   const certifications = ["ABC Certified Facility", "ISO 9001:2015 Quality Management", "FDA Approved Manufacturing", "AOPA Member Organization", "Joint Commission Accredited", "Medicare & Medicaid Approved"];
   return <div className="min-h-screen relative">
+      <Seo
+        title="About Quantum Medical — Our Clinical Team & Mission"
+        description="Meet the prosthetists, orthotists, and researchers behind Quantum Medical. 15+ years delivering personalized mobility care and innovative device design."
+        path="/about"
+      />
       <Background3D />
       <Header />
       

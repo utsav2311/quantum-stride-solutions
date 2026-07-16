@@ -1,3 +1,4 @@
+import Seo from "@/components/Seo";
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -161,6 +162,11 @@ const BookAppointment = () => {
 
   return (
     <div className="min-h-screen relative">
+      <Seo
+        title="Book an Appointment — Quantum Medical"
+        description="Schedule a prosthetic or orthotic consultation with Quantum Medical. Pick a date, service, and clinician — we confirm within one business day."
+        path="/book-appointment"
+      />
       <Background3D />
       <Header />
       <div className="bg-background relative overflow-hidden pt-20">

@@ -1,3 +1,4 @@
+import Seo from "@/components/Seo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Background3D from "@/components/Background3D";
@@ -120,6 +121,11 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen relative">
+      <Seo
+        title="Contact Quantum Medical — Clinic & Enquiries"
+        description="Reach Quantum Medical's clinical team for consultations, fittings, and support. Phone, email, address, and an online inquiry form."
+        path="/contact"
+      />
       <Background3D />
       <Header />
       
