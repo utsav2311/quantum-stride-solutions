@@ -79,11 +79,11 @@ const HeroCarousel = () => {
                     {slide.eyebrow}
                   </p>
                   <h1 className="font-playfair font-bold text-white leading-[0.95] mb-5 md:mb-8 animate-slide-up">
-                    <span className="block text-5xl sm:text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] tracking-tight break-words">
+                    <span className="block text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl tracking-tight whitespace-nowrap">
                       {slide.title}
                     </span>
                     {slide.titleAccent && (
-                      <span className="block text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl italic font-light text-accent mt-2 break-words">
+                      <span className="block text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl italic font-light text-accent mt-2 whitespace-nowrap">
                         {slide.titleAccent}
                       </span>
                     )}
