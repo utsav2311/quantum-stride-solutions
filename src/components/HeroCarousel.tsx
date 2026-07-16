@@ -99,10 +99,6 @@ const HeroCarousel = () => {
                     >
                       <Link to="/book-appointment">{slide.cta}</Link>
                     </Button>
-                    <div className="hidden md:block h-px w-16 bg-white/40" />
-                    <span className="hidden md:inline text-white/70 text-sm tracking-widest uppercase">
-                      0{index + 1} / 0{slides.length}
-                    </span>
                   </div>
                 </div>
               </div>
