@@ -38,7 +38,7 @@ const Header = ({ transparent = false }: HeaderProps) => {
           <Link to="/" className="flex items-center space-x-2 animate-slide-left animation-delay-200 group min-w-0">
             <div className="relative flex-shrink-0 transition-all duration-300 group-hover:scale-105">
               <img 
-                src={logoAsset.url}
+                src="/quantum-logo.png"
                 alt="Quantum Medical Logo" 
                 className="w-10 h-10 sm:w-12 sm:h-12 object-contain drop-shadow-lg"
               />

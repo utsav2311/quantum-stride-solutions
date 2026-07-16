@@ -15,7 +15,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2 mb-4 group">
               <div className="flex-shrink-0 transition-all duration-300 group-hover:scale-105">
                 <img 
-                  src={logoAsset.url}
+                  src="/quantum-logo.png"
                   alt="Quantum Medical Logo" 
                   className="w-9 h-9 object-contain drop-shadow-md"
                 />
