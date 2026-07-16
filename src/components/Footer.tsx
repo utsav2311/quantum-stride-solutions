@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 stagger-animation">
           <div className="hover-lift">
             <div className="flex items-center space-x-2 mb-4 group">
-              <div className="rounded-full bg-white p-1.5 shadow-md ring-1 ring-white/20 group-hover:ring-accent/50 group-hover:shadow-lg transition-all duration-300">
+              <div className="rounded-full bg-white shadow-md ring-1 ring-white/20 group-hover:ring-accent/50 group-hover:shadow-lg transition-all duration-300 overflow-hidden">
                 <img 
                   src="/lovable-uploads/e5a83eab-625b-4d9c-803e-cd8d42658144.png" 
                   alt="Quantum Medical Logo" 
