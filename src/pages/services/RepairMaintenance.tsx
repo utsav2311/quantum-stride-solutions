@@ -9,6 +9,12 @@ import consultation from "@/assets/consultation-service.jpg";
 const RepairMaintenance = () => {
   return (
     <div className="min-h-screen">
+      <Seo
+        title="Prosthetic Repair & Maintenance — Quantum Medical"
+        description="Emergency repairs, routine servicing, and component upgrades for prosthetic and orthotic devices. Keep your device performing at its best."
+        path="/services/repair-maintenance"
+        jsonLd={{"@context":"https://schema.org","@type":"Service","name":"Prosthetic Repair & Maintenance","description":"Emergency repair, routine maintenance, and component upgrades for prosthetic and orthotic devices.","provider":{"@type":"MedicalBusiness","name":"Quantum Medical","url":"https://quantum-stride-solutions.lovable.app/"}}}
+      />
       <Header />
       
       <main className="pt-20">
