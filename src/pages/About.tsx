@@ -1,3 +1,4 @@
+import Seo from "@/components/Seo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Background3D from "@/components/Background3D";
@@ -69,6 +70,11 @@ const About = () => {
   }];
   const certifications = ["ABC Certified Facility", "ISO 9001:2015 Quality Management", "FDA Approved Manufacturing", "AOPA Member Organization", "Joint Commission Accredited", "Medicare & Medicaid Approved"];
   return <div className="min-h-screen relative">
+      <Seo
+        title="About Quantum Medical — Our Clinical Team & Mission"
+        description="Meet the prosthetists, orthotists, and researchers behind Quantum Medical. 15+ years delivering personalized mobility care and innovative device design."
+        path="/about"
+      />
       <Background3D />
       <Header />
       
@@ -165,7 +171,7 @@ const About = () => {
             animationDelay: `${index * 150}ms`
           }}>
                 <div className="relative">
-                  <img src={member.image} alt={member.name} className="w-full h-64 object-cover" />
+                  <img src={member.image} alt={`${member.role} at Quantum Medical, specialist in ${member.specialization}`} className="w-full h-64 object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 text-white">
                     <Badge variant="secondary">{member.credentials}</Badge>

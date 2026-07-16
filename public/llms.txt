@@ -1,0 +1,21 @@
+# Quantum Medical
+
+> Advanced prosthetic and orthotic care — custom-crafted mobility solutions for kids and adults, delivered by an expert clinical team.
+
+Quantum Medical designs, fits, and services prosthetic limbs, custom orthotic devices, and medical equipment. We combine biomedical engineering, myoelectric technology, and personalized clinical care to help patients regain mobility and independence.
+
+## Pages
+
+- [Home](/): Overview of Quantum Medical, our approach, and mobility solutions.
+- [Services](/services): Full catalog of prosthetic, orthotic, and medical equipment services.
+- [About](/about): Our clinical team, mission, and 15+ year track record.
+- [Contact](/contact): Clinic location, phone, email, and inquiry form.
+- [Book Appointment](/book-appointment): Schedule a consultation or fitting.
+
+## Services
+
+- [Lower Limb Prosthetics](/services/lower-limb-prosthetics): Below-knee, above-knee, and microprocessor-controlled prosthetic legs.
+- [Upper Limb Prosthetics](/services/upper-limb-prosthetics): Myoelectric arms, body-powered devices, and partial hand prosthetics.
+- [Custom Orthotics](/services/custom-orthotics): Spinal, lower limb, upper limb, and pediatric orthotic bracing.
+- [Repair & Maintenance](/services/repair-maintenance): Emergency repairs, routine servicing, and component upgrades.
+- [Medical Equipments](/services/medical-equipments): Wholesale supply, installation, and repair of medical and laboratory equipment.

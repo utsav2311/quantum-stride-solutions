@@ -1,3 +1,4 @@
+import Seo from "@/components/Seo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -7,6 +8,12 @@ import { Link } from "react-router-dom";
 const LowerLimbProsthetics = () => {
   return (
     <div className="min-h-screen">
+      <Seo
+        title="Lower Limb Prosthetics — Quantum Medical"
+        description="Below-knee, above-knee, and microprocessor-controlled prosthetic legs. Custom sockets, sports prosthetics, and personalized gait training."
+        path="/services/lower-limb-prosthetics"
+        jsonLd={{"@context":"https://schema.org","@type":"MedicalProcedure","name":"Lower Limb Prosthetics","description":"Custom below-knee and above-knee prosthetic fitting including microprocessor knees.","provider":{"@type":"MedicalBusiness","name":"Quantum Medical","url":"https://quantum-stride-solutions.lovable.app/"}}}
+      />
       <Header />
       
       <main className="pt-20">

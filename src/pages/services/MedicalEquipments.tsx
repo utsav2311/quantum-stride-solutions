@@ -1,3 +1,4 @@
+import Seo from "@/components/Seo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -8,6 +9,12 @@ import consultation from "@/assets/consultation-service.jpg";
 const MedicalEquipments = () => {
   return (
     <div className="min-h-screen">
+      <Seo
+        title="Medical Equipment Supply & Servicing — Quantum Medical"
+        description="Wholesale trading, installation, maintenance, and repair of medical and laboratory equipment. Trusted supply for clinics and hospitals."
+        path="/services/medical-equipments"
+        jsonLd={{"@context":"https://schema.org","@type":"Service","name":"Medical Equipment Supply","description":"Wholesale supply, installation, and servicing of medical and laboratory equipment.","provider":{"@type":"MedicalBusiness","name":"Quantum Medical","url":"https://quantum-stride-solutions.lovable.app/"}}}
+      />
       <Header />
       
       <main className="pt-20">

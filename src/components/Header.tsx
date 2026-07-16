@@ -42,7 +42,7 @@ const Header = ({ transparent = false }: HeaderProps) => {
               className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 hover-scale transition-all duration-300 group-hover:opacity-80"
             />
             <div className="min-w-0">
-              <h1 className={titleClasses}>Quantum Medical</h1>
+              <span className={titleClasses}>Quantum Medical</span>
               <p className={subtitleClasses}>Prosthetics & Orthotics</p>
             </div>
           </Link>
@@ -67,7 +67,7 @@ const Header = ({ transparent = false }: HeaderProps) => {
             {/* Mobile Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="sm" className="md:hidden">
+                <Button variant="ghost" size="sm" className="md:hidden" aria-label="Open menu">
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>

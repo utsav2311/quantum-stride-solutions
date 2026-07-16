@@ -103,9 +103,10 @@ const Services = () => {
 
                 <Link
                   to={service.link}
+                  aria-label={`Explore our ${service.title.toLowerCase()} solutions`}
                   className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-accent group-hover:gap-3 transition-all duration-300"
                 >
-                  Learn More
+                  Explore {service.title}
                   <span aria-hidden>→</span>
                 </Link>
               </CardContent>
