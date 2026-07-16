@@ -7,7 +7,6 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import logoAsset from "@/assets/quantum-logo.png.asset.json";
 
 interface HeaderProps {
   transparent?: boolean;
