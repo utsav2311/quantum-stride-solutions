@@ -37,11 +37,11 @@ const Header = ({ transparent = false }: HeaderProps) => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2 animate-slide-left animation-delay-200 group min-w-0">
-            <div className="relative flex-shrink-0 rounded-full bg-white shadow-lg ring-1 ring-black/5 group-hover:shadow-xl group-hover:ring-primary/30 transition-all duration-300 overflow-hidden">
+            <div className="relative flex-shrink-0 transition-all duration-300 group-hover:scale-105">
               <img 
-                src="/lovable-uploads/e5a83eab-625b-4d9c-803e-cd8d42658144.png" 
+                src={logoAsset.url}
                 alt="Quantum Medical Logo" 
-                className="w-8 h-8 sm:w-10 sm:h-10 object-contain hover-scale transition-transform duration-300"
+                className="w-10 h-10 sm:w-12 sm:h-12 object-contain drop-shadow-lg"
               />
             </div>
             <div className="min-w-0">
