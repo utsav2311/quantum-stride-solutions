@@ -165,7 +165,7 @@ const About = () => {
             animationDelay: `${index * 150}ms`
           }}>
                 <div className="relative">
-                  <img src={member.image} alt={member.name} className="w-full h-64 object-cover" />
+                  <img src={member.image} alt={`${member.role} at Quantum Medical, specialist in ${member.specialization}`} className="w-full h-64 object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 text-white">
                     <Badge variant="secondary">{member.credentials}</Badge>
