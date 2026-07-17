@@ -10,7 +10,7 @@ Automated WhatsApp sending requires a business API provider. We'll use **Twilio*
 1. Create a free Twilio account at twilio.com.
 2. Activate the **WhatsApp Sandbox** (Messaging → Try it out → Send a WhatsApp message). Twilio gives you a sandbox sender number and a join code.
 3. From the recipient phone (+91 62003 96319), send the join code (e.g. `join <two-words>`) via WhatsApp to the sandbox number — this opts the number in.
-4. In Lovable, I'll trigger the Twilio connector so you can log in and link the account.
+4. In Lovable, I've triggered the Twilio connector so you can log in and link the account.
 
 For production (no sandbox), you later request WhatsApp Sender approval from Twilio; the code stays the same.
 
