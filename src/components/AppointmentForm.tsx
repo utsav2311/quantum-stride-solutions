@@ -38,7 +38,7 @@ const AppointmentForm = () => {
 
     setIsSubmitting(true);
     try {
-      const { error } = await supabase.from("appointments").insert({
+      const appointmentPayload = {
         full_name: `${formData.firstName} ${formData.lastName}`,
         email: formData.email,
         phone: formData.phone,
@@ -47,9 +47,28 @@ const AppointmentForm = () => {
         appointment_type: formData.service,
         special_requests: formData.message,
         consent_contact: true,
-      });
+      };
+
+      const { error } = await supabase.from("appointments").insert(appointmentPayload);
 
       if (error) throw error;
+
+      // Send WhatsApp notification to clinic owner; do not block success toast on failure
+      try {
+        await supabase.functions.invoke("notify-appointment", {
+          body: {
+            full_name: appointmentPayload.full_name,
+            phone: appointmentPayload.phone,
+            email: appointmentPayload.email,
+            appointment_type: appointmentPayload.appointment_type,
+            appointment_date: appointmentPayload.appointment_date,
+            appointment_time: appointmentPayload.appointment_time,
+            special_requests: appointmentPayload.special_requests,
+          },
+        });
+      } catch (notifyErr) {
+        console.error("WhatsApp notification failed:", notifyErr);
+      }
 
       toast({
         title: "Appointment Request Submitted",
