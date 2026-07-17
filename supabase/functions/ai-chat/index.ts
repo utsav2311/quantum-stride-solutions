@@ -1,3 +1,5 @@
+import { z } from "npm:zod@3.23.8";
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
@@ -21,11 +23,28 @@ Guidelines:
 - If asked something you don't know, suggest calling the clinic or booking a consultation.
 - Keep replies under 4 short sentences unless the user asks for detail.`;
 
+const MessageSchema = z.object({
+  role: z.enum(["user", "assistant"]),
+  content: z.string().min(1).max(2000),
+});
+
+const BodySchema = z.object({
+  messages: z.array(MessageSchema).min(1).max(20),
+});
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
   try {
-    const { messages } = await req.json();
+    const parsed = BodySchema.safeParse(await req.json());
+    if (!parsed.success) {
+      return new Response(
+        JSON.stringify({ error: parsed.error.flatten().fieldErrors }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } },
+      );
+    }
+    const { messages } = parsed.data;
+
     const apiKey = Deno.env.get("LOVABLE_API_KEY");
     if (!apiKey) throw new Error("Missing LOVABLE_API_KEY");
 

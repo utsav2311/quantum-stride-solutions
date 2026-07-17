@@ -49,23 +49,21 @@ const AppointmentForm = () => {
         consent_contact: true,
       };
 
-      const { error } = await supabase.from("appointments").insert(appointmentPayload);
+      const { data: inserted, error } = await supabase
+        .from("appointments")
+        .insert(appointmentPayload)
+        .select("id")
+        .single();
 
       if (error) throw error;
 
       // Send WhatsApp notification to clinic owner; do not block success toast on failure
       try {
-        await supabase.functions.invoke("notify-appointment", {
-          body: {
-            full_name: appointmentPayload.full_name,
-            phone: appointmentPayload.phone,
-            email: appointmentPayload.email,
-            appointment_type: appointmentPayload.appointment_type,
-            appointment_date: appointmentPayload.appointment_date,
-            appointment_time: appointmentPayload.appointment_time,
-            special_requests: appointmentPayload.special_requests,
-          },
-        });
+        if (inserted?.id) {
+          await supabase.functions.invoke("notify-appointment", {
+            body: { appointment_id: inserted.id },
+          });
+        }
       } catch (notifyErr) {
         console.error("WhatsApp notification failed:", notifyErr);
       }

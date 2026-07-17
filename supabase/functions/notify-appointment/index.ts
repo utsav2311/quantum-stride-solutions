@@ -1,16 +1,11 @@
 import { corsHeaders } from 'npm:@supabase/supabase-js@2/cors'
+import { createClient } from 'npm:@supabase/supabase-js@2'
 import { z } from 'npm:zod@3.23.8'
 
 const RECIPIENT = 'whatsapp:+916200396319'
 
 const BodySchema = z.object({
-  full_name: z.string().min(1).max(200),
-  phone: z.string().min(3).max(40),
-  email: z.string().email().max(320),
-  appointment_type: z.string().min(1).max(100),
-  appointment_date: z.string().min(1).max(40),
-  appointment_time: z.string().min(1).max(40),
-  special_requests: z.string().max(2000).optional().default(''),
+  appointment_id: z.string().uuid(),
 })
 
 Deno.serve(async (req) => {
@@ -27,26 +22,60 @@ Deno.serve(async (req) => {
       })
     }
 
-    const { full_name, phone, email, appointment_type, appointment_date, appointment_time, special_requests } = parsed.data
+    const { appointment_id } = parsed.data
 
+    const supabaseUrl = Deno.env.get('SUPABASE_URL')
+    const serviceRoleKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')
     const lovableApiKey = Deno.env.get('LOVABLE_API_KEY')
     const twilioApiKey = Deno.env.get('TWILIO_API_KEY')
     const fromNumber = Deno.env.get('TWILIO_WHATSAPP_FROM')
 
+    if (!supabaseUrl || !serviceRoleKey) throw new Error('Missing Supabase env')
     if (!lovableApiKey) throw new Error('Missing LOVABLE_API_KEY')
     if (!twilioApiKey) throw new Error('Missing TWILIO_API_KEY')
     if (!fromNumber) throw new Error('Missing TWILIO_WHATSAPP_FROM')
 
+    // Verify appointment exists server-side; only send notification for real bookings.
+    const admin = createClient(supabaseUrl, serviceRoleKey)
+    const { data: appointment, error: fetchErr } = await admin
+      .from('appointments')
+      .select('id, full_name, phone, email, appointment_type, appointment_date, appointment_time, special_requests, created_at')
+      .eq('id', appointment_id)
+      .maybeSingle()
+
+    if (fetchErr) {
+      console.error('appointment lookup failed:', fetchErr)
+      return new Response(JSON.stringify({ error: 'Lookup failed' }), {
+        status: 500,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      })
+    }
+    if (!appointment) {
+      return new Response(JSON.stringify({ error: 'Appointment not found' }), {
+        status: 404,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      })
+    }
+
+    // Only allow notifications for very recently-created appointments to prevent replay abuse.
+    const createdAt = new Date(appointment.created_at as string).getTime()
+    if (Number.isFinite(createdAt) && Date.now() - createdAt > 5 * 60 * 1000) {
+      return new Response(JSON.stringify({ error: 'Appointment too old for notification' }), {
+        status: 409,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      })
+    }
+
     const body = [
       '🩺 *New Appointment Request*',
       '',
-      `*Name:* ${full_name}`,
-      `*Phone:* ${phone}`,
-      `*Email:* ${email}`,
-      `*Service:* ${appointment_type}`,
-      `*Date:* ${appointment_date}`,
-      `*Time:* ${appointment_time}`,
-      `*Notes:* ${special_requests || '—'}`,
+      `*Name:* ${appointment.full_name}`,
+      `*Phone:* ${appointment.phone}`,
+      `*Email:* ${appointment.email}`,
+      `*Service:* ${appointment.appointment_type}`,
+      `*Date:* ${appointment.appointment_date}`,
+      `*Time:* ${appointment.appointment_time}`,
+      `*Notes:* ${appointment.special_requests || '—'}`,
     ].join('\n')
 
     const response = await fetch('https://connector-gateway.lovable.dev/twilio/Messages.json', {
