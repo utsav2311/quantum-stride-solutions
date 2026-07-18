@@ -5,7 +5,7 @@ const WHATSAPP_NUMBER = '916200396319'; // +91 62003 96319
 const DEFAULT_MESSAGE = "Hello! I'd like to know more about your services.";
 
 const WhatsAppButton = () => {
-  const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(DEFAULT_MESSAGE)}`;
+  const href = `https://web.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(DEFAULT_MESSAGE)}`;
 
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
     // Lovable runs the app inside a preview iframe. WhatsApp blocks iframe loads

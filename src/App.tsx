@@ -16,7 +16,7 @@ import RepairMaintenance from "./pages/services/RepairMaintenance";
 import MedicalEquipments from "./pages/services/MedicalEquipments";
 import Background3D from "@/components/Background3D";
 import ScrollToTop from "@/components/ScrollToTop";
-import AIChatbot from "@/components/AIChatbot";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import FloatingCallButton from "@/components/FloatingCallButton";
 import SocialSidebar from "@/components/SocialSidebar";
 
@@ -44,7 +44,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <AIChatbot />
+        <WhatsAppButton />
         <FloatingCallButton />
         <SocialSidebar />
       </BrowserRouter>
