@@ -64,12 +64,12 @@ const SocialSidebar = () => {
             aria-label={social.name}
             onClick={(e) => handleClick(e, social.href)}
             className={`
-              w-12 h-12 rounded-full flex items-center justify-center text-white
+              w-10 h-10 rounded-full flex items-center justify-center text-white
               transition-all duration-300 ease-out hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2
               ${social.bg}
             `}
           >
-            <Icon className="w-6 h-6 fill-current" />
+            <Icon className="w-5 h-5 fill-current" />
           </a>
         );
       })}
