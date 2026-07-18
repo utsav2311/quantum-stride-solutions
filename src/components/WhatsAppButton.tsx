@@ -1,7 +1,7 @@
 import { type MouseEvent } from 'react';
 import { MessageCircle } from 'lucide-react';
 
-const WHATSAPP_NUMBER = '916200396319'; // +91 62003 96319
+const WHATSAPP_NUMBER = '971558488759'; // +971 55 848 8759
 const DEFAULT_MESSAGE = "Hello! I'd like to know more about your services.";
 
 const WhatsAppButton = () => {
