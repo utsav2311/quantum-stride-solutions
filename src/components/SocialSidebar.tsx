@@ -12,11 +12,6 @@ const YouTubeIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const TikTokIcon = ({ className }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 448 512" fill="currentColor">
-    <path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25v349.44a162.55,162.55,0,1,1-140-185v89.89a74.53,74.53,0,1,0,52.23,71.12V0h88.18a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z" />
-  </svg>
-);
 
 type SocialLink = {
   name: string;
@@ -37,12 +32,6 @@ const socialLinks: SocialLink[] = [
     href: "#",
     bg: "bg-[#FF0000] hover:shadow-[0_0_20px_rgba(255,0,0,0.5)]",
     icon: YouTubeIcon,
-  },
-  {
-    name: "TikTok",
-    href: "#",
-    bg: "bg-black hover:shadow-[0_0_20px_rgba(0,0,0,0.5)]",
-    icon: TikTokIcon,
   },
 ];
 
