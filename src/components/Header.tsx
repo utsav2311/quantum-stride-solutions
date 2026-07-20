@@ -45,9 +45,9 @@ const navItems: NavItem[] = [
   {
     label: "Pediatric Care",
     children: [
-      { label: "Pediatric Orthotics", to: "/services/pediatric-orthotics" },
       { label: "Pediatric Prosthetics", to: "/services/pediatric-prosthetics" },
-      { label: "Mobility Aids for Kids", to: "/services/mobility-aids-for-kids" },
+      { label: "Cranial Orthoses", to: "/services/cranial-orthoses" },
+      { label: "Scoliosis Bracing", to: "/services/scoliosis-bracing" },
     ],
   },
   {
