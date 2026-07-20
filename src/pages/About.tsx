@@ -115,14 +115,14 @@ const About = () => {
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
             {/* Bio */}
-            <div className="animate-fade-in space-y-6">
-              <h3 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-tight">
+            <div className="animate-fade-in space-y-5">
+              <h3 className="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold text-foreground leading-tight">
                 Mr. Rahul Kashyap
               </h3>
-              <p className="text-lg font-semibold text-foreground">
+              <p className="text-base md:text-lg font-semibold text-foreground">
                 Founder &amp; Director | Certified Orthotist &amp; Prosthetist (CPO)
               </p>
-              <div className="space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed">
+              <div className="space-y-4 text-sm md:text-base text-muted-foreground leading-relaxed">
                 <p>
                   Rahul Kashyap is a DHA- and DOH-licensed and accredited Certified Orthotist &amp; Prosthetist with nearly a decade of diverse clinical experience in orthotics and prosthetics. He earned his bachelor's degree from the prestigious All India Institute of Physical Medicine &amp; Rehabilitation (AIIPMR), Mumbai.
                 </p>
