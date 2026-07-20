@@ -51,10 +51,9 @@ const AppointmentForm = () => {
         consent_contact: true,
       };
 
-      const { data: inserted, error } = await supabase
+      const { error } = await supabase
         .from("appointments")
-        .insert(appointmentPayload)
-        .select();
+        .insert(appointmentPayload);
 
       if (error) throw error;
 
