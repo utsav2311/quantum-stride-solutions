@@ -42,7 +42,7 @@ const FloatingCallButton = () => {
   };
 
   return (
-    <div className="fixed right-4 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-3">
+    <div className="fixed bottom-4 right-4 z-50 flex flex-col items-center gap-3">
       {actionButtons.map((action) => {
         const Icon = action.icon;
         return (
