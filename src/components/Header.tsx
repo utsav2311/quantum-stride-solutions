@@ -1,12 +1,64 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Menu } from "lucide-react";
+import { ChevronDown, Menu } from "lucide-react";
 import { useState } from "react";
 import {
   Sheet,
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+type NavItem = {
+  label: string;
+  to?: string;
+  children?: { label: string; to: string }[];
+};
+
+const navItems: NavItem[] = [
+  { label: "Home", to: "/" },
+  {
+    label: "Orthotics",
+    children: [
+      { label: "Spine & Back Braces", to: "/services/custom-orthotics" },
+      { label: "Upper Limb Orthotics", to: "/services/custom-orthotics" },
+      { label: "Lower Limb Orthotics", to: "/services/custom-orthotics" },
+      { label: "Custom Orthotic Insoles & Footwear", to: "/services/custom-orthotics" },
+    ],
+  },
+  {
+    label: "Prosthetics",
+    children: [
+      { label: "Upper Limb Prosthetics", to: "/services/upper-limb-prosthetics" },
+      { label: "Lower Limb Prosthetics", to: "/services/lower-limb-prosthetics" },
+      { label: "Sports Prosthetics", to: "/services/lower-limb-prosthetics" },
+      { label: "Cosmetic Prosthetics", to: "/services/upper-limb-prosthetics" },
+    ],
+  },
+  {
+    label: "Pediatric Care",
+    children: [
+      { label: "Pediatric Orthotics", to: "/services/custom-orthotics" },
+      { label: "Pediatric Prosthetics", to: "/services/lower-limb-prosthetics" },
+      { label: "Mobility Aids for Kids", to: "/services/medical-equipments" },
+    ],
+  },
+  {
+    label: "Mobility & Seating System",
+    children: [
+      { label: "Wheelchairs", to: "/services/medical-equipments" },
+      { label: "Custom Seating Systems", to: "/services/medical-equipments" },
+      { label: "Walkers & Standing Frames", to: "/services/medical-equipments" },
+    ],
+  },
+  { label: "About", to: "/about" },
+  { label: "Contact", to: "/contact" },
+];
 
 interface HeaderProps {
   transparent?: boolean;
