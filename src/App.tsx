@@ -79,7 +79,6 @@ const App = () => (
           <Route path="/services/custom-seating" element={<CustomSeating />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <WhatsAppButton />
         <FloatingCallButton />
         <SocialSidebar />
       </BrowserRouter>
