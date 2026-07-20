@@ -3,18 +3,18 @@ import { Cpu, HeartHandshake, ShieldCheck } from "lucide-react";
 const badges = [
   {
     icon: Cpu,
-    title: "Next-Gen Technology",
-    desc: "Non-invasive body scans, CAD/CAM modeling and 3D printing.",
+    title: "3D Printed, CAD/CAM Designed Devices",
+    desc: "High-precision 3D scanning, CAD/CAM design and additive manufacturing in-house.",
   },
   {
     icon: HeartHandshake,
-    title: "Trusted Care",
-    desc: "Hundreds of patients walking, running and living freely again.",
+    title: "Personalized AI-Driven Solutions",
+    desc: "GAIT analysis and intelligent design tuned to your anatomy, lifestyle and goals.",
   },
   {
     icon: ShieldCheck,
-    title: "Multidisciplinary Approach",
-    desc: "DOH & DHA certified clinicians working as one team for you.",
+    title: "Highly Experienced Clinical Team",
+    desc: "Global-gold-standard expertise refined by decades of top-tier practice and local accreditation.",
   },
 ];
 
