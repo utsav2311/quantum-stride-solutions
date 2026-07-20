@@ -13,7 +13,7 @@ const CustomOrthotics = () => {
         title="Custom Orthotics — Spinal, Limb & Pediatric Bracing"
         description="Personalized orthotic devices for spinal support, limb bracing, and pediatric alignment — designed for comfort, function, and long-term wear."
         path="/services/custom-orthotics"
-        jsonLd={{"@context":"https://schema.org","@type":"MedicalProcedure","name":"Custom Orthotics","description":"Custom orthotic bracing including spinal, upper limb, lower limb, and pediatric solutions.","provider":{"@type":"MedicalBusiness","name":"Quantum Medical","url":"https://quantum-stride-solutions.lovable.app/"}}}
+        jsonLd={{"@context":"https://schema.org","@type":"MedicalProcedure","name":"Custom Orthotics","description":"Custom orthotic bracing including spinal, upper limb, lower limb, and pediatric solutions.","provider":{"@type":"MedicalBusiness","name":"Quantum Medical","url":"https://quantumuae.ae/"}}}
       />
       <Header />
       

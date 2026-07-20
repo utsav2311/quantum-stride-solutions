@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://quantum-stride-solutions.lovable.app/sitemap.xml
+Sitemap: https://quantumuae.ae/sitemap.xml

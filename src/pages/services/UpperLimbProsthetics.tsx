@@ -12,7 +12,7 @@ const UpperLimbProsthetics = () => {
         title="Upper Limb Prosthetics — Quantum Medical"
         description="Myoelectric arms, body-powered devices, and partial hand prosthetics. Intuitive control, multiple grip patterns, and durable everyday designs."
         path="/services/upper-limb-prosthetics"
-        jsonLd={{"@context":"https://schema.org","@type":"MedicalProcedure","name":"Upper Limb Prosthetics","description":"Myoelectric and body-powered arm and hand prosthetics with tailored fitting.","provider":{"@type":"MedicalBusiness","name":"Quantum Medical","url":"https://quantum-stride-solutions.lovable.app/"}}}
+        jsonLd={{"@context":"https://schema.org","@type":"MedicalProcedure","name":"Upper Limb Prosthetics","description":"Myoelectric and body-powered arm and hand prosthetics with tailored fitting.","provider":{"@type":"MedicalBusiness","name":"Quantum Medical","url":"https://quantumuae.ae/"}}}
       />
       <Header />
       
