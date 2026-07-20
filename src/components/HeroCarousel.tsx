@@ -86,6 +86,9 @@ const HeroCarousel = () => {
                       style={{ fontSize: "clamp(2rem, 8vw, 7.5rem)" }}
                     >
                       {slide.title}
+                      {slide.titleHighlight && (
+                        <span className="text-accent">{slide.titleHighlight}</span>
+                      )}
                     </span>
                     {slide.titleAccent && (
                       <span
