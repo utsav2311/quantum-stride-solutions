@@ -125,8 +125,8 @@ const About = () => {
               {/* Animated glow rings */}
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <div className="absolute w-[85%] aspect-square rounded-full bg-gradient-to-tr from-accent/40 via-primary/30 to-accent/20 blur-3xl animate-pulse-slow" />
-                <div className="absolute w-[70%] aspect-square rounded-full border border-accent/30 animate-spin-slow" style={{ animationDuration: '18s' }} />
-                <div className="absolute w-[80%] aspect-square rounded-full border border-primary/20 animate-spin-slow" style={{ animationDuration: '26s', animationDirection: 'reverse' }} />
+                <div className="absolute w-[70%] aspect-square rounded-full border border-accent/30 animate-spin" style={{ animationDuration: '18s' }} />
+                <div className="absolute w-[80%] aspect-square rounded-full border border-primary/20 animate-spin" style={{ animationDuration: '26s', animationDirection: 'reverse' }} />
               </div>
 
               {/* Floating badges */}
