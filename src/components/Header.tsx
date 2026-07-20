@@ -129,18 +129,18 @@ const Header = ({ transparent = false }: HeaderProps) => {
                   </div>
                 </div>
               ) : (
-                <Link key={item.label} to={item.to!} className={navLinkClasses}>
+                <Link key={item.label} to={item.to!} className={`${navLinkClasses} text-[13px] 2xl:text-sm whitespace-nowrap`}>
                   {item.label}
                 </Link>
               )
             )}
           </nav>
           
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-4">
             <Button 
               variant="medical" 
               size="sm"
-              className="hidden lg:flex animate-slide-right animation-delay-400 hover-lift hover:animate-glow transition-all duration-300"
+              className="hidden xl:flex animate-slide-right animation-delay-400 hover-lift hover:animate-glow transition-all duration-300"
               asChild
             >
               <Link to="/book-appointment">Book Appointment</Link>
@@ -149,7 +149,7 @@ const Header = ({ transparent = false }: HeaderProps) => {
             {/* Mobile Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="sm" className="lg:hidden" aria-label="Open menu">
+                <Button variant="ghost" size="sm" className="xl:hidden" aria-label="Open menu">
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
