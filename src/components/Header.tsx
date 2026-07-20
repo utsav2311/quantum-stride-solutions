@@ -101,16 +101,16 @@ const Header = ({ transparent = false }: HeaderProps) => {
             </div>
           </Link>
           
-          <nav className="hidden xl:flex items-center gap-3 2xl:gap-5 stagger-children">
+          <nav className="hidden xl:flex items-center gap-6 2xl:gap-8 stagger-children">
             {navItems.map((item) =>
               item.children ? (
                 <div key={item.label} className="relative group">
                   <button
                     type="button"
-                    className={`${navLinkClasses} inline-flex items-center gap-0.5 text-[13px] 2xl:text-sm whitespace-nowrap group-hover:text-accent`}
+                    className={`${navLinkClasses} inline-flex items-center gap-1 text-sm 2xl:text-[15px] font-medium whitespace-nowrap group-hover:text-accent py-2`}
                   >
                     {item.label}
-                    <ChevronDown className="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" />
+                    <ChevronDown className="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" />
                   </button>
                   <div
                     className="absolute left-1/2 -translate-x-1/2 top-full pt-3 min-w-[280px] opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50"
@@ -129,12 +129,13 @@ const Header = ({ transparent = false }: HeaderProps) => {
                   </div>
                 </div>
               ) : (
-                <Link key={item.label} to={item.to!} className={`${navLinkClasses} text-[13px] 2xl:text-sm whitespace-nowrap`}>
+                <Link key={item.label} to={item.to!} className={`${navLinkClasses} text-sm 2xl:text-[15px] font-medium whitespace-nowrap py-2`}>
                   {item.label}
                 </Link>
               )
             )}
           </nav>
+
           
           <div className="flex items-center gap-2 sm:gap-4">
             <Button 
