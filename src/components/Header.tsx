@@ -53,9 +53,8 @@ const navItems: NavItem[] = [
   {
     label: "Mobility & Seating System",
     children: [
-      { label: "Wheelchairs", to: "/services/wheelchairs" },
-      { label: "Custom Seating Systems", to: "/services/custom-seating-systems" },
-      { label: "Walkers & Standing Frames", to: "/services/walkers-standing-frames" },
+      { label: "Walker Canes & Crutches", to: "/services/walker-canes-crutches" },
+      { label: "Custom Seating", to: "/services/custom-seating" },
     ],
   },
   { label: "About", to: "/about" },

@@ -30,6 +30,8 @@ import SocketsLiners from "./pages/services/SocketsLiners";
 import SiliconeRestoration from "./pages/services/SiliconeRestoration";
 import CranialOrthoses from "./pages/services/CranialOrthoses";
 import ScoliosisBracing from "./pages/services/ScoliosisBracing";
+import WalkerCanesCrutches from "./pages/services/WalkerCanesCrutches";
+import CustomSeating from "./pages/services/CustomSeating";
 import Background3D from "@/components/Background3D";
 import ScrollToTop from "@/components/ScrollToTop";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -74,6 +76,8 @@ const App = () => (
           <Route path="/services/silicone-restoration" element={<SiliconeRestoration />} />
           <Route path="/services/cranial-orthoses" element={<CranialOrthoses />} />
           <Route path="/services/scoliosis-bracing" element={<ScoliosisBracing />} />
+          <Route path="/services/walker-canes-crutches" element={<WalkerCanesCrutches />} />
+          <Route path="/services/custom-seating" element={<CustomSeating />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <WhatsAppButton />
