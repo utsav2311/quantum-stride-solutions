@@ -1,0 +1,2 @@
+GRANT INSERT ON public.appointments TO anon, authenticated;
+GRANT ALL ON public.appointments TO service_role;
