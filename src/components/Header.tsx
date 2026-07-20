@@ -71,12 +71,12 @@ const Header = ({ transparent = false }: HeaderProps) => {
     : "bg-background/95 backdrop-blur-md border-b border-border/50 sticky top-0 z-50 animate-slide-up";
 
   const titleClasses = transparent
-    ? "text-lg sm:text-2xl font-bold text-white hover:text-white/80 transition-colors duration-300 truncate drop-shadow-lg"
-    : "text-lg sm:text-2xl font-bold text-primary hover:text-primary/80 transition-colors duration-300 truncate";
+    ? "text-base sm:text-xl md:text-2xl font-bold text-white hover:text-white/80 transition-colors duration-300 truncate drop-shadow-lg"
+    : "text-base sm:text-xl md:text-2xl font-bold text-primary hover:text-primary/80 transition-colors duration-300 truncate";
 
   const subtitleClasses = transparent
-    ? "text-[10px] sm:text-xs text-white/80 truncate drop-shadow"
-    : "text-[10px] sm:text-xs text-muted-foreground truncate";
+    ? "text-[9px] sm:text-[10px] md:text-xs text-white/80 truncate drop-shadow"
+    : "text-[9px] sm:text-[10px] md:text-xs text-muted-foreground truncate";
 
   const navLinkClasses = transparent
     ? "nav-link text-white hover:text-accent transition-all duration-300 drop-shadow"
@@ -94,7 +94,7 @@ const Header = ({ transparent = false }: HeaderProps) => {
                 className="w-10 h-10 sm:w-12 sm:h-12 object-contain drop-shadow-lg"
               />
             </div>
-            <div className="min-w-0 hidden sm:block">
+            <div className="min-w-0 max-w-[120px] sm:max-w-none">
               <span className={titleClasses}>Quantum Medical</span>
               <p className={subtitleClasses}>Prosthetics & Orthotics</p>
             </div>
