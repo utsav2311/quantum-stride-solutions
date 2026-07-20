@@ -94,7 +94,7 @@ const Header = ({ transparent = false }: HeaderProps) => {
                 className="w-10 h-10 sm:w-12 sm:h-12 object-contain drop-shadow-lg"
               />
             </div>
-            <div className="min-w-0 hidden sm:block">
+            <div className="min-w-0 max-w-[120px] sm:max-w-none">
               <span className={titleClasses}>Quantum Medical</span>
               <p className={subtitleClasses}>Prosthetics & Orthotics</p>
             </div>
