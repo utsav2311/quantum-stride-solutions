@@ -1,22 +1,20 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { TextReveal } from "@/components/animations";
+import { Target, Compass } from "lucide-react";
 
 const About = () => {
-  const features = [
+  const pillars = [
     {
-      icon: "👨‍⚕️",
-      title: "Certified Professionals",
-      description: "DOH and DHA certified clinicians with decades of combined experience.",
+      icon: <Compass className="w-6 h-6" />,
+      title: "Our Vision",
+      description:
+        "To be the definitive Clinical Performance Authority — known not for the device, but for the guaranteed, measurable outcome achieved through technological precision and proactive patient partnership.",
     },
     {
-      icon: "🔬",
-      title: "Advanced Technology",
-      description: "3D scanning and CAD/CAM manufacturing for a perfect, repeatable fit.",
-    },
-    {
-      icon: "💙",
-      title: "Patient-Centered Care",
-      description: "Personalized treatment plans and ongoing support for life beyond the clinic.",
+      icon: <Target className="w-6 h-6" />,
+      title: "Our Mission",
+      description:
+        "To restore, enhance and sustain our patients’ functional potential by integrating global-gold-standard clinical expertise with additive manufacturing precision and a proactive, outcome-driven partnership model.",
     },
   ];
 
@@ -29,32 +27,30 @@ const About = () => {
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center max-w-7xl mx-auto">
           <div className="lg:col-span-7">
             <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">
-              About Quantum Medical
+              Welcome to Quantum Medical
             </p>
             <TextReveal stagger delay={150}>
               <h2 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.05] mb-8">
-                Built for <span className="italic text-accent">movement</span>.<br />
-                Engineered for <span className="italic text-accent">life</span>.
+                Advanced <span className="italic text-accent">prosthetic</span> &<br />
+                <span className="italic text-accent">orthotic</span> care.
               </h2>
             </TextReveal>
             <p className="text-lg md:text-xl text-muted-foreground mb-6 leading-relaxed max-w-2xl">
-              With years of experience in prosthetics and orthotics, Quantum Medical
-              combines traditional craftsmanship with the most advanced scan-to-build
-              technology available — so every device fits the person, not the other way around.
+              Quantum Medical offers prosthetic and orthotic solutions for hospitals, clinics and rehabilitation partners — providing advanced care for kids and adults using GAIT analysis, CAD/CAM systems and 3D printing to create custom devices that deliver superior comfort, accuracy and durability.
             </p>
             <blockquote className="border-l-4 border-accent pl-6 py-2 italic text-foreground/80 text-lg max-w-2xl">
-              "Every patient walks out with more than a device — they walk out with confidence."
+              "Each step forward is supported by thoughtful engineering and genuine care."
             </blockquote>
           </div>
 
           <div className="lg:col-span-5 space-y-4">
-            {features.map((f, i) => (
+            {pillars.map((f, i) => (
               <Card
                 key={i}
                 className="group border-border/60 hover:border-accent transition-all duration-500 hover:-translate-y-1 hover:shadow-xl bg-card"
               >
                 <CardContent className="p-6 flex items-start gap-5">
-                  <div className="text-3xl shrink-0 w-14 h-14 flex items-center justify-center rounded-full bg-accent/10 group-hover:bg-accent group-hover:scale-110 transition-all duration-500">
+                  <div className="shrink-0 w-14 h-14 flex items-center justify-center rounded-full bg-accent/10 text-accent group-hover:bg-accent group-hover:text-accent-foreground group-hover:scale-110 transition-all duration-500">
                     {f.icon}
                   </div>
                   <div>
