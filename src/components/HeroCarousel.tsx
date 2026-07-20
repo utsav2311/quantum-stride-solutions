@@ -87,7 +87,9 @@ const HeroCarousel = () => {
                     >
                       {slide.title}
                       {slide.titleHighlight && (
-                        <span className="text-accent">{slide.titleHighlight}</span>
+                        <span className="text-accent font-playfair font-bold tracking-tight break-words">
+                          {slide.titleHighlight}
+                        </span>
                       )}
                     </span>
                     {slide.titleAccent && (
