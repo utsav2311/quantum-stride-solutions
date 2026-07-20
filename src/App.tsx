@@ -76,6 +76,8 @@ const App = () => (
           <Route path="/services/silicone-restoration" element={<SiliconeRestoration />} />
           <Route path="/services/cranial-orthoses" element={<CranialOrthoses />} />
           <Route path="/services/scoliosis-bracing" element={<ScoliosisBracing />} />
+          <Route path="/services/walker-canes-crutches" element={<WalkerCanesCrutches />} />
+          <Route path="/services/custom-seating" element={<CustomSeating />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <WhatsAppButton />
