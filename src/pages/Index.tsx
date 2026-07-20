@@ -8,6 +8,10 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Background3D from "@/components/Background3D";
 import TrustBadges from "@/components/TrustBadges";
+import HowWeWork from "@/components/HowWeWork";
+import WhyChooseUs from "@/components/WhyChooseUs";
+import Testimonials from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
 import { ScrollProgressBar } from "@/components/animations/ScrollProgressBar";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -29,7 +33,7 @@ const Index = () => {
     <div className="min-h-screen relative">
       <Seo
         title="Quantum Medical — Advanced Prosthetics & Orthotics"
-        description="Custom prosthetic limbs, orthotic bracing, and mobility care for kids and adults. Expert clinicians, myoelectric technology, personalized fittings."
+        description="Custom prosthetic and orthotic care for kids and adults, built with GAIT analysis, CAD/CAM and 3D printing for superior comfort, accuracy and durability."
         path="/"
       />
       <ScrollProgressBar color="gradient" />
@@ -39,12 +43,15 @@ const Index = () => {
         <HeroCarousel />
       </div>
       <TrustBadges />
+      <About />
       <Services />
       <MoreLink to="/services" label="View All Services" />
-      <About />
-      <MoreLink to="/about" label="Learn More About Us" />
+      <HowWeWork />
+      <WhyChooseUs />
+      <Testimonials />
       <AppointmentForm />
       <MoreLink to="/book-appointment" label="Full Appointment Form" />
+      <FAQ />
       <Contact />
       <MoreLink to="/contact" label="Visit Contact Page" />
       <Footer />
