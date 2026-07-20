@@ -54,6 +54,18 @@ const App = () => (
           <Route path="/services/repair-maintenance" element={<RepairMaintenance />} />
           <Route path="/services/medical-equipments" element={<MedicalEquipments />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/services/spine-back-braces" element={<SpineBackBraces />} />
+          <Route path="/services/upper-limb-orthotics" element={<UpperLimbOrthotics />} />
+          <Route path="/services/lower-limb-orthotics" element={<LowerLimbOrthotics />} />
+          <Route path="/services/custom-orthotic-insoles" element={<CustomOrthoticInsoles />} />
+          <Route path="/services/sports-prosthetics" element={<SportsProsthetics />} />
+          <Route path="/services/cosmetic-prosthetics" element={<CosmeticProsthetics />} />
+          <Route path="/services/pediatric-orthotics" element={<PediatricOrthotics />} />
+          <Route path="/services/pediatric-prosthetics" element={<PediatricProsthetics />} />
+          <Route path="/services/mobility-aids-for-kids" element={<MobilityAidsForKids />} />
+          <Route path="/services/wheelchairs" element={<Wheelchairs />} />
+          <Route path="/services/custom-seating-systems" element={<CustomSeatingSystems />} />
+          <Route path="/services/walkers-standing-frames" element={<WalkersStandingFrames />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <WhatsAppButton />
