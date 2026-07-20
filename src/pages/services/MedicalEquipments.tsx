@@ -13,7 +13,7 @@ const MedicalEquipments = () => {
         title="Medical Equipment Supply & Servicing — Quantum Medical"
         description="Wholesale trading, installation, maintenance, and repair of medical and laboratory equipment. Trusted supply for clinics and hospitals."
         path="/services/medical-equipments"
-        jsonLd={{"@context":"https://schema.org","@type":"Service","name":"Medical Equipment Supply","description":"Wholesale supply, installation, and servicing of medical and laboratory equipment.","provider":{"@type":"MedicalBusiness","name":"Quantum Medical","url":"https://quantum-stride-solutions.lovable.app/"}}}
+        jsonLd={{"@context":"https://schema.org","@type":"Service","name":"Medical Equipment Supply","description":"Wholesale supply, installation, and servicing of medical and laboratory equipment.","provider":{"@type":"MedicalBusiness","name":"Quantum Medical","url":"https://quantumuae.ae/"}}}
       />
       <Header />
       

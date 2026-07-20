@@ -40,7 +40,7 @@ const ServiceDetailPage = ({
           provider: {
             "@type": "MedicalBusiness",
             name: "Quantum Medical",
-            url: "https://quantum-stride-solutions.lovable.app/",
+            url: "https://quantumuae.ae/",
           },
         }}
       />

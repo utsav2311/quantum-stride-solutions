@@ -12,7 +12,7 @@ const LowerLimbProsthetics = () => {
         title="Lower Limb Prosthetics — Quantum Medical"
         description="Below-knee, above-knee, and microprocessor-controlled prosthetic legs. Custom sockets, sports prosthetics, and personalized gait training."
         path="/services/lower-limb-prosthetics"
-        jsonLd={{"@context":"https://schema.org","@type":"MedicalProcedure","name":"Lower Limb Prosthetics","description":"Custom below-knee and above-knee prosthetic fitting including microprocessor knees.","provider":{"@type":"MedicalBusiness","name":"Quantum Medical","url":"https://quantum-stride-solutions.lovable.app/"}}}
+        jsonLd={{"@context":"https://schema.org","@type":"MedicalProcedure","name":"Lower Limb Prosthetics","description":"Custom below-knee and above-knee prosthetic fitting including microprocessor knees.","provider":{"@type":"MedicalBusiness","name":"Quantum Medical","url":"https://quantumuae.ae/"}}}
       />
       <Header />
       
