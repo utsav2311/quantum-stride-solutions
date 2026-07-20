@@ -25,10 +25,10 @@ const navItems: NavItem[] = [
   {
     label: "Orthotics",
     children: [
-      { label: "Spine & Back Braces", to: "/services/custom-orthotics" },
-      { label: "Upper Limb Orthotics", to: "/services/custom-orthotics" },
-      { label: "Lower Limb Orthotics", to: "/services/custom-orthotics" },
-      { label: "Custom Orthotic Insoles & Footwear", to: "/services/custom-orthotics" },
+      { label: "Spine & Back Braces", to: "/services/spine-back-braces" },
+      { label: "Upper Limb Orthotics", to: "/services/upper-limb-orthotics" },
+      { label: "Lower Limb Orthotics", to: "/services/lower-limb-orthotics" },
+      { label: "Custom Orthotic Insoles & Footwear", to: "/services/custom-orthotic-insoles" },
     ],
   },
   {
@@ -36,24 +36,24 @@ const navItems: NavItem[] = [
     children: [
       { label: "Upper Limb Prosthetics", to: "/services/upper-limb-prosthetics" },
       { label: "Lower Limb Prosthetics", to: "/services/lower-limb-prosthetics" },
-      { label: "Sports Prosthetics", to: "/services/lower-limb-prosthetics" },
-      { label: "Cosmetic Prosthetics", to: "/services/upper-limb-prosthetics" },
+      { label: "Sports Prosthetics", to: "/services/sports-prosthetics" },
+      { label: "Cosmetic Prosthetics", to: "/services/cosmetic-prosthetics" },
     ],
   },
   {
     label: "Pediatric Care",
     children: [
-      { label: "Pediatric Orthotics", to: "/services/custom-orthotics" },
-      { label: "Pediatric Prosthetics", to: "/services/lower-limb-prosthetics" },
-      { label: "Mobility Aids for Kids", to: "/services/medical-equipments" },
+      { label: "Pediatric Orthotics", to: "/services/pediatric-orthotics" },
+      { label: "Pediatric Prosthetics", to: "/services/pediatric-prosthetics" },
+      { label: "Mobility Aids for Kids", to: "/services/mobility-aids-for-kids" },
     ],
   },
   {
     label: "Mobility & Seating System",
     children: [
-      { label: "Wheelchairs", to: "/services/medical-equipments" },
-      { label: "Custom Seating Systems", to: "/services/medical-equipments" },
-      { label: "Walkers & Standing Frames", to: "/services/medical-equipments" },
+      { label: "Wheelchairs", to: "/services/wheelchairs" },
+      { label: "Custom Seating Systems", to: "/services/custom-seating-systems" },
+      { label: "Walkers & Standing Frames", to: "/services/walkers-standing-frames" },
     ],
   },
   { label: "About", to: "/about" },

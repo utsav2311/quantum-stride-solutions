@@ -14,6 +14,18 @@ import UpperLimbProsthetics from "./pages/services/UpperLimbProsthetics";
 import CustomOrthotics from "./pages/services/CustomOrthotics";
 import RepairMaintenance from "./pages/services/RepairMaintenance";
 import MedicalEquipments from "./pages/services/MedicalEquipments";
+import SpineBackBraces from "./pages/services/SpineBackBraces";
+import UpperLimbOrthotics from "./pages/services/UpperLimbOrthotics";
+import LowerLimbOrthotics from "./pages/services/LowerLimbOrthotics";
+import CustomOrthoticInsoles from "./pages/services/CustomOrthoticInsoles";
+import SportsProsthetics from "./pages/services/SportsProsthetics";
+import CosmeticProsthetics from "./pages/services/CosmeticProsthetics";
+import PediatricOrthotics from "./pages/services/PediatricOrthotics";
+import PediatricProsthetics from "./pages/services/PediatricProsthetics";
+import MobilityAidsForKids from "./pages/services/MobilityAidsForKids";
+import Wheelchairs from "./pages/services/Wheelchairs";
+import CustomSeatingSystems from "./pages/services/CustomSeatingSystems";
+import WalkersStandingFrames from "./pages/services/WalkersStandingFrames";
 import Background3D from "@/components/Background3D";
 import ScrollToTop from "@/components/ScrollToTop";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -42,6 +54,18 @@ const App = () => (
           <Route path="/services/repair-maintenance" element={<RepairMaintenance />} />
           <Route path="/services/medical-equipments" element={<MedicalEquipments />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/services/spine-back-braces" element={<SpineBackBraces />} />
+          <Route path="/services/upper-limb-orthotics" element={<UpperLimbOrthotics />} />
+          <Route path="/services/lower-limb-orthotics" element={<LowerLimbOrthotics />} />
+          <Route path="/services/custom-orthotic-insoles" element={<CustomOrthoticInsoles />} />
+          <Route path="/services/sports-prosthetics" element={<SportsProsthetics />} />
+          <Route path="/services/cosmetic-prosthetics" element={<CosmeticProsthetics />} />
+          <Route path="/services/pediatric-orthotics" element={<PediatricOrthotics />} />
+          <Route path="/services/pediatric-prosthetics" element={<PediatricProsthetics />} />
+          <Route path="/services/mobility-aids-for-kids" element={<MobilityAidsForKids />} />
+          <Route path="/services/wheelchairs" element={<Wheelchairs />} />
+          <Route path="/services/custom-seating-systems" element={<CustomSeatingSystems />} />
+          <Route path="/services/walkers-standing-frames" element={<WalkersStandingFrames />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <WhatsAppButton />
