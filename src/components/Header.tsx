@@ -101,18 +101,46 @@ const Header = ({ transparent = false }: HeaderProps) => {
             </div>
           </Link>
           
-          <nav className="hidden md:flex items-center space-x-8 stagger-children">
-            <Link to="/" className={navLinkClasses}>Home</Link>
-            <Link to="/services" className={navLinkClasses}>Services</Link>
-            <Link to="/about" className={navLinkClasses}>About</Link>
-            <Link to="/contact" className={navLinkClasses}>Contact</Link>
+          <nav className="hidden lg:flex items-center space-x-6 stagger-children">
+            {navItems.map((item) =>
+              item.children ? (
+                <div key={item.label} className="relative group">
+                  <button
+                    type="button"
+                    className={`${navLinkClasses} inline-flex items-center gap-1 group-hover:text-accent`}
+                  >
+                    {item.label}
+                    <ChevronDown className="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" />
+                  </button>
+                  <div
+                    className="absolute left-1/2 -translate-x-1/2 top-full pt-3 min-w-[280px] opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50"
+                  >
+                    <div className="bg-background border border-border/60 rounded-xl shadow-medical overflow-hidden">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.label}
+                          to={child.to}
+                          className="block px-5 py-3 text-sm font-medium text-foreground hover:bg-accent hover:text-accent-foreground transition-colors duration-200 border-b border-border/40 last:border-b-0"
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <Link key={item.label} to={item.to!} className={navLinkClasses}>
+                  {item.label}
+                </Link>
+              )
+            )}
           </nav>
           
           <div className="flex items-center gap-4">
             <Button 
               variant="medical" 
               size="sm"
-              className="hidden md:flex animate-slide-right animation-delay-400 hover-lift hover:animate-glow transition-all duration-300"
+              className="hidden lg:flex animate-slide-right animation-delay-400 hover-lift hover:animate-glow transition-all duration-300"
               asChild
             >
               <Link to="/book-appointment">Book Appointment</Link>
@@ -121,42 +149,48 @@ const Header = ({ transparent = false }: HeaderProps) => {
             {/* Mobile Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="sm" className="md:hidden" aria-label="Open menu">
+                <Button variant="ghost" size="sm" className="lg:hidden" aria-label="Open menu">
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px]">
-                <nav className="flex flex-col gap-6 mt-8">
-                  <Link 
-                    to="/" 
-                    className="nav-link text-foreground hover:text-primary transition-all duration-300 text-lg"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Home
-                  </Link>
-                  <Link 
-                    to="/services" 
-                    className="nav-link text-foreground hover:text-primary transition-all duration-300 text-lg"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Services
-                  </Link>
-                  <Link 
-                    to="/about" 
-                    className="nav-link text-foreground hover:text-primary transition-all duration-300 text-lg"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    About
-                  </Link>
-                  <Link 
-                    to="/contact" 
-                    className="nav-link text-foreground hover:text-primary transition-all duration-300 text-lg"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Contact
-                  </Link>
-                  <Button 
-                    variant="medical" 
+              <SheetContent side="right" className="w-[320px] overflow-y-auto">
+                <nav className="flex flex-col gap-2 mt-8">
+                  {navItems.map((item) =>
+                    item.children ? (
+                      <Accordion key={item.label} type="single" collapsible>
+                        <AccordionItem value={item.label} className="border-b border-border/40">
+                          <AccordionTrigger className="text-base font-medium hover:text-primary py-3">
+                            {item.label}
+                          </AccordionTrigger>
+                          <AccordionContent>
+                            <div className="flex flex-col gap-1 pl-2">
+                              {item.children.map((child) => (
+                                <Link
+                                  key={child.label}
+                                  to={child.to}
+                                  onClick={() => setIsOpen(false)}
+                                  className="py-2 text-sm text-muted-foreground hover:text-accent transition-colors"
+                                >
+                                  {child.label}
+                                </Link>
+                              ))}
+                            </div>
+                          </AccordionContent>
+                        </AccordionItem>
+                      </Accordion>
+                    ) : (
+                      <Link
+                        key={item.label}
+                        to={item.to!}
+                        className="nav-link text-foreground hover:text-primary transition-all duration-300 text-base py-3 border-b border-border/40"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    )
+                  )}
+                  <Button
+                    variant="medical"
                     size="sm"
                     className="w-full mt-4"
                     asChild
