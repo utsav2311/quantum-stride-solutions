@@ -12,7 +12,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+971 50 135 4607"],
+      details: ["+971 55 848 8759"],
     },
     {
       icon: Clock,
@@ -122,7 +122,7 @@ const Contact = () => {
                 Have an urgent question or need a same-week consultation? We're one call away.
               </p>
               <Button variant="medical" size="lg" className="mt-auto">
-                Call Now: +971 50 135 4607
+                Call Now: +971 55 848 8759
               </Button>
             </CardContent>
           </Card>
