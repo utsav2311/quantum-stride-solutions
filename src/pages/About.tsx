@@ -113,9 +113,21 @@ const About = () => {
             </h2>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
+            {/* Portrait on orange background */}
+            <div className="relative animate-fade-in order-1 lg:order-2" style={{ animationDelay: "200ms" }}>
+              <div className="relative rounded-2xl overflow-hidden bg-accent shadow-2xl aspect-[4/5] max-w-md mx-auto group">
+                <img
+                  src={ceoPortrait.url}
+                  alt="Mr. Rahul Kashyap — Founder & Director, Certified Orthotist & Prosthetist"
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+            </div>
+
             {/* Bio */}
-            <div className="animate-fade-in space-y-5">
+            <div className="animate-fade-in space-y-5 order-2 lg:order-1">
               <h3 className="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold text-foreground leading-tight">
                 Mr. Rahul Kashyap
               </h3>
@@ -141,18 +153,6 @@ const About = () => {
                 <p>
                   Under his leadership, Xtremity has established a strong B2B clinical presence in Dubai and is now expanding structured partnerships across India.
                 </p>
-              </div>
-            </div>
-
-            {/* Portrait on orange background */}
-            <div className="relative animate-fade-in" style={{ animationDelay: "200ms" }}>
-              <div className="relative rounded-2xl overflow-hidden bg-accent shadow-2xl aspect-[4/5] max-w-md mx-auto group">
-                <img
-                  src={ceoPortrait.url}
-                  alt="Mr. Rahul Kashyap — Founder & Director, Certified Orthotist & Prosthetist"
-                  loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                />
               </div>
             </div>
           </div>
