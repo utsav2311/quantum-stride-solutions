@@ -75,20 +75,28 @@ const HeroCarousel = () => {
 
               <div className="relative z-10 h-full flex items-center px-4 sm:px-6 md:px-16 lg:px-28">
                 <div className="max-w-4xl w-full">
-                  <p className="text-xs sm:text-sm md:text-base lg:text-lg tracking-[0.3em] text-white/80 mb-3 md:mb-6 animate-fade-in font-sans">
+                  <p className="tracking-[0.25em] sm:tracking-[0.3em] text-white/80 mb-3 md:mb-6 animate-fade-in font-sans"
+                     style={{ fontSize: "clamp(0.7rem, 1.4vw, 1.125rem)" }}>
                     {slide.eyebrow}
                   </p>
                   <h1 className="font-playfair font-bold text-white leading-[0.95] mb-5 md:mb-8 animate-slide-up">
-                    <span className="block text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl tracking-tight whitespace-nowrap">
+                    <span
+                      className="block tracking-tight break-words"
+                      style={{ fontSize: "clamp(2rem, 8vw, 7.5rem)" }}
+                    >
                       {slide.title}
                     </span>
                     {slide.titleAccent && (
-                      <span className="block text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl italic font-light text-accent mt-2 whitespace-nowrap">
+                      <span
+                        className="block italic font-light text-accent mt-2 break-words"
+                        style={{ fontSize: "clamp(1.5rem, 6vw, 6rem)" }}
+                      >
                         {slide.titleAccent}
                       </span>
                     )}
                   </h1>
-                  <p className="text-sm sm:text-base md:text-xl lg:text-2xl text-white/85 mb-6 md:mb-10 max-w-2xl leading-relaxed animate-fade-in font-light">
+                  <p className="text-white/85 mb-6 md:mb-10 max-w-2xl leading-relaxed animate-fade-in font-light"
+                     style={{ fontSize: "clamp(0.875rem, 1.6vw, 1.375rem)" }}>
                     {slide.subtitle}
                   </p>
                   <div className="flex items-center gap-4 animate-scale-in">
