@@ -95,22 +95,22 @@ const Header = ({ transparent = false }: HeaderProps) => {
                 className="w-10 h-10 sm:w-12 sm:h-12 object-contain drop-shadow-lg"
               />
             </div>
-            <div className="min-w-0">
+            <div className="min-w-0 hidden sm:block">
               <span className={titleClasses}>Quantum Medical</span>
               <p className={subtitleClasses}>Prosthetics & Orthotics</p>
             </div>
           </Link>
           
-          <nav className="hidden lg:flex items-center space-x-6 stagger-children">
+          <nav className="hidden xl:flex items-center gap-3 2xl:gap-5 stagger-children">
             {navItems.map((item) =>
               item.children ? (
                 <div key={item.label} className="relative group">
                   <button
                     type="button"
-                    className={`${navLinkClasses} inline-flex items-center gap-1 group-hover:text-accent`}
+                    className={`${navLinkClasses} inline-flex items-center gap-0.5 text-[13px] 2xl:text-sm whitespace-nowrap group-hover:text-accent`}
                   >
                     {item.label}
-                    <ChevronDown className="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" />
+                    <ChevronDown className="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" />
                   </button>
                   <div
                     className="absolute left-1/2 -translate-x-1/2 top-full pt-3 min-w-[280px] opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50"
