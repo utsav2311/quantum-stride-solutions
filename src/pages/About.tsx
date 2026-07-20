@@ -11,6 +11,7 @@ import { Award, Users, Heart, Target, Lightbulb, Shield, Globe, Calendar, CheckC
 import prostheticProfessional from "@/assets/prosthetic-professional.jpg";
 import researchBackground from "@/assets/research-background.jpg";
 import clinicBackground from "@/assets/clinic-background.jpg";
+import ceoPortrait from "@/assets/rahul-kashyap-ceo.png.asset.json";
 const About = () => {
   const values = [{
     icon: <Heart className="w-8 h-8" />,
@@ -120,9 +121,37 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="relative">
-              <img src={prostheticProfessional} alt="Our professional team" className="rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300" />
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-lg"></div>
+            <div className="relative group flex items-center justify-center">
+              {/* Animated glow rings */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div className="absolute w-[85%] aspect-square rounded-full bg-gradient-to-tr from-accent/40 via-primary/30 to-accent/20 blur-3xl animate-pulse-slow" />
+                <div className="absolute w-[70%] aspect-square rounded-full border border-accent/30 animate-spin-slow" style={{ animationDuration: '18s' }} />
+                <div className="absolute w-[80%] aspect-square rounded-full border border-primary/20 animate-spin-slow" style={{ animationDuration: '26s', animationDirection: 'reverse' }} />
+              </div>
+
+              {/* Floating badges */}
+              <div className="absolute top-6 -left-2 md:left-4 z-20 bg-card/90 backdrop-blur-md border border-border/60 rounded-full px-4 py-2 shadow-xl animate-fade-in hover:scale-105 transition-transform" style={{ animationDelay: '400ms' }}>
+                <p className="text-xs font-semibold text-accent">Founder & CEO</p>
+              </div>
+              <div className="absolute bottom-10 -right-2 md:right-4 z-20 bg-card/90 backdrop-blur-md border border-border/60 rounded-full px-4 py-2 shadow-xl animate-fade-in hover:scale-105 transition-transform" style={{ animationDelay: '700ms' }}>
+                <p className="text-xs font-semibold text-foreground">15+ Yrs Experience</p>
+              </div>
+
+              {/* Portrait with float animation */}
+              <div className="relative z-10 animate-float">
+                <img
+                  src={ceoPortrait.url}
+                  alt="Dr. Rahul Kashyap — Founder & CEO of Quantum Medical"
+                  loading="lazy"
+                  className="relative w-full max-w-md mx-auto drop-shadow-[0_25px_45px_rgba(0,0,0,0.35)] transition-transform duration-700 group-hover:scale-[1.03]"
+                />
+              </div>
+
+              {/* Name plaque */}
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 z-20 bg-gradient-to-r from-accent to-primary text-white px-6 py-3 rounded-xl shadow-2xl animate-fade-in text-center" style={{ animationDelay: '900ms' }}>
+                <p className="font-playfair font-bold text-lg leading-tight">Dr. Rahul Kashyap</p>
+                <p className="text-[10px] tracking-[0.2em] uppercase opacity-90">Founder · CEO</p>
+              </div>
             </div>
           </div>
         </div>
