@@ -26,6 +26,8 @@ import MobilityAidsForKids from "./pages/services/MobilityAidsForKids";
 import Wheelchairs from "./pages/services/Wheelchairs";
 import CustomSeatingSystems from "./pages/services/CustomSeatingSystems";
 import WalkersStandingFrames from "./pages/services/WalkersStandingFrames";
+import SocketsLiners from "./pages/services/SocketsLiners";
+import SiliconeRestoration from "./pages/services/SiliconeRestoration";
 import Background3D from "@/components/Background3D";
 import ScrollToTop from "@/components/ScrollToTop";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -66,6 +68,8 @@ const App = () => (
           <Route path="/services/wheelchairs" element={<Wheelchairs />} />
           <Route path="/services/custom-seating-systems" element={<CustomSeatingSystems />} />
           <Route path="/services/walkers-standing-frames" element={<WalkersStandingFrames />} />
+          <Route path="/services/sockets-liners" element={<SocketsLiners />} />
+          <Route path="/services/silicone-restoration" element={<SiliconeRestoration />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <WhatsAppButton />
