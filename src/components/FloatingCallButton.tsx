@@ -1,8 +1,8 @@
 import { Phone } from "lucide-react";
 import { type MouseEvent } from "react";
 
-const PHONE_NUMBER = "+971 50 135 4607";
-const PHONE_HREF = "tel:+971501354607";
+const PHONE_NUMBER = "+971 55 848 8759";
+const PHONE_HREF = "tel:+971558488759";
 
 const FloatingCallButton = () => {
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
