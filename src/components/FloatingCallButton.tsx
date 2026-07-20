@@ -74,7 +74,7 @@ const FloatingCallButton = () => {
             {/* Icon badge */}
             <span className="relative flex items-center justify-center w-12 h-12 rounded-full bg-accent text-accent-foreground shadow-medical ring-4 ring-background/40 transition-transform duration-300 group-hover:scale-110">
               <span className="absolute inset-0 rounded-full bg-accent animate-ping opacity-40 pointer-events-none" />
-              <Icon className="relative w-5 h-5 fill-current animate-wave" strokeWidth={2} />
+              <Icon className="relative w-5 h-5 fill-current animate-wave" />
             </span>
           </a>
         );
