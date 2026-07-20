@@ -34,7 +34,6 @@ import WalkerCanesCrutches from "./pages/services/WalkerCanesCrutches";
 import CustomSeating from "./pages/services/CustomSeating";
 import Background3D from "@/components/Background3D";
 import ScrollToTop from "@/components/ScrollToTop";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import FloatingCallButton from "@/components/FloatingCallButton";
 import SocialSidebar from "@/components/SocialSidebar";
 
@@ -80,7 +79,6 @@ const App = () => (
           <Route path="/services/custom-seating" element={<CustomSeating />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <WhatsAppButton />
         <FloatingCallButton />
         <SocialSidebar />
       </BrowserRouter>
