@@ -21,13 +21,13 @@ const FloatingCallButton = () => {
       href={PHONE_HREF}
       aria-label={`Call us at ${PHONE_NUMBER}`}
       onClick={handleClick}
-      className="fixed right-4 top-1/2 -translate-y-1/2 z-50 group focus:outline-none"
+      className="fixed right-4 bottom-4 z-50 group focus:outline-none"
     >
-      {/* Sliding label panel — hidden behind the icon, slides out to the left on hover */}
+      {/* Phone number label — pops out to the left of the icon on hover */}
       <span
         className="
-          absolute right-6 top-1/2 -translate-y-1/2
-          h-11 pl-5 pr-8 flex items-center
+          absolute right-12 top-1/2 -translate-y-1/2
+          h-10 pl-4 pr-3 flex items-center
           rounded-l-full bg-accent text-accent-foreground
           text-sm font-semibold whitespace-nowrap
           shadow-medical
@@ -39,8 +39,8 @@ const FloatingCallButton = () => {
         {PHONE_NUMBER}
       </span>
 
-      {/* Phone icon — sits outside as a circular badge, always visible */}
-      <span className="relative flex items-center justify-center w-12 h-12 rounded-full bg-accent text-accent-foreground shadow-medical ring-4 ring-background/40 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[12deg]">
+      {/* Phone icon badge — fixed in the bottom-right corner */}
+      <span className="relative flex items-center justify-center w-12 h-12 rounded-full bg-accent text-accent-foreground shadow-medical ring-4 ring-background/40 transition-transform duration-300 group-hover:scale-110">
         <span className="absolute inset-0 rounded-full bg-accent animate-ping opacity-40 pointer-events-none" />
         <Phone className="relative w-5 h-5 fill-current animate-wave" strokeWidth={2} />
       </span>
