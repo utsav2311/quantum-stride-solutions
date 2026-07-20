@@ -38,7 +38,9 @@ const AppointmentForm = () => {
 
     setIsSubmitting(true);
     try {
+      const appointmentId = crypto.randomUUID();
       const appointmentPayload = {
+        id: appointmentId,
         full_name: `${formData.firstName} ${formData.lastName}`,
         email: formData.email,
         phone: formData.phone,
@@ -49,20 +51,20 @@ const AppointmentForm = () => {
         consent_contact: true,
       };
 
-      const { data: inserted, error } = await supabase
+      const { error } = await supabase
         .from("appointments")
-        .insert(appointmentPayload)
-        .select("id")
-        .single();
+        .insert(appointmentPayload);
 
       if (error) throw error;
 
       // Send WhatsApp notification to clinic owner; do not block success toast on failure
       try {
-        if (inserted?.id) {
-          await supabase.functions.invoke("notify-appointment", {
-            body: { appointment_id: inserted.id },
-          });
+        const { error: notifyError } = await supabase.functions.invoke("notify-appointment", {
+          body: { appointment_id: appointmentId },
+        });
+
+        if (notifyError) {
+          console.error("WhatsApp notification failed:", notifyError);
         }
       } catch (notifyErr) {
         console.error("WhatsApp notification failed:", notifyErr);
