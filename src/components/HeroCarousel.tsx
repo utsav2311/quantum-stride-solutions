@@ -15,7 +15,7 @@ const slides = [
     image: heroMedical,
     eyebrow: "TRANSFORMING HEALTHCARE",
     title: "MOBILITY IS ",
-    titleHighlight: "FREEDOM",
+    titleHighlight: "FREEDOMI",
     titleAccent: "",
     subtitle: "Tailored prosthetic & orthotic solutions for hospitals, clinics and rehabilitation partners.",
     cta: "Book Your Appointment",
