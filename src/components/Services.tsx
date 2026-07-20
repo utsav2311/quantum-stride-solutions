@@ -55,12 +55,12 @@ const Services = () => {
 
       <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
         <AnimatedSection animation="slide-up" duration="slow" className="max-w-4xl mb-16 md:mb-20">
-          <p className="text-sm tracking-[0.3em] text-accent font-bold mb-4 uppercase">What We Do</p>
+          <p className="text-sm tracking-[0.3em] text-accent font-bold mb-4 uppercase">Smart Designs Creating</p>
           <h2 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-[1.05] tracking-tight">
-            Solutions that <span className="italic text-accent">move with you</span>.
+            Real-World <span className="italic text-accent">Strength</span>.
           </h2>
           <p className="text-lg md:text-xl text-white/70 max-w-2xl leading-relaxed">
-            Comprehensive prosthetic and orthotic care, custom-built around your body and your life.
+            For kids and adults — all under one roof. Custom prosthetic and orthotic care built with GAIT analysis, CAD/CAM systems and 3D printing.
           </p>
         </AnimatedSection>
 
