@@ -34,8 +34,10 @@ const navItems: NavItem[] = [
   {
     label: "Prosthetics",
     children: [
-      { label: "Upper Limb Prosthetics", to: "/services/upper-limb-prosthetics" },
       { label: "Lower Limb Prosthetics", to: "/services/lower-limb-prosthetics" },
+      { label: "Upper Limb Prosthetics", to: "/services/upper-limb-prosthetics" },
+      { label: "Sockets & Liners", to: "/services/sockets-liners" },
+      { label: "Silicone Restoration", to: "/services/silicone-restoration" },
       { label: "Sports Prosthetics", to: "/services/sports-prosthetics" },
       { label: "Cosmetic Prosthetics", to: "/services/cosmetic-prosthetics" },
     ],
