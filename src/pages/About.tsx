@@ -104,53 +104,55 @@ const About = () => {
         </div>
       </section>
 
-      {/* Our Story */}
+      {/* Our Clinical Experts */}
       <section className="py-20 md:py-24">
         <div className="container mx-auto px-6 md:px-8 lg:px-12">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in">
-              <p className="text-sm tracking-[0.3em] text-accent font-semibold mb-4 uppercase">Our Journey</p>
-              <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-6">Our <span className="italic text-accent">story</span>.</h2>
-              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="font-playfair text-4xl sm:text-5xl md:text-6xl font-bold text-accent leading-[1.1]">
+              Our Clinical Experts
+            </h2>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
+            {/* Bio */}
+            <div className="animate-fade-in space-y-6">
+              <h3 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-tight">
+                Mr. Rahul Kashyap
+              </h3>
+              <p className="text-lg font-semibold text-foreground">
+                Founder &amp; Director | Certified Orthotist &amp; Prosthetist (CPO)
+              </p>
+              <div className="space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Founded in 2008, Quantum Medical began with a simple yet powerful mission: to restore independence and improve quality of life for individuals requiring prosthetic and orthotic care. What started as a small clinic has grown into a leading healthcare facility serving thousands of patients across the region.
+                  Rahul Kashyap is a DHA- and DOH-licensed and accredited Certified Orthotist &amp; Prosthetist with nearly a decade of diverse clinical experience in orthotics and prosthetics. He earned his bachelor's degree from the prestigious All India Institute of Physical Medicine &amp; Rehabilitation (AIIPMR), Mumbai.
                 </p>
-                <p>Our founder, Dr. Rahul Kashyap, recognized the need for more personalized, technology-driven solutions in the prosthetics and orthotics field. With a background in biomedical engineering and over 15 years of clinical experience, she assembled a team of dedicated professionals who share her vision of excellence in patient care.</p>
                 <p>
-                  Today, we continue to push the boundaries of what's possible in prosthetic and orthotic technology, while never losing sight of the human element that makes our work so meaningful. Every device we create represents hope, independence, and the possibility of a better tomorrow.
+                  Following graduation, he began his professional journey with Ottobock, gaining advanced technical exposure before completing his structured residency training. Since moving to the UAE in 2014, Rahul has practiced across multiple leading healthcare facilities, building extensive expertise in managing complex orthotic and prosthetic cases with a strong focus on clinical precision and functional outcomes.
+                </p>
+                <div>
+                  <p className="font-semibold text-foreground mb-3">Areas of Clinical Expertise:</p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>Scoliosis bracing (pattern-specific management)</li>
+                    <li>Cranial orthoses for head deformities</li>
+                    <li>Neuromuscular orthotic management</li>
+                    <li>Lower extremity prosthetic rehabilitation</li>
+                  </ul>
+                </div>
+                <p>
+                  Under his leadership, Xtremity has established a strong B2B clinical presence in Dubai and is now expanding structured partnerships across India.
                 </p>
               </div>
             </div>
-            <div className="relative group flex items-center justify-center">
-              {/* Animated glow rings */}
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="absolute w-[85%] aspect-square rounded-full bg-gradient-to-tr from-accent/40 via-primary/30 to-accent/20 blur-3xl animate-pulse-slow" />
-                <div className="absolute w-[70%] aspect-square rounded-full border border-accent/30 animate-spin" style={{ animationDuration: '18s' }} />
-                <div className="absolute w-[80%] aspect-square rounded-full border border-primary/20 animate-spin" style={{ animationDuration: '26s', animationDirection: 'reverse' }} />
-              </div>
 
-              {/* Floating badges */}
-              <div className="absolute top-6 -left-2 md:left-4 z-20 bg-card/90 backdrop-blur-md border border-border/60 rounded-full px-4 py-2 shadow-xl animate-fade-in hover:scale-105 transition-transform" style={{ animationDelay: '400ms' }}>
-                <p className="text-xs font-semibold text-accent">Founder & CEO</p>
-              </div>
-              <div className="absolute bottom-10 -right-2 md:right-4 z-20 bg-card/90 backdrop-blur-md border border-border/60 rounded-full px-4 py-2 shadow-xl animate-fade-in hover:scale-105 transition-transform" style={{ animationDelay: '700ms' }}>
-                <p className="text-xs font-semibold text-foreground">15+ Yrs Experience</p>
-              </div>
-
-              {/* Portrait with float animation */}
-              <div className="relative z-10 animate-float">
+            {/* Portrait on orange background */}
+            <div className="relative animate-fade-in" style={{ animationDelay: "200ms" }}>
+              <div className="relative rounded-2xl overflow-hidden bg-accent shadow-2xl aspect-[4/5] max-w-md mx-auto group">
                 <img
                   src={ceoPortrait.url}
-                  alt="Dr. Rahul Kashyap — Founder & CEO of Quantum Medical"
+                  alt="Mr. Rahul Kashyap — Founder & Director, Certified Orthotist & Prosthetist"
                   loading="lazy"
-                  className="relative w-full max-w-md mx-auto drop-shadow-[0_25px_45px_rgba(0,0,0,0.35)] transition-transform duration-700 group-hover:scale-[1.03]"
+                  className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 />
-              </div>
-
-              {/* Name plaque */}
-              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 z-20 bg-gradient-to-r from-accent to-primary text-white px-6 py-3 rounded-xl shadow-2xl animate-fade-in text-center" style={{ animationDelay: '900ms' }}>
-                <p className="font-playfair font-bold text-lg leading-tight">Dr. Rahul Kashyap</p>
-                <p className="text-[10px] tracking-[0.2em] uppercase opacity-90">Founder · CEO</p>
               </div>
             </div>
           </div>
