@@ -43,7 +43,7 @@ const LowerLimbProsthetics = () => {
               
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/2ffe22c2-3a59-4bd1-bcc7-6858ceb7c5c3.png" 
+                  src="/uploads/2ffe22c2-3a59-4bd1-bcc7-6858ceb7c5c3.png" 
                   alt="Lower Limb Prosthetics"
                   className="w-full h-96 object-contain rounded-lg"
                 />
