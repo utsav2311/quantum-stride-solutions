@@ -21,7 +21,7 @@ const FloatingCallButton = () => {
       href={PHONE_HREF}
       aria-label={`Call us at ${PHONE_NUMBER}`}
       onClick={handleClick}
-      className="fixed right-4 bottom-4 z-50 group focus:outline-none"
+      className="fixed right-4 top-1/2 -translate-y-1/2 z-50 group focus:outline-none"
     >
       {/* Phone number label — pops out to the left of the icon on hover */}
       <span
