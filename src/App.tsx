@@ -30,6 +30,8 @@ import SocketsLiners from "./pages/services/SocketsLiners";
 import SiliconeRestoration from "./pages/services/SiliconeRestoration";
 import CranialOrthoses from "./pages/services/CranialOrthoses";
 import ScoliosisBracing from "./pages/services/ScoliosisBracing";
+import WalkerCanesCrutches from "./pages/services/WalkerCanesCrutches";
+import CustomSeating from "./pages/services/CustomSeating";
 import Background3D from "@/components/Background3D";
 import ScrollToTop from "@/components/ScrollToTop";
 import WhatsAppButton from "@/components/WhatsAppButton";
